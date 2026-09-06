@@ -24,6 +24,7 @@ class PublicPagesTest extends TestCase
         return [
             'home' => ['/', 'Home'],
             'work' => ['/werk', 'Work/Index'],
+            'services' => ['/diensten', 'Services/Index'],
             'websites' => ['/diensten/websites', 'Services/Websites'],
             'dashboards' => ['/diensten/dashboards', 'Services/Dashboards'],
             'webshops' => ['/diensten/webshops', 'Services/Webshops'],

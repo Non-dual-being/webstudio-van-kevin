@@ -1,53 +1,58 @@
 <script setup lang="ts">
-import { Link } from '@inertiajs/vue3';
-import { home } from '@/routes';
+import { Link, usePage } from '@inertiajs/vue3';
+import { computed } from 'vue';
+
+const navigation = [
+    { label: 'Home', href: '/' },
+    { label: 'Werk', href: '/werk' },
+    { label: 'Diensten', href: '/diensten' },
+    { label: 'Over mij', href: '/over-mij' },
+    { label: 'Contact', href: '/contact' },
+    { label: 'Privacy', href: '/privacy' },
+];
+
+const page = usePage();
+const currentPath = computed(() => page.url.split('?')[0]);
+
+const isCurrentPage = (href: string) => currentPath.value === href;
+const isActive = (href: string) =>
+    isCurrentPage(href) ||
+    (href !== '/' && currentPath.value.startsWith(`${href}/`));
 </script>
 
 <template>
-    <div class="flex min-h-screen flex-col bg-white text-neutral-900">
-        <header class="border-b border-neutral-200">
+    <div class="flex min-h-screen flex-col bg-stone-50 text-slate-900">
+        <header class="border-b border-stone-200 bg-stone-50">
             <div
-                class="mx-auto flex w-full max-w-5xl flex-col gap-4 px-5 py-5 sm:flex-row sm:items-center sm:justify-between"
+                class="mx-auto flex max-w-6xl flex-col gap-5 px-5 py-5 md:flex-row md:items-center md:justify-between"
             >
                 <Link
-                    :href="home()"
-                    class="w-fit text-lg font-semibold focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4"
+                    href="/"
+                    class="w-fit text-lg font-semibold tracking-tight decoration-amber-600 decoration-2 underline-offset-4 hover:underline focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-700"
                 >
                     Kevin Webstudio
                 </Link>
 
                 <nav aria-label="Hoofdnavigatie">
-                    <ul class="flex flex-wrap gap-x-5 gap-y-3 text-sm">
-                        <li>
+                    <ul
+                        class="grid grid-cols-3 gap-x-4 gap-y-3 text-sm sm:flex sm:flex-wrap sm:gap-x-5"
+                    >
+                        <li v-for="item in navigation" :key="item.href">
                             <Link
-                                href="/werk"
-                                class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4"
+                                :href="item.href"
+                                :aria-current="
+                                    isCurrentPage(item.href)
+                                        ? 'page'
+                                        : undefined
+                                "
+                                class="inline-block rounded-sm border-b-2 py-1 underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-700"
+                                :class="
+                                    isActive(item.href)
+                                        ? 'border-amber-600 font-semibold text-slate-950'
+                                        : 'border-transparent text-slate-600 hover:border-stone-300 hover:text-slate-950'
+                                "
                             >
-                                Werk
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/diensten/websites"
-                                class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4"
-                            >
-                                Diensten
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/over-mij"
-                                class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4"
-                            >
-                                Over mij
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/contact"
-                                class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4"
-                            >
-                                Contact
+                                {{ item.label }}
                             </Link>
                         </li>
                     </ul>
@@ -55,21 +60,16 @@ import { home } from '@/routes';
             </div>
         </header>
 
-        <main class="mx-auto w-full max-w-5xl flex-1 px-5 py-16 sm:py-24">
+        <main class="mx-auto w-full max-w-6xl flex-1 px-5 py-12 sm:py-16">
             <slot />
         </main>
 
-        <footer class="border-t border-neutral-200">
+        <footer class="border-t border-stone-200">
             <div
-                class="mx-auto flex w-full max-w-5xl flex-col gap-3 px-5 py-6 text-sm text-neutral-600 sm:flex-row sm:items-center sm:justify-between"
+                class="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-7 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between"
             >
-                <p>&copy; Kevin Webstudio</p>
-                <Link
-                    href="/privacy"
-                    class="w-fit rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4"
-                >
-                    Privacy
-                </Link>
+                <p>&copy; {{ new Date().getFullYear() }} Kevin Webstudio</p>
+                <p>Met aandacht gebouwd, helder uitgelegd.</p>
             </div>
         </footer>
     </div>

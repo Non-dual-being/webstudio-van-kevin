@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::inertia('/', 'Home')->name('home');
 Route::inertia('/werk', 'Work/Index')->name('work.index');
+Route::inertia('/diensten', 'Services/Index')->name('services.index');
 Route::inertia('/diensten/websites', 'Services/Websites')->name('services.websites');
 Route::inertia('/diensten/dashboards', 'Services/Dashboards')->name('services.dashboards');
 Route::inertia('/diensten/webshops', 'Services/Webshops')->name('services.webshops');
