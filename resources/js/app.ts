@@ -13,6 +13,7 @@ createInertiaApp({
         const publicPages = [
             'Home',
             'Work/Index',
+            'Work/Show',
             'Services/Index',
             'Services/Websites',
             'Services/Dashboards',

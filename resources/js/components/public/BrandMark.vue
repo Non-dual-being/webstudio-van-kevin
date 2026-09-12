@@ -1,0 +1,9 @@
+<template>
+    <img
+        src="/brand/kevin-webstudio-kds-mark.svg"
+        alt=""
+        width="44"
+        height="44"
+        draggable="false"
+    />
+</template>

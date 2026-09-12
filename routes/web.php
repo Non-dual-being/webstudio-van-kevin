@@ -1,12 +1,14 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\Teams\TeamInvitationController;
 use App\Http\Middleware\EnsureTeamMembership;
 use Illuminate\Support\Facades\Route;
 
-Route::inertia('/', 'Home')->name('home');
-Route::inertia('/werk', 'Work/Index')->name('work.index');
+Route::get('/', [PortfolioController::class, 'home'])->name('home');
+Route::get('/werk', [PortfolioController::class, 'index'])->name('work.index');
+Route::get('/werk/{slug}', [PortfolioController::class, 'show'])->name('work.show');
 Route::inertia('/diensten', 'Services/Index')->name('services.index');
 Route::inertia('/diensten/websites', 'Services/Websites')->name('services.websites');
 Route::inertia('/diensten/dashboards', 'Services/Dashboards')->name('services.dashboards');

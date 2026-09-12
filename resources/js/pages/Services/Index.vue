@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { Head, Link } from '@inertiajs/vue3';
+import { Head } from '@inertiajs/vue3';
+import PublicCardAction from '@/components/public/PublicCardAction.vue';
 import PublicLayout from '@/layouts/PublicLayout.vue';
 
 const services = [
@@ -34,12 +35,13 @@ const services = [
     <Head title="Diensten" />
     <PublicLayout>
         <header class="max-w-3xl">
-            <p
-                class="text-sm font-semibold tracking-wide text-amber-700 uppercase"
+            <span
+                aria-hidden="true"
+                class="block h-1 w-10 rounded-full bg-amber-600"
+            />
+            <h1
+                class="mt-5 text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl"
             >
-                Wat ik bouw
-            </p>
-            <h1 class="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">
                 Digitale oplossingen die passen bij het echte werk
             </h1>
             <p class="mt-6 text-lg leading-8 text-slate-700">
@@ -53,24 +55,27 @@ const services = [
             <h2 id="dienstenaanbod" class="text-2xl font-semibold">
                 Waarmee ik kan helpen
             </h2>
-            <div
-                class="mt-6 grid gap-px overflow-hidden rounded-lg border border-stone-200 bg-stone-200 sm:grid-cols-2"
-            >
+            <div class="mt-6 grid gap-5 sm:grid-cols-2">
                 <article
                     v-for="service in services"
                     :key="service.title"
-                    class="bg-stone-50 p-6 sm:p-7"
+                    class="flex h-full flex-col rounded-xl border border-stone-200 bg-white p-6 transition-[border-color,box-shadow] duration-150 ease-out hover:border-slate-300 hover:shadow-sm motion-reduce:transition-none sm:p-7"
                 >
-                    <h3 class="text-lg font-semibold">{{ service.title }}</h3>
-                    <p class="mt-3 leading-7 text-slate-600">
+                    <span
+                        aria-hidden="true"
+                        class="block h-1 w-8 rounded-full bg-amber-600"
+                    />
+                    <h3 class="mt-5 text-lg font-semibold text-slate-950">
+                        {{ service.title }}
+                    </h3>
+                    <p class="mt-3 mb-6 leading-7 text-slate-600">
                         {{ service.text }}
                     </p>
-                    <Link
-                        :href="service.href"
-                        class="mt-5 inline-block rounded-sm font-semibold text-amber-800 underline decoration-amber-500 underline-offset-4 hover:text-amber-950 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-700"
-                    >
-                        {{ service.linkLabel }}
-                    </Link>
+                    <footer class="mt-auto border-t border-stone-200 pt-5">
+                        <PublicCardAction :href="service.href">
+                            {{ service.linkLabel }}
+                        </PublicCardAction>
+                    </footer>
                 </article>
             </div>
         </section>

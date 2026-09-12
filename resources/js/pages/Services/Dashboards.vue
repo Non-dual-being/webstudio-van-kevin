@@ -7,12 +7,13 @@ import PublicLayout from '@/layouts/PublicLayout.vue';
     <Head title="Dashboards en beheeromgevingen" />
     <PublicLayout>
         <article class="max-w-3xl">
-            <p
-                class="text-sm font-semibold tracking-wide text-amber-700 uppercase"
+            <span
+                aria-hidden="true"
+                class="block h-1 w-10 rounded-full bg-amber-600"
+            />
+            <h1
+                class="mt-5 text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl"
             >
-                Dienst · Interne systemen
-            </p>
-            <h1 class="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">
                 Dashboards en beheeromgevingen
             </h1>
             <p class="mt-6 text-lg leading-8 text-slate-700">

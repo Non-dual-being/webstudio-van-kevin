@@ -1,0 +1,149 @@
+{
+    "pages": [
+        {
+            "name": "home",
+            "width": 1440,
+            "title": "Websites en webapplicaties op maat - Kevin Webstudio",
+            "h1": "Ik bouw begrijpelijke digitale oplossingen die echt bij je werk passen",
+            "h1Count": 1,
+            "viewport": 1440,
+            "scrollWidth": 1425,
+            "height": 2033,
+            "caseLinks": 1,
+            "demoLinks": 0,
+            "images": [
+                {
+                    "src": "/brand/kevin-webstudio-kds-mark.svg",
+                    "loaded": true
+                }
+            ]
+        },
+        {
+            "name": "werk",
+            "width": 1440,
+            "title": "Werk en projecten - Kevin Webstudio",
+            "h1": "Werk",
+            "h1Count": 1,
+            "viewport": 1440,
+            "scrollWidth": 1425,
+            "height": 1550,
+            "caseLinks": 1,
+            "demoLinks": 0,
+            "images": [
+                {
+                    "src": "/brand/kevin-webstudio-kds-mark.svg",
+                    "loaded": true
+                }
+            ]
+        },
+        {
+            "name": "onderwijsformulier",
+            "width": 1440,
+            "title": "Onderwijsformulier - Kevin Webstudio",
+            "h1": "Onderwijsformulier",
+            "h1Count": 1,
+            "viewport": 1440,
+            "scrollWidth": 1425,
+            "height": 2561,
+            "caseLinks": 0,
+            "demoLinks": 0,
+            "images": [
+                {
+                    "src": "/brand/kevin-webstudio-kds-mark.svg",
+                    "loaded": true
+                }
+            ]
+        },
+        {
+            "name": "home",
+            "width": 390,
+            "title": "Websites en webapplicaties op maat - Kevin Webstudio",
+            "h1": "Ik bouw begrijpelijke digitale oplossingen die echt bij je werk passen",
+            "h1Count": 1,
+            "viewport": 390,
+            "scrollWidth": 390,
+            "height": 2979,
+            "caseLinks": 1,
+            "demoLinks": 0,
+            "images": [
+                {
+                    "src": "/brand/kevin-webstudio-kds-mark.svg",
+                    "loaded": true
+                }
+            ]
+        },
+        {
+            "name": "werk",
+            "width": 390,
+            "title": "Werk en projecten - Kevin Webstudio",
+            "h1": "Werk",
+            "h1Count": 1,
+            "viewport": 390,
+            "scrollWidth": 390,
+            "height": 2286,
+            "caseLinks": 1,
+            "demoLinks": 0,
+            "images": [
+                {
+                    "src": "/brand/kevin-webstudio-kds-mark.svg",
+                    "loaded": true
+                }
+            ]
+        },
+        {
+            "name": "onderwijsformulier",
+            "width": 390,
+            "title": "Onderwijsformulier - Kevin Webstudio",
+            "h1": "Onderwijsformulier",
+            "h1Count": 1,
+            "viewport": 390,
+            "scrollWidth": 390,
+            "height": 4797,
+            "caseLinks": 0,
+            "demoLinks": 0,
+            "images": [
+                {
+                    "src": "/brand/kevin-webstudio-kds-mark.svg",
+                    "loaded": true
+                }
+            ]
+        }
+    ],
+    "interactions": [
+        {
+            "width": 1440,
+            "from": "/",
+            "case": "passed",
+            "contact": "passed",
+            "inertia": "passed",
+            "workNavigation": "active"
+        },
+        {
+            "width": 1440,
+            "from": "/werk",
+            "case": "passed",
+            "contact": "passed",
+            "inertia": "passed",
+            "workNavigation": "active"
+        },
+        {
+            "width": 390,
+            "from": "/",
+            "case": "passed",
+            "contact": "passed",
+            "inertia": "passed",
+            "workNavigation": "active"
+        },
+        {
+            "width": 390,
+            "from": "/werk",
+            "case": "passed",
+            "contact": "passed",
+            "inertia": "passed",
+            "workNavigation": "active"
+        }
+    ],
+    "errors": [],
+    "externalRequests": [],
+    "unknownSlug": 404
+}

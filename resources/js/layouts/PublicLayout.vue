@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Link, usePage } from '@inertiajs/vue3';
 import { computed } from 'vue';
+import BrandMark from '@/components/public/BrandMark.vue';
 
 const navigation = [
     { label: 'Home', href: '/' },
@@ -28,9 +29,10 @@ const isActive = (href: string) =>
             >
                 <Link
                     href="/"
-                    class="w-fit text-lg font-semibold tracking-tight decoration-amber-600 decoration-2 underline-offset-4 hover:underline focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-700"
+                    class="flex w-fit items-center gap-2.5 rounded-sm text-lg font-semibold tracking-tight text-slate-950 transition-colors duration-150 ease-out hover:text-slate-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-600 motion-reduce:transition-none"
                 >
-                    Kevin Webstudio
+                    <BrandMark class="size-11 shrink-0" />
+                    <span>Kevin Webstudio</span>
                 </Link>
 
                 <nav aria-label="Hoofdnavigatie">
