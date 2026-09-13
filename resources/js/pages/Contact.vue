@@ -5,15 +5,15 @@ import PublicLayout from '@/layouts/PublicLayout.vue';
 const conversationPoints = [
     {
         title: 'Doel',
-        text: 'Wat wil je met je website, formulier of webapplicatie bereiken?',
+        text: 'Wat moet de website of het systeem straks opleveren?',
     },
     {
         title: 'Gebruikers',
-        text: 'Voor wie is het bedoeld en wat moeten die mensen kunnen doen?',
+        text: 'Wie gaat ermee werken en wat hebben zij daarbij nodig?',
     },
     {
         title: 'Huidige knelpunten',
-        text: 'Wat gaat er nu lastig, bijvoorbeeld bij het vinden van informatie of het verwerken van aanvragen?',
+        text: 'Waar kost het proces nu onnodig tijd of ontstaat verwarring?',
     },
     {
         title: 'Planning',
@@ -24,15 +24,15 @@ const conversationPoints = [
 const processSteps = [
     {
         title: 'Kennismaken',
-        text: 'Ik luister naar je idee en vraag door over de mensen en het werk erachter.',
+        text: 'We bespreken je idee, gebruikers en wat er nu speelt.',
     },
     {
         title: 'Voorstel afstemmen',
-        text: 'We spreken af wat ik bouw, welke input nodig is en welke keuzes nog openstaan.',
+        text: 'Je krijgt een helder voorstel voor aanpak, omvang en planning.',
     },
     {
         title: 'Bouwen en bijstellen',
-        text: 'Je bekijkt een eerste versie en geeft feedback. Bij oplevering maken we duidelijke afspraken over beheer en overdracht.',
+        text: 'We maken de oplossing stap voor stap en scherpen die samen aan.',
     },
 ];
 </script>
@@ -56,26 +56,17 @@ const processSteps = [
                 </h1>
                 <div class="mt-6 space-y-4 text-lg leading-8 text-slate-700">
                     <p>
-                        Heb je een idee voor een website, een formulier of een
-                        webapplicatie? Vertel me wat je wilt bereiken, voor wie
-                        het bedoeld is en wat er nu lastig gaat.
+                        Misschien heb je een website nodig die je verhaal helder
+                        vertelt, een dashboard dat overzicht brengt of een
+                        praktisch systeem dat terugkerend werk eenvoudiger
+                        maakt.
                     </p>
                     <p>
-                        Je hoeft de technische oplossing nog niet te kennen. Ik
-                        denk met je mee over wat nodig is en welke eerste stap
-                        past.
+                        Ik luister naar wat je wilt bereiken en denk mee vanuit
+                        de mensen die ermee gaan werken. Zo komen inhoud,
+                        ontwerp en techniek samen in een oplossing die bij je
+                        dagelijkse praktijk past.
                     </p>
-                </div>
-                <div class="mt-6">
-                    <p class="leading-7 text-slate-600">
-                        Je kunt me mailen op:
-                    </p>
-                    <a
-                        href="mailto:info@kevinwebstudio.nl"
-                        class="mt-1 inline-flex min-h-11 items-center rounded-sm text-lg font-semibold text-slate-900 underline decoration-stone-300 underline-offset-4 transition-colors duration-150 ease-out hover:decoration-slate-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-600 motion-reduce:transition-none"
-                    >
-                        info@kevinwebstudio.nl
-                    </a>
                 </div>
             </div>
 

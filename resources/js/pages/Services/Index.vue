@@ -6,25 +6,25 @@ import PublicLayout from '@/layouts/PublicLayout.vue';
 const services = [
     {
         title: 'Websites',
-        text: 'Is het voor bezoekers niet duidelijk wat je doet? Ik kan je aanbod, werk en contactmogelijkheden een logische plek geven op een heldere website.',
+        text: 'Een toegankelijke maatwerkwebsite die jouw verhaal helder vertelt en prettig werkt op ieder scherm.',
         href: '/diensten/websites',
         linkLabel: 'Bekijk websites',
     },
     {
         title: 'Dashboards en beheeromgevingen',
-        text: 'Mis je overzicht in losse bestanden of aanvragen? We bekijken welke gegevens en handelingen je in één beheeromgeving nodig hebt, zoals zoeken, filteren en een status bijhouden.',
+        text: 'Een rustige beheerplek die gegevens en terugkerende taken begrijpelijk bij elkaar brengt.',
         href: '/diensten/dashboards',
         linkLabel: 'Bekijk dashboards',
     },
     {
         title: 'Webshops en productcatalogi',
-        text: 'Wil je producten laten zien of online verkopen? Denk aan categorieën, productinformatie en een passende stap naar aanvragen of bestellen. Betalingen en koppelingen stemmen we vooraf af.',
+        text: 'Een overzichtelijke verkoopomgeving die past bij je assortiment en manier van werken.',
         href: '/diensten/webshops',
         linkLabel: 'Bekijk webshops',
     },
     {
         title: 'Formulieren en boekingssystemen',
-        text: 'Moet je bij aanvragen vaak informatie navragen? Een begeleid formulier kan passende vervolgvragen, invoercontroles en een overzicht vóór verzending combineren. We bepalen samen welke regels nodig zijn.',
+        text: 'Praktisch maatwerk voor aanvragen, afspraken en andere processen die nu onnodig veel handwerk kosten.',
         href: '/contact',
         linkLabel: 'Bespreek je proces',
     },
@@ -42,13 +42,12 @@ const services = [
             <h1
                 class="mt-5 text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl"
             >
-                Wat wil je makkelijker maken?
+                Digitale oplossingen die passen bij het echte werk
             </h1>
             <p class="mt-6 text-lg leading-8 text-slate-700">
-                Een bezoeker moet je aanbod kunnen begrijpen, een aanvraag goed
-                kunnen invullen of een product kunnen vinden. Misschien wil je
-                zelf meer overzicht in je werk. Ik help je bepalen wat daarvoor
-                nodig is en welke onderdelen we bouwen.
+                Geen vast pakket, maar een doordachte basis rond jouw bezoekers,
+                informatie en dagelijkse werkwijze. Ik denk mee over wat nodig
+                is en leg technische keuzes begrijpelijk uit.
             </p>
         </header>
 

@@ -5,8 +5,8 @@ return [
         'slug' => 'onderwijsformulier',
         'title' => 'Onderwijsformulier',
         'category' => 'Formulieren en boekingssystemen',
-        'summary' => 'Een bestaand aanvraagformulier dat scholen door datum, programma en groepsgrootte begeleidt, met een prijsopgave en controle vóór verzending.',
-        'intro' => 'Dit bestaande aanvraagformulier helpt scholen een onderwijsbezoek samen te stellen. De keuzes voor onderwijssector, programma, groepssamenstelling en beschikbaarheid sluiten stap voor stap op elkaar aan. Deze case laat zien hoe dat werkt.',
+        'summary' => 'Een onderwijsbezoek aanvragen, van een passende datum en programma tot een prijsopgave en bevestiging van de aanvraag.',
+        'intro' => 'Een publiek aanvraagformulier dat meebeweegt met de keuzes van een school. Onderwijssector, programma, groepssamenstelling en beschikbaarheid bepalen samen welke vervolgstappen mogelijk zijn.',
         'challenge' => 'Bij een onderwijsbezoek hangen veel keuzes samen. Niet ieder programma past bij iedere onderwijssector of bezoekdag. Ook de groepsgrootte, begeleiders en beschikbare plaatsen spelen mee. Het formulier moet die samenhang begrijpelijk maken tijdens het aanvragen.',
         'solution' => 'Het formulier toont vervolgvelden zodra de benodigde keuzes zijn gemaakt. De bezoeker stelt zo stap voor stap een aanvraag samen en krijgt uitleg bij ongeldige invoer. De server levert de programma- en validatieregels en controleert de aanvraag opnieuw bij het verzenden.',
         'features' => [
