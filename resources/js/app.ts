@@ -7,22 +7,28 @@ import { initializeFlashToast } from '@/lib/flashToast';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
-createInertiaApp({
-    title: (title) => (title ? `${title} - ${appName}` : appName),
-    layout: (name) => {
-        const publicPages = [
-            'Home',
-            'Work/Index',
-            'Work/Show',
-            'Services/Index',
-            'Services/Websites',
-            'Services/Dashboards',
-            'Services/Webshops',
-            'About',
-            'Contact',
-            'Privacy',
-        ];
+const publicPages = [
+    'Home',
+    'Work/Index',
+    'Work/Show',
+    'Services/Index',
+    'Services/Websites',
+    'Services/Dashboards',
+    'Services/Webshops',
+    'About',
+    'Contact',
+    'Privacy',
+];
 
+createInertiaApp({
+    title: (title, page) => {
+        const siteName = publicPages.includes(page.component)
+            ? 'Kevin Webstudio'
+            : appName;
+
+        return title ? `${title} - ${siteName}` : siteName;
+    },
+    layout: (name) => {
         switch (true) {
             case publicPages.includes(name):
                 return null;

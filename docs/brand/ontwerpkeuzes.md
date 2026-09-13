@@ -19,8 +19,8 @@ De favicon-SVG neemt de oorspronkelijke paden en viewBox van het KDS-merkteken o
 
 De Contact-pagina heeft een persoonlijke introductie naast het zachtgrijze kader Dit helpt bij een eerste gesprek. Dat kader vraagt naar doel, gebruikers, huidige knelpunten en planning. Daaronder staan de drie stappen kennismaken, voorstel afstemmen en bouwen en bijstellen.
 
-## Openstaand contactadres
+## Zakelijk contactadres
 
-Er is nog geen aantoonbaar ingesteld zakelijk contactadres in de geschikte projectconfiguratie. Daarom bevat de pagina nog geen e-maillink, werkende mailknop of formulieractie. De definitieve contactactie kan worden toegevoegd zodra een zakelijk adres is bevestigd en ingesteld.
+In stap 4 is het aangemaakte zakelijke adres `info@kevinwebstudio.nl` door Kevin bevestigd. De Contact-pagina toont dit als gewone `mailto:`-link, met de bestaande publieke linkkleuren en toetsenbordfocus. Hiermee opent de bezoeker zijn eigen mailprogramma. De technische bezorging is in deze stap niet getest. Er is nog geen contactformulier of verzendbackend gebouwd.
 
 Voor de eerste release is een echt werkend contactformulier verplicht, naast de interactieve onderwijsformulier-demo. Beide worden in afzonderlijke stappen gebouwd. Zie [positionering en tekstbasis](../strategy/positionering.md) en de [controle van stap 3](merkafwerking-stap-3.md).
