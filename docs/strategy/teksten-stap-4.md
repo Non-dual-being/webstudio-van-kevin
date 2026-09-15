@@ -97,7 +97,7 @@ Voor de opdrachten stond `C:\wamp64\bin\php\php8.4.15` vooraan in het tijdelijke
 | Links en toetsenbord | Bestaande bestemmingen en zichtbare focus via echte Tab-toetsaanslagen gecontroleerd; navigatie naar case en Contact werkt, ook met Enter |
 | E-mailadres | Exacte native mailto-bestemming, toetsenbordbediening, zichtbare focus en aanraakhoogte van minimaal 44 px gecontroleerd |
 | Browserfouten | Geen JavaScript-, console- of HTTP-fouten |
-| Beeldweergave van nieuwe screenshots | Niet uitvoerbaar: de lokale imageviewer faalt door de Windows-sandboxfout `helper_unknown_error: setup refresh had errors` |
+| Screenshots Home, Over mij en Contact | Op 15 september alsnog daadwerkelijk bekeken via de GitHub-verbinding, op 1440 en 390 px; geen zichtbare afkapping, overlap of storende tekstafbreking |
 
 De tien gecontroleerde routes zijn `/`, `/werk`, `/werk/onderwijsformulier`, `/diensten`, de drie bestaande dienstendetailroutes, `/over-mij`, `/contact` en `/privacy`. In totaal zijn twintig viewportcontroles en twintig toetsenbordcontroles uitgevoerd. De browserresultaten en screenshots zijn op 13 september 2026 om 21:32 UTC vastgelegd.
 
@@ -105,7 +105,11 @@ De preview gebruikte de bestaande projectconfiguratie en de geslaagde productieb
 
 ## Screenshots en beperkingen
 
-De zes onderstaande screenshots zijn nieuw vastgelegd op de herstelde versie. Ze zijn niet visueel goedgekeurd: daadwerkelijk openen met de beschikbare beeldweergave lukte niet. Leesbaarheid en tekstafbreking moeten daarom nog handmatig op de beelden worden beoordeeld. De geslaagde DOM-, navigatie- en focuscontroles vervangen die beoordeling niet.
+De zes onderstaande screenshots zijn nieuw vastgelegd op de herstelde versie. De lokale imageviewer bleef falen door `helper_unknown_error: setup refresh had errors`. Na het pushen van herstelcommit `ece57c25018557f64e5ad6fc05f7fd4c21d1d416` konden precies deze bestanden via de GitHub-verbinding worden opgehaald en als beeld worden geopend. Hun Git-blobhashes zijn vergeleken met de lokale commit; er zijn geen oudere screenshots gebruikt en geen base64-afbeeldingen in de terminal geprint.
+
+Home, Over mij en Contact zijn daarmee op 15 september 2026 daadwerkelijk visueel beoordeeld op beide breedtes. De tekst is leesbaar, koppen breken passend af en er is geen zichtbare afkapping of overlap. De mobiele stapeling van knoppen, kaarten en werkwijze blijft rustig; de desktopgrids, het merkbeeld, de navigatie en de contactlink blijven samenhangend. Er was geen codeaanpassing nodig. Deze latere controle is in een aanvullende documentatiecommit vastgelegd, zodat de herstelcommit en geschiedenis intact blijven.
+
+Voor Werk, de onderwijsformulier-case, Diensten en de drie dienstendetailpagina's zijn de browsermetingen, koppen-, titel-, navigatie- en toetsenbordcontroles op beide breedtes geslaagd. De extra lokale beelden van die pagina's konden door de sandboxfout niet afzonderlijk visueel worden geopend; deze beperking blijft bestaan.
 
 | Pagina | Desktop | Mobiel |
 | --- | --- | --- |
@@ -113,17 +117,17 @@ De zes onderstaande screenshots zijn nieuw vastgelegd op de herstelde versie. Ze
 | Over mij | [1440 px](screenshots/stap-4/over-mij-1440.png) | [390 px](screenshots/stap-4/over-mij-390.png) |
 | Contact | [1440 px](screenshots/stap-4/contact-1440.png) | [390 px](screenshots/stap-4/contact-390.png) |
 
-De browsercontrole gebruikt Chrome-emulatie, geen fysieke telefoon. De screenshots bevatten de publieke Home-, Over mij- en Contactpagina's in een eigen browseromgeving, zonder aangemelde gebruiker of ingevulde aanvraaggegevens.
+De browsercontrole gebruikt Chrome-emulatie, geen fysieke telefoon. De bekeken screenshots bevatten uitsluitend de publieke Home-, Over mij- en Contactpagina's in een eigen browseromgeving, zonder aangemelde gebruiker of ingevulde aanvraaggegevens.
 
 Bij de toetsenbordcontrole is het native activeringsgedrag van de mailto-link gecontroleerd; het starten van een externe mailclient is in de test onderschept. Er is geen e-mail verstuurd en e-mailbezorging is niet getest.
 
-De bestaande melding over optionele Fontaine-ondersteuning blokkeert de build niet. Normale lokale tools liepen tegen de genoemde Windows-sandboxfout aan; terminalcontroles konden met toegestane uitvoering buiten de sandbox worden afgerond. De imageviewer biedt die mogelijkheid niet. Dit is een omgevingsbeperking.
+De bestaande melding over optionele Fontaine-ondersteuning blokkeert de build niet. Normale lokale tools liepen tegen de genoemde Windows-sandboxfout aan; terminalcontroles konden met toegestane uitvoering buiten de sandbox worden afgerond. De lokale imageviewer biedt die mogelijkheid niet. Voor de zes vastgelegde screenshots bood de GitHub-verbinding na de push een werkende route naar beeldweergave. De lokale sandboxfout blijft een omgevingsbeperking.
 
 De eerder gemelde volledige suite met 103 tests, PHPStan en Composer-validatie is tijdens deze herstelopdracht niet opnieuw uitgevoerd en wordt hier niet als nieuwe validatie opgevoerd.
 
 ## Voor de eerste publieke release
 
-- Beoordeel de nieuwe screenshots nog visueel op leesbaarheid en tekstafbreking bij beide breedtes.
+- Rond de afzonderlijke visuele beeldcontrole van Werk, de onderwijsformulier-case en Diensten af zodra de lokale beeldweergave weer werkt. De zes vastgelegde screenshots van Home, Over mij en Contact zijn al bekeken.
 - Bouw het echte contactformulier met zakelijke e-mail in de afzonderlijk geplande stap.
 - Bouw de interactieve onderwijsformulier-demo in de afzonderlijk geplande stap.
 - Bepaal prijzen, pakketgrenzen, doorlooptijden en onderhoudsafspraken in stap 5.
