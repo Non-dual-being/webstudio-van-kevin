@@ -28,11 +28,20 @@ Deze metingen geven informatie over afmetingen, structuur en bediening. Ze zijn 
 
 ## Daadwerkelijke beeldbeoordeling
 
-De lokale imageviewer kon de nieuwe screenshots niet openen: `helper_unknown_error: setup refresh had errors`. Dit is een omgevingsprobleem. De beelden zijn daarom nog niet als visueel goedgekeurd aangemerkt.
+De twaalf nieuwe screenshots zijn op 16 september 2026 daadwerkelijk als beeld bekeken, op 390 en 1440 px. De lokale imageviewer bleef falen met `helper_unknown_error: setup refresh had errors`. Na de push van `8f40c5784ec4652131b883d0cfda19593ebf51f1` zijn precies de screenshots uit die commit via de GitHub-verbinding geopend. De twaalf Git-blobhashes zijn vergeleken met de lokale commit. Er zijn geen oude beelden als actuele controle gebruikt en geen grote base64-afbeeldingen in de terminal geprint.
 
-Na het vastleggen en pushen van de toegestane publieke screenshots wordt geprobeerd ze via de GitHub-verbinding werkelijk te bekijken. Daarna wordt dit onderdeel met de feitelijke resultaten aangevuld. Er worden geen grote base64-afbeeldingen in de terminal geprint.
+| Pagina                  | Visueel bekeken op 390 px                                                                                                             | Visueel bekeken op 1440 px                                                                                                  |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Werk                    | Projectkaart en categorieën staan leesbaar onder elkaar; ook de lange categoriekop past. Contactblok en knop blijven binnen de pagina | Projectkaart, tweekolomsgrid en afsluitend blok zijn op de bestaande linkerlijn uitgelijnd; geen zichtbare afkapping        |
+| Onderwijsformulier-case | De lange paginatitel past. Processtappen en functiekaarten stapelen rustig; tekst, technieklabels en contactactie blijven leesbaar    | Vier proceskolommen en twee kolommen met functiekaarten blijven overzichtelijk; koppen, tekst en kaartafstanden sluiten aan |
+| Diensten                | De hoofdkop breekt in twee regels; kaartteksten en lange dienstnamen passen, met duidelijke ruimte rond de acties                     | Kaarten staan in twee kolommen; scheidingslijnen en acties zijn per rij gelijk uitgelijnd                                   |
+| Websites                | De hoofdkop breekt in twee regels; intro, toelichtingsblok en knop hebben voldoende ruimte                                            | De kop past op één regel; leesbreedte en uitlijning van het toelichtingsblok zijn rustig                                    |
+| Dashboards              | De hoofdkop gebruikt drie regels zonder afkapping; ook de lange knoptekst past                                                        | De hoofdkop gebruikt twee regels; intro, toelichting en knop volgen dezelfde linkerlijn                                     |
+| Webshops                | De hoofdkop breekt in twee regels; langere alinea's en contactknop blijven binnen de tekstkolom                                       | Goed leesbare tekstbreedte, consistente uitlijning en voldoende afstand tussen intro, toelichting en knop                   |
 
-Er is op basis van alleen automatische metingen geen visuele tekortkoming of ontwerpwijziging verondersteld. Leesbaarheid, tekstafbreking en uitlijning moeten op de beelden worden beoordeeld.
+Op deze twaalf beelden zijn geen concrete visuele tekortkomingen gevonden die een gerichte fix vragen: geen zichtbare overlap, horizontale overloop of afgekapt tekstblok. De beeldcontrole is daarmee afgerond voor de twee gevraagde breedtes. Er is geen nieuw ontwerp of codewijziging uitgevoerd.
+
+De automatische browsermetingen blijven afzonderlijke resultaten. De beeldbeoordeling is gebaseerd op echte screenshots; zij vervangt geen test op een fysieke telefoon of controle van andere schermbreedtes.
 
 ## Screenshots
 
@@ -51,4 +60,6 @@ De twaalf nieuwe beelden tonen uitsluitend de publieke Werk-, case- en dienstenp
 
 Deze taak levert een intern dienstenvoorstel en documentatie van de resterende beeldcontrole. Het echte contactformulier en de interactieve onderwijsdemo blijven afzonderlijk te bouwen releasevoorwaarden. Er zijn geen publieke tekst-, stijl- of functionaliteitswijzigingen gedaan. Er is niets gemerged of gedeployd.
 
-Volledige applicatietests zijn niet opnieuw uitgevoerd voor uitsluitend documentatie en screenshots. De documentatie, lokale links, bedoelde bestandslijst en zowel `git diff --check` als `git diff --cached --check` worden vóór de commit gecontroleerd.
+Volledige applicatietests zijn niet opnieuw uitgevoerd voor uitsluitend documentatie en screenshots. De twee nieuwe Markdownbestanden zijn met Prettier gecontroleerd; de relatieve links, vijf gebundelde beslisvragen en bedoelde bestandslijst zijn gecontroleerd. Zowel `git diff --check` als `git diff --cached --check` zijn geslaagd. Na deze beeldbeoordeling zijn uitsluitend dit verslag en het open controlepunt in het stap-4-verslag bijgewerkt.
+
+De eigen tijdelijke Chrome-browser is na vergelijking van PID en profiel afgesloten. De bestaande Laravel- en Vite-processen zijn niet gestopt.

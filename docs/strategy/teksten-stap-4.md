@@ -109,7 +109,7 @@ De zes onderstaande screenshots zijn nieuw vastgelegd op de herstelde versie. De
 
 Home, Over mij en Contact zijn daarmee op 15 september 2026 daadwerkelijk visueel beoordeeld op beide breedtes. De tekst is leesbaar, koppen breken passend af en er is geen zichtbare afkapping of overlap. De mobiele stapeling van knoppen, kaarten en werkwijze blijft rustig; de desktopgrids, het merkbeeld, de navigatie en de contactlink blijven samenhangend. Er was geen codeaanpassing nodig. Deze latere controle is in een aanvullende documentatiecommit vastgelegd, zodat de herstelcommit en geschiedenis intact blijven.
 
-Voor Werk, de onderwijsformulier-case, Diensten en de drie dienstendetailpagina's zijn de browsermetingen, koppen-, titel-, navigatie- en toetsenbordcontroles op beide breedtes geslaagd. De extra lokale beelden van die pagina's konden door de sandboxfout niet afzonderlijk visueel worden geopend; deze beperking blijft bestaan.
+Voor Werk, de onderwijsformulier-case, Diensten en de drie dienstendetailpagina's waren tijdens stap 4 de browsermetingen, koppen-, titel-, navigatie- en toetsenbordcontroles op beide breedtes geslaagd. Hun extra lokale beelden konden toen door de sandboxfout niet afzonderlijk visueel worden geopend. **Aanvulling 16 september 2026:** deze resterende beeldcontrole is in stap 5 alsnog afgerond met twaalf actuele screenshots op 390 en 1440 px, daadwerkelijk bekeken via GitHub. Er zijn geen concrete visuele tekortkomingen gevonden. Zie de [beeldcontrole van stap 5](beeldcontrole-stap-5.md).
 
 | Pagina | Desktop | Mobiel |
 | --- | --- | --- |
@@ -127,7 +127,8 @@ De eerder gemelde volledige suite met 103 tests, PHPStan en Composer-validatie i
 
 ## Voor de eerste publieke release
 
-- Rond de afzonderlijke visuele beeldcontrole van Werk, de onderwijsformulier-case en Diensten af zodra de lokale beeldweergave weer werkt. De zes vastgelegde screenshots van Home, Over mij en Contact zijn al bekeken.
+De resterende beeldcontrole uit stap 4 is inmiddels afgerond; zie [stap 5](beeldcontrole-stap-5.md).
+
 - Bouw het echte contactformulier met zakelijke e-mail in de afzonderlijk geplande stap.
 - Bouw de interactieve onderwijsformulier-demo in de afzonderlijk geplande stap.
 - Bepaal prijzen, pakketgrenzen, doorlooptijden en onderhoudsafspraken in stap 5.
