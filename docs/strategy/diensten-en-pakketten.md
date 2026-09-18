@@ -1,12 +1,27 @@
-# Diensten en pakketten: intern voorstel voor stap 5
+# Diensten en pakketten: publieke toepassing en intern voorstel
 
-**Status: VOORSTEL TER BEOORDELING — niet vastgesteld en niet voor publicatie.**
+**Status: het dienstenaanbod is toegepast in de websitecode. De commerciële uitwerking hieronder blijft een INTERN VOORSTEL, niet vastgesteld als verkoopvoorwaarden.**
 
-Datum: 15–16 september 2026. Basis: `feature/public-visual-refinement` op `c96f0107cbc5ce606e9b840397a2ef18768178b0`, met een schone werkboom en gelijk aan origin na fetch. De herstelde teksten van stap 4 blijven behouden.
+Bijgewerkt: 18 september 2026. Oorspronkelijk voorstel: 15–16 september 2026. Vertrekpunt voor de publieke toepassing: `9fb4e85` op `feature/public-visual-refinement`. Dit beschrijft de lokale wijzigingen; er is geen merge of deployment uitgevoerd.
 
-Alle hieronder genoemde inbegrepen onderdelen, aantallen, feedbackrondes en afbakeningen zijn **VOORSTEL**. Kevin heeft ze nog niet als verkoopvoorwaarden bevestigd. Dit document bevat geen definitieve prijzen, uurtarieven, oplevertermijnen, beschikbaarheidsgaranties, juridische voorwaarden of btw-uitspraken. De publieke website en applicatiefunctionaliteit zijn in deze stap niet aangepast.
+## Wat nu op de website staat
 
-## Vergelijking in één oogopslag
+- Home en Diensten gebruiken dezelfde vier namen en volgorde: **Websites**, **Webapplicaties op maat**, **Webshops en productcatalogi**, **Onderhoud en doorontwikkeling**.
+- Formulieren, dashboards en beheeromgevingen vallen onder Webapplicaties op maat. De detailpagina blijft op `/diensten/dashboards`.
+- Per aanbod staan de klantvraag, voorbeelden en vooraf af te spreken onderdelen beschreven. De drie detailpagina’s hebben een contactactie; onderhoud verwijst vanuit de dienstenkaart direct naar `/contact`.
+- De dienstenkaarten en detailpagina’s tonen **“Prijs na kennismaking”**. Er staan geen onbevestigde aantallen, tarieven, doorlooptijden, feedbacklimieten of onderhoudsgaranties in deze aanbodteksten.
+- Zelf teksten en beelden beheren is een optie die vooraf wordt afgesproken. Bij webshops en catalogi geldt dit ook voor productbeheer.
+- Een catalogus toont producten en kan een aanvraagmogelijkheid hebben. Een aanvraag is nog geen bestelling. Een webshop maakt daadwerkelijk online bestellen mogelijk; betaal-, voorraad-, lever-, retour- en koppelingskeuzes worden per opdracht besproken.
+- Onderhoud noemt technische updates, ondersteuning en uitbreidingen als mogelijke werkzaamheden. Bestaande techniek, eventuele back-ups en herstel worden eerst besproken; nieuwe functies worden apart begroot.
+- De bestaande vormgeving, hoofdnavigatie, routes, gewone mailto-link en centrale onderwijsformulier-case blijven behouden. Deze taak voegt uitsluitend aanbodteksten toe: geen CMS, webshop, contactformulier, mailbackend of demo.
+
+## Commerciële keuzes die nog openstaan
+
+Alle hieronder genoemde inbegrepen onderdelen, aantallen, feedbackrondes en afbakeningen blijven **VOORSTEL**. De keuze voor deze vier diensten bevestigt niet automatisch de interne pakketgrenzen. De website beschrijft mogelijke opdrachten, geen beschikbare standaardmodules of vaste pakketten.
+
+Nog vast te stellen zijn de basisomvang per dienst, inbegrepen functies, feedback en acceptatie, prijsberekening, planning en afhankelijkheden, terugkerende kosten, onderhouds- en herstelafspraken en eigendom en overdracht. Dit document bevat geen definitieve prijzen, uurtarieven, oplevertermijnen, beschikbaarheidsgaranties, juridische voorwaarden of btw-uitspraken.
+
+## Interne pakketvergelijking — nog niet vastgesteld
 
 | Aanbod                        | Geschikt voor                                                                    | Wat de klant krijgt — VOORSTEL                                                                       | Belangrijkste grens — VOORSTEL                                                                                     | Logische prijsaanpak                                                                         |
 | ----------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
@@ -19,9 +34,9 @@ De aantallen begrenzen het voorgestelde opleverwerk. Ze zijn geen gemeten capaci
 
 ## Onderbouwing en betrouwbaarheid
 
-Gelezen: [positionering](positionering.md), [teksten en controle van stap 4](teksten-stap-4.md), [ontwerpkeuzes](../brand/ontwerpkeuzes.md), de vier bestaande dienstenpagina's, [centrale projectinformatie](../../config/projects.php) en [brononderzoek van het onderwijsformulier](../demos/onderwijsformulier.md). README en het lokale runbook zijn gevolgd voor project- en Git-controles; voor uitsluitend documentatie zijn geen volledige applicatietests herhaald.
+Gelezen: [positionering](positionering.md), [teksten en controle van stap 4](teksten-stap-4.md), [ontwerpkeuzes](../brand/ontwerpkeuzes.md), de vier bestaande dienstenpagina's, [centrale projectinformatie](../../config/projects.php) en [brononderzoek van het onderwijsformulier](../demos/onderwijsformulier.md). README en het lokale runbook zijn gevolgd voor project- en Git-controles. De controles bij de publieke toepassing worden vastgelegd in [controle publieke aanbodteksten](aanbodteksten-stap-5-controle.md).
 
-Er zijn drie verschillende soorten uitspraken:
+Er zijn vier verschillende soorten uitspraken:
 
 | Status                                       | Onderbouwde toepassing in dit voorstel                                                                                                                                 | Begrenzing                                                                                                                                                                             |
 | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -217,30 +232,22 @@ Begin met de technische inventarisatie en een overzicht van wat wel en niet word
 
 Een afzonderlijke terugkerende afspraak is mogelijk voor voorspelbaar beheer. Losse ondersteuning of doorontwikkeling kan per opdracht worden begroot. De gekozen systemen, hoeveelheid werk, ondersteuning en herstelafspraken bepalen de prijs; er is nog geen tarief of urenbundel vastgesteld. Domeinen, VPS/hosting, externe back-ups, monitoring, licenties en maildiensten kunnen los hiervan kosten geven.
 
-## Conceptteksten voor toekomstige dienstenkaarten
+## Toepassing in de bestaande pagina’s
 
-**Concept, pas toepassen na beoordeling.** Deze kaarten bevatten bewust geen onbevestigde prijzen, harde pakketgrenzen of reactietijden.
+Deze tabel beschrijft de toegepaste inhoud. De pakketvoorstellen hierboven zijn niet als inbegrepen werk gepubliceerd.
 
-| Kaart                         | Concepttekst                                                                                                                                                                   | Bestaande bestemming — VOORSTEL                                                                             |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
-| Website                       | Je bezoekers moeten snel begrijpen wat je doet en hoe ze je bereiken. Ik breng je aanbod, werk en contact samen op een heldere website die prettig werkt op mobiel en desktop. | “Bekijk websites” → `/diensten/websites`                                                                    |
-| Webapplicatie op maat         | Komen aanvragen onvolledig binnen of mis je overzicht in je werk? Ik help je één proces afbakenen en bouw de afgesproken formulieren, controles en overzichten.                | “Bekijk webapplicaties” → bestaande route `/diensten/dashboards`, na inhoudelijke verbreding van die pagina |
-| Webshop of productcatalogus   | Wil je producten laten zien, aanvragen ontvangen of online verkopen? Ik help je kiezen wat nodig is, van een heldere catalogus tot een afgesproken bestelproces.               | “Bekijk webshops en catalogi” → `/diensten/webshops`                                                        |
-| Onderhoud en doorontwikkeling | Wil je de techniek laten bijhouden of je website verder uitbreiden? Ik spreek met je af wat ik beheer, welke ondersteuning past en hoe we nieuwe wensen aanpakken.             | “Bespreek onderhoud” → `/contact`                                                                           |
+| Pagina of bestand               | Toegepaste inhoud en bestaande bestemming                                                                                                                                          |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Home                            | Vier kaarten met dezelfde dienstnamen als Diensten; de bestaande verwijzingen naar Diensten, Werk en Contact blijven staan                                                         |
+| Diensten                        | Bestaand grid met vier kaarten: klantvraag, voorbeelden, kennismakingsafspraken en “Prijs na kennismaking”; de eerste drie verwijzen naar hun detailpagina, onderhoud naar Contact |
+| `/diensten/websites`            | Voorbeelden van informatiepagina’s en portfolio; afspraken over pagina’s, functies, inhoud, contact en beheer; zelfbeheer als optie; “Bespreek je website” → `/contact`            |
+| `/diensten/dashboards`          | Webapplicaties op maat, inclusief formulieren en dashboards; afspraken over proces, gebruikers, gegevens, regels, koppelingen en beheer; “Bespreek je webapplicatie” → `/contact`  |
+| `/diensten/webshops`            | Catalogus en daadwerkelijk bestellen onderscheiden; productinformatie, verkooponderdelen en optioneel zelfbeheer vooraf afspreken; “Bespreek je assortiment” → `/contact`          |
+| Onderhoud en doorontwikkeling   | Uitgewerkt in de vierde dienstenkaart, zonder nieuwe route; “Bespreek onderhoud” → `/contact`                                                                                      |
+| Contact                         | Bestaande gewone mailto-link; geen nieuwe intake of verwerking                                                                                                                     |
+| Werk en onderwijsformulier-case | Behouden; `config/projects.php` blijft de centrale bron voor projectinformatie; geen nieuwe demoactie                                                                              |
 
-## Voorstel voor toepassing in de huidige pagina's
-
-| Bestand of pagina                            | Latere toepassing — VOORSTEL                                                                                                                                                       |
-| -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `resources/js/pages/Services/Index.vue`      | Behoud het bestaande grid met vier kaarten. Maak daarvan de drie hoofdaanbiedingen plus Onderhoud en doorontwikkeling. Verwerk formulieren herkenbaar binnen Webapplicatie op maat |
-| `resources/js/pages/Services/Websites.vue`   | Voeg na akkoord compacte blokken toe over geschikt gebruik, bevestigde basisomvang, opties, aanlevering en werkwijze                                                               |
-| `resources/js/pages/Services/Dashboards.vue` | Verbreed de inhoud naar Webapplicatie op maat, met formulieren en beheer als voorbeelden. Behoud de bestaande URL; introduceer geen nieuwe route alleen voor de naam               |
-| `resources/js/pages/Services/Webshops.vue`   | Zet productpresentatie en daadwerkelijk verkopen naast elkaar. Benoem uitsluitend bevestigde verkooponderdelen als inbegrepen                                                      |
-| Home, Werk en de onderwijsformulier-case     | Houd de persoonlijke introductie en case intact. Stem later alleen dienstnamen en verwijzingen af; geen demoactie zolang er geen werkende demo bestaat                             |
-| Contact                                      | Behoud nu de gewone mailto-link. Een toekomstige offerte-intake kan naar aanbod en gewenste opties vragen wanneer de echte verwerking gebouwd is                                   |
-| `config/projects.php`                        | Blijft de centrale bron voor projectinformatie; voeg geen pakketvoorwaarden of onbewezen cases toe                                                                                 |
-
-De latere toepassing gebruikt bestaande kleuren, typografie, knoppen, focusstijlen en routes. Er is in deze stap geen publieke wijziging gedaan en geen nieuwe configuratiestructuur aangelegd.
+De toepassing gebruikt de bestaande kleuren, typografie, kaarten, knoppen en focusstijlen. Er is geen nieuwe configuratie voor diensten of pakketten aangelegd.
 
 ## Koppeling met de toekomstige offertefunctie — VOORSTEL
 
@@ -278,16 +285,16 @@ Leg een eventuele verhuizing naar een andere beheerder, het intrekken van toegan
 
 ## Vijf gebundelde beslisvragen voor Kevin
 
-1. **Aanbod en basisomvang:** wil je deze drie hoofdaanbiedingen plus onderhoud voeren, en welke VOORSTEL-grenzen bevestig of wijzig je: 5 websitepagina's, 1 applicatieproces/2 rollen, 20 catalogusproducten/5 categorieën/3 informatiepagina's, 1 taal en 2 feedbackrondes?
-2. **Inbegrepen functies en beheer:** wil je de eenvoudige contactflow standaard bij Website, en zelfbeheer, imports, koppelingen en verkooponderdelen alleen als expliciete opties; welke functies wil je eerst verder onderzoeken?
+1. **Basisomvang:** de vier diensten staan nu op de website. Welke interne VOORSTEL-grenzen wil je bevestigen, wijzigen of laten vervallen: 5 websitepagina's, 1 applicatieproces/2 rollen, 20 catalogusproducten/5 categorieën/3 informatiepagina's, 1 taal en 2 feedbackrondes?
+2. **Inbegrepen functies en beheer:** welke functies wil je standaard aanbieden, zoals een eenvoudige contactflow bij Websites? Hoe wil je het vooraf af te spreken zelfbeheer uitwerken, en welke imports, koppelingen en verkooponderdelen vragen eerst onderzoek?
 3. **Prijs en planning:** welke interne rekenbasis, beschikbare capaciteit en onzekerheidsruimte wil je gebruiken, en wanneer kies je een vaste prijs, afzonderlijk onderzoek of een prijs na intake?
 4. **Onderhoud en hosting:** wat wil je per systeem bieden aan updates, back-ups/herstel en ondersteuning, met welke uitvoeringsmomenten en begrensde inzet, en welke diensten lopen via jouw VPS of rechtstreeks via de klant?
 5. **Eigendom en overdracht:** hoe wil je domeinen, accounts, broncode, content en gegevens laten beheren en overdragen, en welke documentatie en uitleg moeten onderdeel van de opdracht zijn?
 
-## Controle en vervolgstap
+## Controle en vervolgstappen
 
-Het voorstel is gecontroleerd op interne status, expliciete VOORSTEL-grenzen, onderscheid tussen aangetoond/nieuw/onderzoek, bestaande linkbestemmingen en maximaal vijf gebundelde beslisvragen. Er zijn geen bedragen, definitieve termijnen of garanties toegevoegd.
+De publieke aanbodteksten zijn onderscheiden van de interne VOORSTEL-grenzen en vijf open beslisvragen. Het onderscheid tussen aangetoond, nieuw te bouwen en eerst te onderzoeken blijft behouden. Er zijn geen bedragen, definitieve termijnen of garanties toegevoegd.
 
-De afzonderlijke resterende beeldcontrole van Werk, de onderwijsformulier-case en Diensten staat in [beeldcontrole stap 5](beeldcontrole-stap-5.md), met twaalf screenshots en een onderscheid tussen browsermetingen en daadwerkelijke beeldbeoordeling.
+De eerdere beeldcontrole van Werk, de onderwijsformulier-case en Diensten staat in [beeldcontrole stap 5](beeldcontrole-stap-5.md). De nieuwe controle van de vijf gewijzigde pagina’s op 390 en 1440 pixels, screenshots en technische controles staan in [controle publieke aanbodteksten](aanbodteksten-stap-5-controle.md).
 
-Na Kevins inhoudelijke beoordeling kunnen bevestigde onderdelen in een volgende stap in de bestaande pagina's worden toegepast. Het echte contactformulier met zakelijke e-mail en de interactieve onderwijsformulier-demo blijven verplicht vóór de eerste publieke release; dit document bouwt of vervangt die functies niet.
+De volgende commerciële stap is het beoordelen van de open keuzes voordat vaste pakketvoorwaarden, prijzen of termijnen worden gepubliceerd. Het echte contactformulier met zakelijke e-mail en de interactieve onderwijsformulier-demo blijven afzonderlijke voorwaarden voor de eerste publieke release; ze vallen buiten deze tekstwijziging.

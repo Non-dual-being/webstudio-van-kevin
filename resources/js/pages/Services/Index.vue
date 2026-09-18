@@ -6,27 +6,35 @@ import PublicLayout from '@/layouts/PublicLayout.vue';
 const services = [
     {
         title: 'Websites',
-        text: 'Is het voor bezoekers niet duidelijk wat je doet? Ik kan je aanbod, werk en contactmogelijkheden een logische plek geven op een heldere website.',
+        text: 'Begrijpen bezoekers niet goed wat je doet? Ik kan je diensten, portfolio en contactmogelijkheden samenbrengen op een heldere website.',
+        agreement:
+            'Tijdens de kennismaking spreken we de pagina’s, inhoud, functies en het beheer af.',
         href: '/diensten/websites',
         linkLabel: 'Bekijk websites',
     },
     {
-        title: 'Dashboards en beheeromgevingen',
-        text: 'Mis je overzicht in losse bestanden of aanvragen? We bekijken welke gegevens en handelingen je in één beheeromgeving nodig hebt, zoals zoeken, filteren en een status bijhouden.',
+        title: 'Webapplicaties op maat',
+        text: 'Komen aanvragen onvolledig binnen of mis je overzicht? Ik kan een begeleid formulier, een dashboard of een beheeromgeving voor je werkproces bouwen.',
+        agreement:
+            'Tijdens de kennismaking spreken we de gebruikers, gegevens, regels, handelingen en eventuele koppelingen af.',
         href: '/diensten/dashboards',
-        linkLabel: 'Bekijk dashboards',
+        linkLabel: 'Bekijk webapplicaties',
     },
     {
         title: 'Webshops en productcatalogi',
-        text: 'Wil je producten laten zien of online verkopen? Denk aan categorieën, productinformatie en een passende stap naar aanvragen of bestellen. Betalingen en koppelingen stemmen we vooraf af.',
+        text: 'Wil je producten tonen of verkopen? Ik kan een catalogus met productinformatie en een aanvraagmogelijkheid bouwen, of een webshop waarin klanten daadwerkelijk bestellen.',
+        agreement:
+            'Tijdens de kennismaking spreken we assortiment, beheer en de gewenste bestel-, betaal- en leveronderdelen af.',
         href: '/diensten/webshops',
-        linkLabel: 'Bekijk webshops',
+        linkLabel: 'Bekijk webshops en catalogi',
     },
     {
-        title: 'Formulieren en boekingssystemen',
-        text: 'Moet je bij aanvragen vaak informatie navragen? Een begeleid formulier kan passende vervolgvragen, invoercontroles en een overzicht vóór verzending combineren. We bepalen samen welke regels nodig zijn.',
+        title: 'Onderhoud en doorontwikkeling',
+        text: 'Wil je je website of applicatie laten bijhouden of uitbreiden? Denk aan technische updates, hulp bij problemen of het bouwen van nieuwe pagina’s en functies.',
+        agreement:
+            'Tijdens de kennismaking bekijken we de bestaande techniek en spreken we werkzaamheden, ondersteuning en eventuele back-ups en herstel af. Nieuwe functies begroten we apart.',
         href: '/contact',
-        linkLabel: 'Bespreek je proces',
+        linkLabel: 'Bespreek onderhoud',
     },
 ];
 </script>
@@ -69,10 +77,16 @@ const services = [
                     <h3 class="mt-5 text-lg font-semibold text-slate-950">
                         {{ service.title }}
                     </h3>
-                    <p class="mt-3 mb-6 leading-7 text-slate-600">
+                    <p class="mt-3 leading-7 text-slate-600">
                         {{ service.text }}
                     </p>
+                    <p class="mt-3 mb-6 leading-7 text-slate-600">
+                        {{ service.agreement }}
+                    </p>
                     <footer class="mt-auto border-t border-stone-200 pt-5">
+                        <p class="mb-3 text-sm font-semibold text-slate-700">
+                            Prijs na kennismaking
+                        </p>
                         <PublicCardAction :href="service.href">
                             {{ service.linkLabel }}
                         </PublicCardAction>

@@ -9,20 +9,20 @@ defineProps<{ featuredProject: PortfolioProject }>();
 
 const specialties = [
     {
-        title: 'Een heldere website',
+        title: 'Websites',
         text: 'Bezoekers begrijpen niet goed wat je aanbiedt? Ik breng je diensten, werk en contactgegevens samen op een website met een duidelijke route.',
     },
     {
-        title: 'Aanvragen stap voor stap',
-        text: 'Komt een aanvraag binnen met ontbrekende informatie? Ik kan een formulier maken dat passende vervolgvragen stelt en invoer controleert.',
+        title: 'Webapplicaties op maat',
+        text: 'Komen aanvragen onvolledig binnen of mis je overzicht? Ik kan formulieren met vervolgvragen en invoercontroles bouwen, of een dashboard voor aanvragen en taken.',
     },
     {
-        title: 'Overzicht in je werkzaamheden',
-        text: 'Houd je aanvragen of taken bij in losse bestanden? We onderzoeken welk overzicht je nodig hebt en wat een beheeromgeving kan ondersteunen.',
+        title: 'Webshops en productcatalogi',
+        text: 'Wil je producten online tonen of verkopen? Ik kan een catalogus voor productinformatie en aanvragen bouwen, of een webshop waarin klanten daadwerkelijk bestellen.',
     },
     {
-        title: 'Je producten in beeld',
-        text: 'Wil je producten online laten zien of verkopen? We bepalen hoe je assortiment wordt ingedeeld en wat nodig is voor aanvragen of bestellen.',
+        title: 'Onderhoud en doorontwikkeling',
+        text: 'Wil je je website laten bijhouden of uitbreiden? Denk aan technische updates, hulp bij problemen of nieuwe functies. We spreken vooraf af welke werkzaamheden passen.',
     },
 ];
 
@@ -89,7 +89,7 @@ const processSteps = [
                 id="bouwstenen"
                 class="text-2xl font-semibold tracking-tight text-slate-950"
             >
-                Wat ik bouw
+                Waarmee ik kan helpen
             </h2>
             <p class="mt-3 max-w-2xl leading-7 text-slate-600">
                 Van informatie op je website tot de afhandeling van een

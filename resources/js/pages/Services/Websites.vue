@@ -5,7 +5,7 @@ import PublicLayout from '@/layouts/PublicLayout.vue';
 </script>
 
 <template>
-    <Head title="Maatwerk websites" />
+    <Head title="Websites" />
     <PublicLayout>
         <article class="max-w-3xl">
             <span
@@ -28,18 +28,25 @@ import PublicLayout from '@/layouts/PublicLayout.vue';
                 class="mt-10 border-l-2 border-amber-600 pl-5"
             >
                 <h2 id="werkwijze" class="text-lg font-semibold">
-                    Inhoud, navigatie en beheer
+                    Wat we tijdens de kennismaking afspreken
                 </h2>
                 <p class="mt-2 leading-7 text-slate-600">
                     Denk aan een dienstenoverzicht, een portfolio of een pagina
-                    die veelgestelde vragen beantwoordt. We bepalen wat
-                    bezoekers eerst moeten weten en welke inhoud je zelf wilt
-                    bijhouden. Daarna spreken we de pagina’s en functies af, met
-                    aandacht voor leesbaarheid en bediening op mobiel en
-                    desktop.
+                    die veelgestelde vragen beantwoordt. We bespreken je
+                    bezoekers en spreken de pagina’s, functies,
+                    contactmogelijkheden en aanlevering van teksten en beelden
+                    af, met aandacht voor gebruik op mobiel en desktop.
+                </p>
+                <p class="mt-3 leading-7 text-slate-600">
+                    Zelf teksten en beelden beheren is een optie die we vooraf
+                    afspreken. Ook leggen we vast hoe overdracht en latere
+                    wijzigingen worden geregeld.
                 </p>
             </section>
-            <PublicButtonLink href="/contact" class="mt-8">
+            <p class="mt-8 font-semibold text-slate-950">
+                Prijs na kennismaking
+            </p>
+            <PublicButtonLink href="/contact" class="mt-4">
                 Bespreek je website
             </PublicButtonLink>
         </article>
