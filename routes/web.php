@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\Teams\TeamInvitationController;
@@ -14,7 +15,8 @@ Route::inertia('/diensten/websites', 'Services/Websites')->name('services.websit
 Route::inertia('/diensten/dashboards', 'Services/Dashboards')->name('services.dashboards');
 Route::inertia('/diensten/webshops', 'Services/Webshops')->name('services.webshops');
 Route::inertia('/over-mij', 'About')->name('about');
-Route::inertia('/contact', 'Contact')->name('contact.create');
+Route::get('/contact', [ContactController::class, 'create'])->name('contact.create');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 Route::inertia('/privacy', 'Privacy')->name('privacy');
 
 Route::prefix('{current_team}')
