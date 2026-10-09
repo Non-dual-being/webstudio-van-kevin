@@ -343,7 +343,7 @@ const processSteps = [
                             <Link
                                 :href="privacy()"
                                 class="rounded-sm text-slate-900 underline decoration-stone-400 underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-600"
-                                >privacytekst</Link
+                                >privacyverklaring</Link
                             >.
                         </p>
                         <button

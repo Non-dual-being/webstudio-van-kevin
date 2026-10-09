@@ -9,6 +9,9 @@ return [
     'max_attempts' => 3,
     'backoff' => [60, 300],
     'claim_seconds' => 300,
+    // No deletion until a retention policy is approved and explicitly configured.
+    // Never schedule contact:prune automatically as part of enabling this value.
+    'retention_days' => env('CONTACT_RETENTION_DAYS'),
     // Explicit opt-in, additionally restricted to local/testing environments.
     'allow_test_transport' => (bool) env('CONTACT_ALLOW_TEST_TRANSPORT', false),
 ];

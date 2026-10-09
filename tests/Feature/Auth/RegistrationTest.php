@@ -2,59 +2,52 @@
 
 namespace Tests\Feature\Auth;
 
-use App\Enums\TeamRole;
-use App\Models\Team;
 use App\Models\TeamInvitation;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Inertia\Testing\AssertableInertia as Assert;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Notification;
+use Illuminate\Support\Facades\Route;
 use Tests\TestCase;
 
 class RegistrationTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_registration_screen_can_be_rendered()
+    public function test_public_registration_routes_are_absent(): void
     {
-        $response = $this->get(route('register'));
-
-        $response->assertOk();
+        $this->assertFalse(Route::has('register'));
+        $this->assertFalse(Route::has('register.store'));
+        $this->get('/register')->assertNotFound();
+        $this->getJson('/register')->assertNotFound();
     }
 
-    public function test_registration_screen_includes_team_invitation_context()
+    public function test_direct_registration_posts_cannot_create_accounts_even_with_an_invitation(): void
     {
+        Mail::fake();
+        Notification::fake();
         $owner = User::factory()->create();
-        $team = Team::factory()->create(['name' => 'Laravel Team']);
-        $team->members()->attach($owner, ['role' => TeamRole::Owner->value]);
-
+        $team = $owner->personalTeam();
         $invitation = TeamInvitation::factory()->create([
             'team_id' => $team->id,
             'email' => 'invited@example.com',
             'invited_by' => $owner->id,
         ]);
 
-        $response = $this->get(route('register', ['invitation' => $invitation->code]));
-
-        $response->assertOk();
-        $response->assertInertia(fn (Assert $page) => $page
-            ->component('auth/Register')
-            ->where('teamInvitation.code', $invitation->code)
-            ->where('teamInvitation.teamName', 'Laravel Team'),
-        );
-    }
-
-    public function test_new_users_can_register()
-    {
-        $response = $this->post(route('register.store'), [
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-            'password' => 'password',
-            'password_confirmation' => 'password',
-        ]);
-
-        $this->assertAuthenticated();
-
-        $user = User::where('email', 'test@example.com')->first();
-        $response->assertRedirect(route('dashboard'));
+        $fields = [
+            'name' => 'Fictieve bezoeker', 'email' => 'invited@example.com',
+            'password' => 'a-strong-fictional-password',
+            'password_confirmation' => 'a-strong-fictional-password',
+            'invitation' => $invitation->code,
+        ];
+        $this->get('/register?invitation='.$invitation->code)->assertNotFound();
+        $this->post('/register', $fields)->assertNotFound();
+        $this->postJson('/register?invitation='.$invitation->code, $fields)->assertNotFound();
+        $this->assertGuest();
+        $this->assertDatabaseCount('users', 1);
+        $this->assertDatabaseCount('teams', 1);
+        $this->assertNull($invitation->fresh()->accepted_at);
+        Mail::assertNothingSent();
+        Notification::assertNothingSent();
     }
 }

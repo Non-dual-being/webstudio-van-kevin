@@ -168,7 +168,7 @@ return [
 
     'features' => [
         /* @chisel-registration */
-        Features::registration(),
+        // Release 1: no public account creation (GET and POST routes are absent).
         /* @end-chisel-registration */
         Features::resetPasswords(),
         /* @chisel-email-verification */

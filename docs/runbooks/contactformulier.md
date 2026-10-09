@@ -144,6 +144,8 @@ CONTACT_LIMIT_SECONDS=3600
 
 De publieke privacytekst beschrijft nu de daadwerkelijk gebouwde aanvraagopslag, ontvangstbevestiging, technische sessiecookie en spambeperking. **Nog vóór publicatie bepalen:** de bewaartermijn voor aanvragen, mailstatussen, mailboxkopieën en backups, en de bijpassende privacyinformatie. Er is geen termijn verzonnen en er is geen automatische verwijdering toegevoegd.
 
+**Aanvulling stap 10, 9 oktober 2026:** de uitgebreide gegevensinventarisatie, bijgewerkte privacyinformatie, registratieblokkering en standaard alleen-lezen `contact:prune` staan in [Privacy en publieke toegang](privacy-en-publieke-toegang.md). Bewaartermijnen zijn voorstellen; uitvoering vereist een expliciet vastgestelde configuratie én `--execute`. Geen automatische verwijdering ingeschakeld. De daar beschreven geïsoleerde preview op 8110 vervangt het bewijs van run 9 niet; daadwerkelijke inboxontvangst, Reply-To en SPF/DKIM/DMARC blijven de afzonderlijke open productiecontroles hieronder.
+
 ## Lokaal bewezen — afronding 3 oktober 2026
 
 - De bestaande PHP-suite is met PHP 8.4.15 uitgevoerd: **174 tests**, inclusief **30 contacttests en 41 mailtests**. 173 slaagden direct. Eén transportvariant faalde door `MAIL_URL=''` in de tijdelijke controlehelper: Laravel interpreteert dit anders dan `null`. Alleen die helper is gecorrigeerd; daarna zijn alle vier varianten van de betrokken test geslaagd (8 assertions). Er blijft geen mislukte test open; de echte SMTP-configuratie en applicatiecode zijn hiervoor niet aangepast.

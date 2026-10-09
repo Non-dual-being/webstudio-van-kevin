@@ -27,7 +27,7 @@ class AuthenticationTest extends TestCase
         $response->assertOk();
     }
 
-    public function test_login_screen_includes_team_invitation_context()
+    public function test_login_screen_does_not_expose_team_invitation_context_to_guests()
     {
         $owner = User::factory()->create();
         $team = Team::factory()->create(['name' => 'Laravel Team']);
@@ -44,9 +44,11 @@ class AuthenticationTest extends TestCase
         $response->assertOk();
         $response->assertInertia(fn (Assert $page) => $page
             ->component('auth/Login')
-            ->where('teamInvitation.code', $invitation->code)
-            ->where('teamInvitation.teamName', 'Laravel Team'),
+            ->missing('teamInvitation')
+            ->where('auth.user', null)
+            ->where('teams', []),
         );
+        $response->assertDontSee('Laravel Team')->assertDontSee('invited@example.com');
     }
 
     public function test_users_can_authenticate_using_the_login_screen()
