@@ -1,0 +1,1187 @@
+{
+  "sourceRepository": "GeoFortForm4",
+  "sourceRevision": "1a43fc16bdaafb27920d8c6c819fa58c6e02dc35",
+  "reviewedAt": "2026-10-10",
+  "sourceChangesInSelection": "",
+  "hashAlgorithm": "SHA-256",
+  "description": "Hashes van de ongewijzigde bronbytes vóór demo-aanpassingen. Alleen geselecteerde code gelezen; geen .env, database, logs of aanvragen.",
+  "files": [
+    {
+      "source": "resources/js/views/BookingGeoFormView.vue",
+      "sha256": "969ce2e9ac3a3e3b44274b10b5761a4cfc052129f1e6467324bb2bec1c495937",
+      "destination": "resources/js/views/BookingGeoFormView.vue",
+      "adaptations": [
+        "Unmountbeveiliging.",
+        "Oorspronkelijke klantfooter niet overgenomen.",
+        "Lokale demo-uitleg; geen klantdocument.",
+        "Late initiële response negeren.",
+        "Late submit na reset negeren.",
+        "Formulierflow behouden; demoteksten en focus-/requestlevensduur aangepast.",
+        "Lokale iconen via @lucide/vue; geen CDN of klantassets."
+      ],
+      "demoSha256": "d27a0353e67c381f0c54dcd4063a2248bfdadfd895daa5d6cb48d0c3a3aceedd"
+    },
+    {
+      "source": "resources/js/components/form/GeoFormBookingDateField.vue",
+      "sha256": "d16152b011ef5a7fb9621b6982c60de682d7bb4fa1ea2a0047b6d47063dfe0e5",
+      "destination": "resources/js/components/form/GeoFormBookingDateField.vue",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Unmountbeveiliging, zichtbaar invoerlabel en voorbeeldkalenderuitleg."
+      ],
+      "demoSha256": "2ac414413fbaf366fb8dc037507ec0458a0956d1b95b69019cf565aa1f9654c9"
+    },
+    {
+      "source": "resources/js/types/validation/FieldErrorTypes.ts",
+      "sha256": "97aae1ead97fc74af62eed09ccc60e92a1368c732ea329292e3621c76f7a80e7",
+      "destination": "resources/js/types/validation/FieldErrorTypes.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "804327ee148eaf6fa48ac79164b719f6381ee0bb30155285f5493e82423443d7"
+    },
+    {
+      "source": "resources/js/composables/useFieldFlash.ts",
+      "sha256": "675978271fdb8ca712927e7f080cc8c60eab8dc1bcb8605acc7e4c68f9f743c2",
+      "destination": "resources/js/composables/useFieldFlash.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "675978271fdb8ca712927e7f080cc8c60eab8dc1bcb8605acc7e4c68f9f743c2"
+    },
+    {
+      "source": "resources/js/services/api/bookingDisabledDatesApi.ts",
+      "sha256": "1ae7b60e0f105a06232782c9927962f62f2e71cb11c90551db9a52c57a80548f",
+      "destination": "resources/js/services/api/bookingDisabledDatesApi.ts",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Alleen expliciete /demo-api-routes, centrale geheugen-cache per run en abort-/generatiecontrole."
+      ],
+      "demoSha256": "b37faa5d211391404fa06ce85fee5d9fddde49b6c4dc8840b3b3f032426430bb"
+    },
+    {
+      "source": "resources/js/types/booking/BookingDateType.ts",
+      "sha256": "b6757c41672eb68ddf7353441d793c792187815acee3ad5a9dbd28da217be839",
+      "destination": "resources/js/types/booking/BookingDateType.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "b6757c41672eb68ddf7353441d793c792187815acee3ad5a9dbd28da217be839"
+    },
+    {
+      "source": "resources/js/shared/disabledDatePresentation.ts",
+      "sha256": "09661c1efe4d78fe8d07d49c7f3fe2caf835e1c96ba45b0c1a1f1169beac143a",
+      "destination": "resources/js/shared/disabledDatePresentation.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "09661c1efe4d78fe8d07d49c7f3fe2caf835e1c96ba45b0c1a1f1169beac143a"
+    },
+    {
+      "source": "resources/js/services/http/apiClient.ts",
+      "sha256": "184e8dc96a29e2c4fcb047ddbcfa22afa684ce5d323f5542d48a846a629cef5f",
+      "destination": "resources/js/services/http/apiClient.ts",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Alleen expliciete /demo-api-routes, centrale geheugen-cache per run en abort-/generatiecontrole."
+      ],
+      "demoSha256": "83d8123e569bd410358c965ea0388206c3dfbaa4e2a3af55035b40eafe549f7e"
+    },
+    {
+      "source": "resources/js/types/http/ApiResponse.ts",
+      "sha256": "554c171ef2abaf370b43237c5da119e3e55491e4dc39c5009f37e9ac9f7dda79",
+      "destination": "resources/js/types/http/ApiResponse.ts",
+      "adaptations": [
+        "Eerlijke demo-successtatus."
+      ],
+      "demoSha256": "66f68535f5355b217e5b4788f6780012d5c604b7369a44d5eaccaeba8551de9e"
+    },
+    {
+      "source": "resources/js/types/booking/BookingFieldTypes.ts",
+      "sha256": "21447c9f3d9b348200ef2fcae59fa3c40d2e0fecb6d65f2f02fc3ab3e3de1627",
+      "destination": "resources/js/types/booking/BookingFieldTypes.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "21447c9f3d9b348200ef2fcae59fa3c40d2e0fecb6d65f2f02fc3ab3e3de1627"
+    },
+    {
+      "source": "resources/js/components/form/GeoFormInputField.vue",
+      "sha256": "a6db4891ec149db9e40cce036a809a167b93fed0736a6c341ddc63a9be4376fb",
+      "destination": "resources/js/components/form/GeoFormInputField.vue",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "7d01c981794adcbf591316e60bff240e4a7d97063e83c031e2948222c6e9a65c"
+    },
+    {
+      "source": "resources/js/components/form/FieldFlash.vue",
+      "sha256": "92f3a3039c313846844329837775299ada40c1772a2fafcbddfdc374f032cd87",
+      "destination": "resources/js/components/form/FieldFlash.vue",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "92f3a3039c313846844329837775299ada40c1772a2fafcbddfdc374f032cd87"
+    },
+    {
+      "source": "resources/js/components/form/GeoFormSelectFied.vue",
+      "sha256": "5560e62516295e5a827f95b3910dd87980eacf2acb270c29d045250017053b77",
+      "destination": "resources/js/components/form/GeoFormSelectFied.vue",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "5560e62516295e5a827f95b3910dd87980eacf2acb270c29d045250017053b77"
+    },
+    {
+      "source": "resources/js/components/form/GeoFormTextareaField.vue",
+      "sha256": "3b8c16d2a80b925a000221f1caf68804c05b8ef5b68c793cc00af01a0b69aa46",
+      "destination": "resources/js/components/form/GeoFormTextareaField.vue",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "3b8c16d2a80b925a000221f1caf68804c05b8ef5b68c793cc00af01a0b69aa46"
+    },
+    {
+      "source": "resources/js/config/booking/BookingFieldConstants.ts",
+      "sha256": "96911b3643647721d91f06c84f20e0a28a69c984d647129cb0c9830a15cf5d24",
+      "destination": "resources/js/config/booking/BookingFieldConstants.ts",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten."
+      ],
+      "demoSha256": "52c7fbb6fcf47629830398247f61d7e37c85db500d8f08ef2189b60195ed7848"
+    },
+    {
+      "source": "resources/js/types/booking/BookingProgramConfigTypes.ts",
+      "sha256": "0341e513667da96ca103169078968e64aec83e00645f5e710d15215193a72e8b",
+      "destination": "resources/js/types/booking/BookingProgramConfigTypes.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "edafc74e1b929c1971bfd24f612a6cbfd7b0a7fa11f74d5f65728ffc3b681c62"
+    },
+    {
+      "source": "resources/js/config/booking/calendar/helpers.ts",
+      "sha256": "f6bc367e5c82c7b5ce763dd27bac61277cf3fdd9eeb63337a80d37fba0764b8a",
+      "destination": "resources/js/config/booking/calendar/helpers.ts",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Vandaag komt uit dezelfde geïnjecteerde datumbron als de PHP-kalender."
+      ],
+      "demoSha256": "5a500b1656be59ffe6f122ff07b8084c85bb1a62e7b06a03a9baa211410b4681"
+    },
+    {
+      "source": "resources/js/components/form/GeoFormSubmitButton.vue",
+      "sha256": "1cde21bbe1ee5def9fb850ef8b8b02c24846edf205320b34ecaef819c1abed71",
+      "destination": "resources/js/components/form/GeoFormSubmitButton.vue",
+      "adaptations": [
+        "Demo-knoptekst en ongeldige bronattribuutkomma hersteld."
+      ],
+      "demoSha256": "3bb48c398400bdcfdf8e78d14d6e8668c3d6d0b80d1db9bf9333475e6ee2cd7b"
+    },
+    {
+      "source": "resources/js/composables/useFormSubmit.ts",
+      "sha256": "49da78637d97471d844fac85f3b8de660f2f237faf8d2d80c62568160c43fca0",
+      "destination": "resources/js/composables/useFormSubmit.ts",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Alleen demo-complete; timer opruimen bij unmount, abort-/generatiecontrole en begrijpelijke netwerkfout."
+      ],
+      "demoSha256": "98025a4c4d92657638332e4eba1ec9ab54b36fafe6e15f9c0bd135646b522a35"
+    },
+    {
+      "source": "resources/js/components/form/GeoFormDiscoveryField.vue",
+      "sha256": "ff52dd239f1a4b39df0a5c35e19b6f60c08398df8e40b75a19bfc4d22d8ace28",
+      "destination": "resources/js/components/form/GeoFormDiscoveryField.vue",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "0cd9186f48df7314f0b9d7f2c7b505714a13f73da9361342118dc1197d24022e"
+    },
+    {
+      "source": "resources/js/config/validation/booking.ts",
+      "sha256": "614c2ae39162f71293b901c7bd5863db470b4552a7a5dd2aa450d95e7b8038d0",
+      "destination": "resources/js/config/validation/booking.ts",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Regels vóór mount uit demo-API laden en wissen bij reset; gedeelde datumbron, strikte datumcheck en neutrale pasteksten."
+      ],
+      "demoSha256": "5718b0a5f18b56394c141d3dbfb7034eb409b0dc5d8cd0881459611033e6091f"
+    },
+    {
+      "source": "resources/js/types/global.d.ts",
+      "sha256": "486d61ef3076611968f3c0e5c1d8a18a466ae2bf2c8c82e79c2e8132d5dce899",
+      "destination": null,
+      "adaptations": [
+        "Overbodige globale type-alias niet opgenomen; expliciete DTO-types blijven behouden."
+      ]
+    },
+    {
+      "source": "resources/js/config/booking/BookingFields.ts",
+      "sha256": "f8744402cad1b923d29c713c93799cb393f8710e8087a046bd6870860eccaf3a",
+      "destination": "resources/js/config/booking/BookingFields.ts",
+      "adaptations": [
+        "Geldige fictieve school- en contactgegevens.",
+        "Neutrale cateringlabel."
+      ],
+      "demoSha256": "be2ddc405f42173aabf3bc121ac0edf599694cf193a3a0ae66fecd2217273c1a"
+    },
+    {
+      "source": "resources/js/types/validation/ValidationTypes.ts",
+      "sha256": "e387bc3e3442dff28ee0a3ba928f098866d878d7b2540f906fd1a9a354409f5b",
+      "destination": "resources/js/types/validation/ValidationTypes.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "e387bc3e3442dff28ee0a3ba928f098866d878d7b2540f906fd1a9a354409f5b"
+    },
+    {
+      "source": "resources/js/services/api/formValidationRulesApi.ts",
+      "sha256": "c1c4264bbc821c49459a9012aac683e84fd1aa3c4d05307b8da4a7a49d689faf",
+      "destination": "resources/js/services/api/formValidationRulesApi.ts",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Alleen expliciete /demo-api-routes, centrale geheugen-cache per run en abort-/generatiecontrole."
+      ],
+      "demoSha256": "2b2c57b949924dc51919d1b675180d3ef5bc69dda6a05413bfec7722a00aa1bb"
+    },
+    {
+      "source": "resources/js/components/form/GeoFormEducationLevelSelector.vue",
+      "sha256": "2911ab941a9e1ac093dfd485849608ce1186650a27905bbd64b53c87c050a6e6",
+      "destination": "resources/js/components/form/GeoFormEducationLevelSelector.vue",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Lokale iconen via @lucide/vue; geen CDN of klantassets."
+      ],
+      "demoSha256": "e3bf0374e01bb773e201267918f14484bb7da896b4027c6bb39241f12f6fc83d"
+    },
+    {
+      "source": "resources/js/components/form/GeoFormEducationSectorSelect.vue",
+      "sha256": "f1b382516a5f05aebd167c128628c2510026fbb22d20f1fa45d232facd292420",
+      "destination": "resources/js/components/form/GeoFormEducationSectorSelect.vue",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Lokale iconen via @lucide/vue; geen CDN of klantassets."
+      ],
+      "demoSha256": "53b1c2190993189d68469e2d997d574d57d2b87160721ba3b9bd99371958f4d8"
+    },
+    {
+      "source": "resources/js/components/form/GeoFormProgramSelect.vue",
+      "sha256": "409d434734af1debf25774e8e594e3e19511e65d0a13688cb758f7f2d9afcaf5",
+      "destination": "resources/js/components/form/GeoFormProgramSelect.vue",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Lokale iconen via @lucide/vue; geen CDN of klantassets."
+      ],
+      "demoSha256": "ef69172ceb88c9d15b747d13fbdc17ab26ff50a21463aa1e634bd64fb523fb01"
+    },
+    {
+      "source": "resources/js/config/booking/educationProgramHelpers.ts",
+      "sha256": "d5b992da20cc6acadf0c04d99cc7133f3e26da8f7ccdc9fb1c78aa411b0c04bd",
+      "destination": "resources/js/config/booking/educationProgramHelpers.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "d5b992da20cc6acadf0c04d99cc7133f3e26da8f7ccdc9fb1c78aa411b0c04bd"
+    },
+    {
+      "source": "resources/js/components/form/GeoFormRadioGroup.vue",
+      "sha256": "170783ffccffa143375be2fef30cb07cff10a2e946b873574c0ebb129f3f8720",
+      "destination": "resources/js/components/form/GeoFormRadioGroup.vue",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "8b9a0fd8159a51b1d275cb5e1ebb3d067e2c3f2659caa85ff343f96a20eb5138"
+    },
+    {
+      "source": "resources/js/components/form/GeoInfoToggles.vue",
+      "sha256": "401932542672462232c848021dca0dce98af8bf5bad2f6e83258c62236bb677a",
+      "destination": "resources/js/components/form/GeoInfoToggles.vue",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "f9bbe2608e0b6b4c0886c31d534be3b7a984ac53e17239e7e5f911f9e4b09dd9"
+    },
+    {
+      "source": "resources/js/components/form/GeoFormBookingProgramInfoPanel.vue",
+      "sha256": "8f06595e6dfde0e40f26a47e7480dd4b1e69fbe467a334972838d242edd490e2",
+      "destination": "resources/js/components/form/GeoFormBookingProgramInfoPanel.vue",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Lokale iconen via @lucide/vue; geen CDN of klantassets."
+      ],
+      "demoSha256": "242d6ea5d68d9be83a890fc712d0300496878910a7f8dfa202fa08dc989727ec"
+    },
+    {
+      "source": "resources/js/components/form/GeoFormEducationModuleSelector.vue",
+      "sha256": "963be9de18cf1643cac7a66934d2c9d9bd918e4101dc9b7ecd6346ef63b320ff",
+      "destination": "resources/js/components/form/GeoFormEducationModuleSelector.vue",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Lokale iconen via @lucide/vue; geen CDN of klantassets."
+      ],
+      "demoSha256": "e28c7e89d132f0111d9d1486be7d61adc30e61ebbb4541cee055ac3f42f96b27"
+    },
+    {
+      "source": "resources/js/components/form/FormLevelError.vue",
+      "sha256": "cd2728315e1247a2adf926f25389e3a2c31e83b3bb3fb2026aed60c78542d6d1",
+      "destination": "resources/js/components/form/FormLevelError.vue",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "04b9e89d97b50da02d4e834af8ec79bd3c8d2d6df129e31c40c23d120aaff60a"
+    },
+    {
+      "source": "resources/js/components/form/GeoFormStudentCountField.vue",
+      "sha256": "fda8bd82891d91eaa5604bc7074990aa3c9540503c090db2bf49471222320793",
+      "destination": "resources/js/components/form/GeoFormStudentCountField.vue",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Lokale iconen via @lucide/vue; geen CDN of klantassets."
+      ],
+      "demoSha256": "8440ed67f83939bedca2a47c9c96f34419be34f640df655ed9118eabfd7e2851"
+    },
+    {
+      "source": "resources/js/components/form/GeoFormSupervisorCountField.vue",
+      "sha256": "2b63b34f4237ceb215fb29fabdb4a0be0d2704fd147b92b3c934f2451212692a",
+      "destination": "resources/js/components/form/GeoFormSupervisorCountField.vue",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Lokale iconen via @lucide/vue; geen CDN of klantassets."
+      ],
+      "demoSha256": "56c1113baa324f710b20fa52c049c7449049209f50d4b0716cac38f3e050bfee"
+    },
+    {
+      "source": "resources/js/components/form/GeoFormRosterPreview.vue",
+      "sha256": "7c46ffd0481ac7aace0ba1e39701a5b798fa866a263f13aaa6027937df11b08c",
+      "destination": "resources/js/components/form/GeoFormRosterPreview.vue",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Lokale iconen via @lucide/vue; geen CDN of klantassets."
+      ],
+      "demoSha256": "10e7a5da390674dcb8a58b11c6d65136455cce556ff5f77a1ca8ae0221b263aa"
+    },
+    {
+      "source": "resources/js/types/booking/BookingRosterTypes.ts",
+      "sha256": "23cbec102bd2f9d781989a08b6e0bf4be98ae2da47d26551106119bd62510766",
+      "destination": "resources/js/types/booking/BookingRosterTypes.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "23cbec102bd2f9d781989a08b6e0bf4be98ae2da47d26551106119bd62510766"
+    },
+    {
+      "source": "resources/js/components/form/GeoFormFoodAndDrinkInfoPanel.vue",
+      "sha256": "123c7c1d40ae31d7e16711696e115ddc5ebd29950c2e6809d3967bdf8b03f766",
+      "destination": "resources/js/components/form/GeoFormFoodAndDrinkInfoPanel.vue",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "123c7c1d40ae31d7e16711696e115ddc5ebd29950c2e6809d3967bdf8b03f766"
+    },
+    {
+      "source": "resources/js/components/form/GeoFormFoodAndDrinkSelectionField.vue",
+      "sha256": "ac4c39481cd113e226667950823e636ef998f4ae3a2ec3ce319d5e68ba6e1887",
+      "destination": "resources/js/components/form/GeoFormFoodAndDrinkSelectionField.vue",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Lokale iconen via @lucide/vue; geen CDN of klantassets."
+      ],
+      "demoSha256": "4fa8e182997c0cd4ec8d8b16b5637293373f27f7996602b476d6ed9dceea3fda"
+    },
+    {
+      "source": "resources/js/composables/useFoodAndDrinkSelection.ts",
+      "sha256": "f37d018da50d4a40d35078a4536a3591a971111be500d14782cc51bb72943b60",
+      "destination": "resources/js/composables/useFoodAndDrinkSelection.ts",
+      "adaptations": [
+        "Neutrale cateringlabel."
+      ],
+      "demoSha256": "063b58f33c4acce544b6f76c313ab2e76bf7482ba92deb607a39d04f21424591"
+    },
+    {
+      "source": "resources/js/components/form/GeoFormPriceQuotePreview.vue",
+      "sha256": "ae5be14ee620c37af1a5e704e3b9e6b225f568f9a2d541fd22babfa9d176c437",
+      "destination": "resources/js/components/form/GeoFormPriceQuotePreview.vue",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Lokale iconen via @lucide/vue; geen CDN of klantassets.",
+        "Voorbeeldbedragen expliciet bij de berekening aangeduid."
+      ],
+      "demoSha256": "4a95ab7e9686d77d5167a56a66a42816a038af4f124ec3420ae86a5601d38dd7"
+    },
+    {
+      "source": "resources/js/types/booking/BookingPriceQuoteTypes.ts",
+      "sha256": "096be7e6641bcc62c1ce55b3aa5fa89af7e62aaefa004a3b0f417221ba7c5f10",
+      "destination": "resources/js/types/booking/BookingPriceQuoteTypes.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "096be7e6641bcc62c1ce55b3aa5fa89af7e62aaefa004a3b0f417221ba7c5f10"
+    },
+    {
+      "source": "resources/js/components/form/GeoFormTermsAcceptanceField.vue",
+      "sha256": "5463712aa6f3390d9fe9f824d1ebb713d4fd6d7cf4ee7d106acafe7b061c564b",
+      "destination": "resources/js/components/form/GeoFormTermsAcceptanceField.vue",
+      "adaptations": [
+        "Expliciete demo-afspraak, geen productievoorwaarden of download.",
+        "Lokale iconen via @lucide/vue; geen CDN of klantassets."
+      ],
+      "demoSha256": "928687d6c02b7db10cec5b5eb913bc21821afec37a5159ebbd1b170a12e913f9"
+    },
+    {
+      "source": "resources/js/composables/useEducationProgram.ts",
+      "sha256": "3c90a5cec6653b23baecfcd36e7bae9d36c81c524559abf39f6a970fd6c82790",
+      "destination": "resources/js/composables/useEducationProgram.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "3c90a5cec6653b23baecfcd36e7bae9d36c81c524559abf39f6a970fd6c82790"
+    },
+    {
+      "source": "resources/js/composables/useEducationSelection.ts",
+      "sha256": "2f1eaccfb425d49c3f04ec6d695555efc0eb4023fd3ca5bbc971282093ff8b15",
+      "destination": "resources/js/composables/useEducationSelection.ts",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten."
+      ],
+      "demoSha256": "bdd0d342727edbf85b1f8d979a6a8ebed297bf3cf604dca50e78726c1c5328dc"
+    },
+    {
+      "source": "resources/js/config/booking/educationLevelHelpers.ts",
+      "sha256": "17f4a9e9b99c1b87b686c3eb05cc0bd2bd41aaea98352a4b735ab4a29295ac87",
+      "destination": "resources/js/config/booking/educationLevelHelpers.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "17f4a9e9b99c1b87b686c3eb05cc0bd2bd41aaea98352a4b735ab4a29295ac87"
+    },
+    {
+      "source": "resources/js/config/booking/educationSelectionHelpers.ts",
+      "sha256": "b0e54d96ccd243ed2a08bc922c94277089757b7bf1e7ce723c8b7f0c2565cb0f",
+      "destination": "resources/js/config/booking/educationSelectionHelpers.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "b0e54d96ccd243ed2a08bc922c94277089757b7bf1e7ce723c8b7f0c2565cb0f"
+    },
+    {
+      "source": "resources/js/config/booking/educationLevelKeys.ts",
+      "sha256": "caee211a16a780d0c7778fc685aad3737d84c1eadbc518a92261cac4358cdcae",
+      "destination": "resources/js/config/booking/educationLevelKeys.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "caee211a16a780d0c7778fc685aad3737d84c1eadbc518a92261cac4358cdcae"
+    },
+    {
+      "source": "resources/js/composables/useScrollindicator.ts",
+      "sha256": "0a5d7f40bdcbd6e039320e43524fb16e595460d05d2d55004ac5805825174d66",
+      "destination": "resources/js/composables/useScrollindicator.ts",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Alle geregistreerde muislisteners ook weer afmelden."
+      ],
+      "demoSha256": "daec18bcc7f488190e3762b04f6b8f91882c74ecffa5c686ece0583c56b9e197"
+    },
+    {
+      "source": "resources/js/composables/useEducationModules.ts",
+      "sha256": "039097c25168dc3525d9011c2e9623f94f9e82ffe720eae7194713bb4984c257",
+      "destination": "resources/js/composables/useEducationModules.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "039097c25168dc3525d9011c2e9623f94f9e82ffe720eae7194713bb4984c257"
+    },
+    {
+      "source": "resources/js/config/booking/educationModuleHelpers.ts",
+      "sha256": "df67f830e9e92500c006ab2f7b5af1b9bed4ee9f54bc3cf5814c1cd69530bcb4",
+      "destination": "resources/js/config/booking/educationModuleHelpers.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "df67f830e9e92500c006ab2f7b5af1b9bed4ee9f54bc3cf5814c1cd69530bcb4"
+    },
+    {
+      "source": "resources/js/composables/useStudentCount.ts",
+      "sha256": "32d3fa7bc38a3d30b430193499e6414f831e83fef44b21b17f6dab8edf61b205",
+      "destination": "resources/js/composables/useStudentCount.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "479941d4f566e8b1704462f2a02e535d693d8d0f47a92cd006c44bbf3fd3b986"
+    },
+    {
+      "source": "resources/js/composables/useSupervisorCount.ts",
+      "sha256": "c8a2397f58cf325fd898d672f01e4fe62a09de4e5f872043308cfff2d848be4a",
+      "destination": "resources/js/composables/useSupervisorCount.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "c8a2397f58cf325fd898d672f01e4fe62a09de4e5f872043308cfff2d848be4a"
+    },
+    {
+      "source": "resources/js/types/booking/BookingPolicyTypes.ts",
+      "sha256": "4985bcdc3b56728ec0160e09d5fe2c7a24771161e792c7ed9694348a6a2e83d0",
+      "destination": "resources/js/types/booking/BookingPolicyTypes.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "4985bcdc3b56728ec0160e09d5fe2c7a24771161e792c7ed9694348a6a2e83d0"
+    },
+    {
+      "source": "resources/js/composables/useBookingRoster.ts",
+      "sha256": "7f8293ef91ab9f6a09ff969a616909c541a835ac2486459a003d701e5e904cdc",
+      "destination": "resources/js/composables/useBookingRoster.ts",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Requests/timers bij unmount opruimen en afgebroken antwoorden veilig negeren."
+      ],
+      "demoSha256": "46e8aba2b00c97d8c221cf4100ced5b4beadeee2451ba96c571079f63f375186"
+    },
+    {
+      "source": "resources/js/services/api/bookingRosterApi.ts",
+      "sha256": "864cb094b92a8e23cb3be8199dad619c3247717f3f71ee1ad6840a896040d77f",
+      "destination": "resources/js/services/api/bookingRosterApi.ts",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Alleen expliciete /demo-api-routes, centrale geheugen-cache per run en abort-/generatiecontrole."
+      ],
+      "demoSha256": "1e9a09f27ec30c5e50a8fb0c126caa740ca054b983cbed613159a6322c71e69f"
+    },
+    {
+      "source": "resources/js/composables/useBookingPriceQuote.ts",
+      "sha256": "1b9ca4501b7fbf5594a48f330d3f2974a147e3848110a475353263974e7f9e28",
+      "destination": "resources/js/composables/useBookingPriceQuote.ts",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Requests/timers bij unmount opruimen en afgebroken antwoorden veilig negeren."
+      ],
+      "demoSha256": "fc3f239cd8b33bdc3743f6b51b74babb19707e99a0c533d284854779d51262f2"
+    },
+    {
+      "source": "resources/js/services/api/bookingPriceQuoteApi.ts",
+      "sha256": "72136ed5963d4898cb4cb4bd1e5ec97c91a6375c71596891da48433e92ad14bc",
+      "destination": "resources/js/services/api/bookingPriceQuoteApi.ts",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Alleen expliciete /demo-api-routes, centrale geheugen-cache per run en abort-/generatiecontrole."
+      ],
+      "demoSha256": "fa9ab285f5c0f987cfa912f554b966e65cea1101597d4d36dc60941c70437472"
+    },
+    {
+      "source": "resources/js/services/api/bookingProgramConfigApi.ts",
+      "sha256": "bd5d180fce348e39ce00a1be2829624758a7baa958c7037cb6e7032c5514caec",
+      "destination": "resources/js/services/api/bookingProgramConfigApi.ts",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Alleen expliciete /demo-api-routes, centrale geheugen-cache per run en abort-/generatiecontrole."
+      ],
+      "demoSha256": "fe624ad44db8a2c658d861456ac734e5588f3437ec0ec3a215cada50220505b0"
+    },
+    {
+      "source": "resources/js/services/api/bookingPolicyApi.ts",
+      "sha256": "c79b5a1d7db9154ad08d3092c1aacda40dcd070db53a4d13ed92261623bd652b",
+      "destination": "resources/js/services/api/bookingPolicyApi.ts",
+      "adaptations": [
+        "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
+        "Alleen expliciete /demo-api-routes, centrale geheugen-cache per run en abort-/generatiecontrole."
+      ],
+      "demoSha256": "8ba87a3d578693e25cc142975f89bb11997b1be264eb75da433d87cc4a8faad2"
+    },
+    {
+      "source": "resources/js/config/booking/BookingFormState.ts",
+      "sha256": "a32678620ef97dcc02dee2d3312fd03211bea6ef499c835d84723429a2092d6e",
+      "destination": "resources/js/config/booking/BookingFormState.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "a32678620ef97dcc02dee2d3312fd03211bea6ef499c835d84723429a2092d6e"
+    },
+    {
+      "source": "resources/js/config/validation/helpers.ts",
+      "sha256": "f8e3431de70076400ed99f6e18c86ea0ce12ecc85a35d1d3101e30595ea862d0",
+      "destination": "resources/js/config/validation/helpers.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "f8e3431de70076400ed99f6e18c86ea0ce12ecc85a35d1d3101e30595ea862d0"
+    },
+    {
+      "source": "resources/js/config/booking/infopanel/programdata.ts",
+      "sha256": "dabf203b835a381d207d4174fa9293c5034f7d5df6c1c497dd5078cf6b37f4ee",
+      "destination": "resources/js/config/booking/infopanel/programdata.ts",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "dabf203b835a381d207d4174fa9293c5034f7d5df6c1c497dd5078cf6b37f4ee"
+    },
+    {
+      "source": "resources/css/form/index.css",
+      "sha256": "8c00901bb07bcad5f61e7fab5cc71ad2cc808f9627d8a9f1fefc2ceaf325eadb",
+      "destination": "resources/css/form/index.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "8c00901bb07bcad5f61e7fab5cc71ad2cc808f9627d8a9f1fefc2ceaf325eadb"
+    },
+    {
+      "source": "resources/css/layers.css",
+      "sha256": "f33284543d7987c81632d86ceabefb1346612878bea9ed554d8e03a37de581a8",
+      "destination": "resources/css/layers.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "f33284543d7987c81632d86ceabefb1346612878bea9ed554d8e03a37de581a8"
+    },
+    {
+      "source": "resources/css/shared/reset.css",
+      "sha256": "5511b8c23ed934646f570c66a027914ca7dc39da8fda726303a81f7b1bfdd917",
+      "destination": "resources/css/shared/reset.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "1ecefc4a5ca93e312b2ee414496ee15d33122833466521ca32fb6a8b3a19bfe8"
+    },
+    {
+      "source": "resources/css/shared/tokens/tokens.global.css",
+      "sha256": "06e0d82c8b6bfc5ce239e24042bd5c009c290aeb42a76bfcd5ed6e06de8b1cdc",
+      "destination": "resources/css/shared/tokens/tokens.global.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "6b47af6f6da47afb3b5d7a0e35f266933a07e0d87fbab93491cee5c9d15f6e9e"
+    },
+    {
+      "source": "resources/css/shared/tokens/form/error.css",
+      "sha256": "933ed67f575cd263ef85a2dd6f7596b85ce111515b5830aa91a064496fc4b7e5",
+      "destination": "resources/css/shared/tokens/form/error.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "933ed67f575cd263ef85a2dd6f7596b85ce111515b5830aa91a064496fc4b7e5"
+    },
+    {
+      "source": "resources/css/shared/tokens/form/submit.css",
+      "sha256": "9abeaa86c49ee5f4dc4d822abbfd2032ffb77a8ccaa04193452b519eb816c491",
+      "destination": "resources/css/shared/tokens/form/submit.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "1bd2d35d1476516a2f0a7574a9337b9441e778b3550a3d5e021358f1ddbd9f5c"
+    },
+    {
+      "source": "resources/css/shared/tokens/form/form-globals.css",
+      "sha256": "b6cf0d9c0bcb10dc1791ba53dfaca3c73a73c4b0e34fb077afb7374755c2285b",
+      "destination": "resources/css/shared/tokens/form/form-globals.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "b6cf0d9c0bcb10dc1791ba53dfaca3c73a73c4b0e34fb077afb7374755c2285b"
+    },
+    {
+      "source": "resources/css/shared/tokens/form/flatpickr.css",
+      "sha256": "a3c65de445c01755c39b6cf02c12a765418c017784ec106bbfbe205e32e5c164",
+      "destination": "resources/css/shared/tokens/form/flatpickr.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "a3c65de445c01755c39b6cf02c12a765418c017784ec106bbfbe205e32e5c164"
+    },
+    {
+      "source": "resources/css/shared/tokens/form/info-panel.css",
+      "sha256": "24fc6c94379e4abdc1a4b55687870301f0f12ba987ff0a3c21b11a650f85868d",
+      "destination": "resources/css/shared/tokens/form/info-panel.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "24fc6c94379e4abdc1a4b55687870301f0f12ba987ff0a3c21b11a650f85868d"
+    },
+    {
+      "source": "resources/css/shared/typography.css",
+      "sha256": "011671866f52e3a03d34a87f5fd4746bd8bd902d99d62f63e4e2622a0e103da4",
+      "destination": "resources/css/shared/typography.css",
+      "adaptations": [
+        "Lokale systeemfonts; geen klantfonts."
+      ],
+      "demoSha256": "6910a89af567003358093e9cbc3cfefc870707621ca6a92d4e15af943b2b4141"
+    },
+    {
+      "source": "resources/css/components/form/index.css",
+      "sha256": "f4cc13e52cdb1c216d0265e533ca692de9de851bb8ed40d813d5b8d0abfad41d",
+      "destination": "resources/css/components/form/index.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "f4cc13e52cdb1c216d0265e533ca692de9de851bb8ed40d813d5b8d0abfad41d"
+    },
+    {
+      "source": "resources/css/components/form/app.css",
+      "sha256": "7f64f145c2013f79b5f9bfe8212a851b3f0809754c4e1ca8f6939ae65d4d8817",
+      "destination": "resources/css/components/form/app.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "7f64f145c2013f79b5f9bfe8212a851b3f0809754c4e1ca8f6939ae65d4d8817"
+    },
+    {
+      "source": "resources/css/components/form/form.css",
+      "sha256": "88834c752fc0d53ef4f17b0a374f0e5d5bbf5a6bbdb371360e99555f9463b2ec",
+      "destination": "resources/css/components/form/form.css",
+      "adaptations": [
+        "Oorspronkelijke klantafbeelding verwijderd."
+      ],
+      "demoSha256": "646bef798788a2f82b697712a72af84ef69e79bd6910fa58f097a1fe68281c75"
+    },
+    {
+      "source": "resources/css/components/form/fieldset.css",
+      "sha256": "2d730a251e12e9b068bc6b8055877d09f07941fdbdf3add26298f0553a175c0a",
+      "destination": "resources/css/components/form/fieldset.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "2d730a251e12e9b068bc6b8055877d09f07941fdbdf3add26298f0553a175c0a"
+    },
+    {
+      "source": "resources/css/components/form/legend.css",
+      "sha256": "29ab44f8b84feb0c9d7e2210d7d48b81df92c6080765d982ab237a94e4e922a1",
+      "destination": "resources/css/components/form/legend.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "87e49a9039726c85461325445850964088a920ae90caddc0819daad2258e8584"
+    },
+    {
+      "source": "resources/css/components/form/input.css",
+      "sha256": "902d757b84a4a46159a8ad1d5a429a505c00ceb25b49ea92028e1e0ffbb92193",
+      "destination": "resources/css/components/form/input.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "902d757b84a4a46159a8ad1d5a429a505c00ceb25b49ea92028e1e0ffbb92193"
+    },
+    {
+      "source": "resources/css/components/form/textarea.css",
+      "sha256": "c1ca40a703d54a9a9013ca9bc747af1b7016b1cf1fcda903b5228e8460b8c893",
+      "destination": "resources/css/components/form/textarea.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "c1ca40a703d54a9a9013ca9bc747af1b7016b1cf1fcda903b5228e8460b8c893"
+    },
+    {
+      "source": "resources/css/components/form/select.css",
+      "sha256": "d06acf2ab9d949f11175b87e691fba37d695980d4d9c7100a57f023a8bf8f07c",
+      "destination": "resources/css/components/form/select.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "d06acf2ab9d949f11175b87e691fba37d695980d4d9c7100a57f023a8bf8f07c"
+    },
+    {
+      "source": "resources/css/components/form/main.css",
+      "sha256": "571005b4c153bb99d9122088a02c750b4bf5d5ac01a3b1ef3e4fdc8a7214a9f9",
+      "destination": "resources/css/components/form/main.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "acb3a75ac45343d5c45a6779261cf38ce54824b6b6cce1e3de944bbda9c5f752"
+    },
+    {
+      "source": "resources/css/components/form/scrollbar.css",
+      "sha256": "fc753aaff542c56eef18987f57f56d35fa45d0c00f2a78809c0399b153fe7aee",
+      "destination": "resources/css/components/form/scrollbar.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "2115559042b755306215ce593e54ee68ffd17899bc322832c539e6ff2735ef56"
+    },
+    {
+      "source": "resources/css/components/form/fields-general.css",
+      "sha256": "45aeae9d976571e11e369bd049c8aad047cdb3b61debbfb320e755c9b051d224",
+      "destination": "resources/css/components/form/fields-general.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "0a16bfeafa566c8a43ecbeb37b85d529708043b54f75b9f97d405286c581c4fd"
+    },
+    {
+      "source": "resources/css/components/form/geotoggle.css",
+      "sha256": "fa481d7eca61523a7169e586d012614daf6f84fa80421772f2bbef33fc0e3df1",
+      "destination": "resources/css/components/form/geotoggle.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "fa481d7eca61523a7169e586d012614daf6f84fa80421772f2bbef33fc0e3df1"
+    },
+    {
+      "source": "resources/css/components/form/flatpicker.css",
+      "sha256": "3fc1d6a4745a41a98ed5bfc9efb9f7f521e7f731ac1cfec6b03e126fe5d7656d",
+      "destination": "resources/css/components/form/flatpicker.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "3fc1d6a4745a41a98ed5bfc9efb9f7f521e7f731ac1cfec6b03e126fe5d7656d"
+    },
+    {
+      "source": "resources/css/components/form/info-panel.css",
+      "sha256": "31a6051dca341355d9f8322a7017bc35b91bbb9ab31341aaa4627f59ac3117ed",
+      "destination": "resources/css/components/form/info-panel.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "31a6051dca341355d9f8322a7017bc35b91bbb9ab31341aaa4627f59ac3117ed"
+    },
+    {
+      "source": "resources/css/components/form/education-select.css",
+      "sha256": "fd7e74a52f112da9408d1f27707144aa83f029a17212e77d3418be6eb9147990",
+      "destination": "resources/css/components/form/education-select.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "fd7e74a52f112da9408d1f27707144aa83f029a17212e77d3418be6eb9147990"
+    },
+    {
+      "source": "resources/css/components/form/education-selection.css",
+      "sha256": "00e203c1220ebeba2fc7a4eec0cdf3dfc4cd7872a2393fe9e3664cd023857d18",
+      "destination": "resources/css/components/form/education-selection.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "241e0c533a3770c75338e03744458345d04c1ca9202cab2c27a4edbd0274b23a"
+    },
+    {
+      "source": "resources/css/error/index.css",
+      "sha256": "5510309fd6cd0b5d1f0e34679f427e42e0d79a9c759e4c9289c633f2918e4c4e",
+      "destination": "resources/css/error/index.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "5510309fd6cd0b5d1f0e34679f427e42e0d79a9c759e4c9289c633f2918e4c4e"
+    },
+    {
+      "source": "resources/css/error/fieldflash-general.css",
+      "sha256": "aa6475109e954e6b9d2f06b681075f1bc776daea6f96b6cc73a810cda593b14a",
+      "destination": "resources/css/error/fieldflash-general.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "e5fa410def82f46d1043ca63495e1a2385fe4d75f2000b6ebe3d834391efe4b4"
+    },
+    {
+      "source": "resources/css/shared/animation.css",
+      "sha256": "2145b338190f5d5ce91d9aa7363072d1e793c2f8a27b59aea63205fe2e05b3cf",
+      "destination": "resources/css/shared/animation.css",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "2145b338190f5d5ce91d9aa7363072d1e793c2f8a27b59aea63205fe2e05b3cf"
+    },
+    {
+      "source": "src/Booking/BookingPolicy.php",
+      "sha256": "6d6423e4212855f498d338c077ec3c217dd69aa9b1ee5fad3fa55ddacb9caab4",
+      "destination": "src/Booking/BookingPolicy.php",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "6d6423e4212855f498d338c077ec3c217dd69aa9b1ee5fad3fa55ddacb9caab4"
+    },
+    {
+      "source": "src/Booking/BookingProgramConfig.php",
+      "sha256": "f0cb7a51cd78e4fe4847e400a7acbff7586870e9530b46f4a0f8e75edc91f11b",
+      "destination": "src/Booking/BookingProgramConfig.php",
+      "adaptations": [
+        "Dezelfde verplichte fictieve catalogus voor informatie en berekening.",
+        "Neutrale presentatieteksten; technische modulekeys en selectieregels behouden.",
+        "Neutrale cateringlabel."
+      ],
+      "demoSha256": "f3251602fd6dca785a4f4e0e630121dcbd083c89a2536490f15c151a08a75b01"
+    },
+    {
+      "source": "src/Services/Booking/Data/EducationSelectionData.php",
+      "sha256": "cdb64241743b7caddcffdceb0fae161a177574a02f750887593057d16958b04a",
+      "destination": "src/Services/Booking/Data/EducationSelectionData.php",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "cdb64241743b7caddcffdceb0fae161a177574a02f750887593057d16958b04a"
+    },
+    {
+      "source": "src/Services/Booking/Pricing/BookingPriceCatalogRegistry.php",
+      "sha256": "46ff7de308d02fe53e3c1490db60fa08b02b7d20867e980a359b908203806c3c",
+      "destination": "src/Services/Booking/Pricing/BookingPriceCatalogRegistry.php",
+      "adaptations": [
+        "Productietarieven en standaardcatalogus verwijderd; expliciete injectie verplicht."
+      ],
+      "demoSha256": "1c3dc9f2938ec2f191d3d73586840c3562dcf9686c44ba17a9fc8a149cc76d18"
+    },
+    {
+      "source": "src/Services/Booking/Pricing/BookingPriceCatalog.php",
+      "sha256": "19c96796b9dd014f3243ef1bb737299a24f4e144f861f571b222b5fae4d64bbf",
+      "destination": "src/Services/Booking/Pricing/BookingPriceCatalog.php",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "19c96796b9dd014f3243ef1bb737299a24f4e144f861f571b222b5fae4d64bbf"
+    },
+    {
+      "source": "src/Validation/FormRules.php",
+      "sha256": "accc803e5c251ba6a6a6a8ab5225b56b6064aa5f8d9d35c9f3c446b05fabfe06",
+      "destination": "src/Validation/FormRules.php",
+      "adaptations": [
+        "Neutrale ontdekopties; validatie en API-keys behouden."
+      ],
+      "demoSha256": "e763765c44967b00fa3bc1e339bdf7b320f21de3b17cca292c6a5098fafc52e5"
+    },
+    {
+      "source": "src/Validation/Validator.php",
+      "sha256": "54cef5866b0a52480f26690c9ccd4b1dcba78356f4b2357d2a7eb2e8303b5111",
+      "destination": "src/Validation/Validator.php",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "c4467fc43ff3ee759ad5b5c1cdd8b714bc9c44706005dfad50655a1e89e90b61"
+    },
+    {
+      "source": "src/Validation/FieldValidationException.php",
+      "sha256": "c0748d596333fa3b9ad2da8114e576a7a3e078b41b673cad27289a7afb9ee646",
+      "destination": "src/Validation/FieldValidationException.php",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "2cc7dcf3ee7cf123ca90d09e0efb86accec22e55fbe3d0ba162a62ca92ff4e76"
+    },
+    {
+      "source": "src/Validation/EducationSelectionValidator.php",
+      "sha256": "bea9386100f9618f118308d3dcfe00cde6707fb6b40573c1ff05a25877da647c",
+      "destination": "src/Validation/EducationSelectionValidator.php",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "bea9386100f9618f118308d3dcfe00cde6707fb6b40573c1ff05a25877da647c"
+    },
+    {
+      "source": "src/Validation/ProgramSelectionValidator.php",
+      "sha256": "7a636dda29a46ecedb644458cac4cebe39880367a3e9958fcd6d48c82a68e234",
+      "destination": "src/Validation/ProgramSelectionValidator.php",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "7a636dda29a46ecedb644458cac4cebe39880367a3e9958fcd6d48c82a68e234"
+    },
+    {
+      "source": "src/Validation/ChoiceModuleSelectionValidator.php",
+      "sha256": "e2d8cf2b6a9c11d1a5629dda6c29e41c92b90f1315ad23ef9e57e7913da8a896",
+      "destination": "src/Validation/ChoiceModuleSelectionValidator.php",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "e2d8cf2b6a9c11d1a5629dda6c29e41c92b90f1315ad23ef9e57e7913da8a896"
+    },
+    {
+      "source": "src/Validation/StudentCountValidator.php",
+      "sha256": "c6503ceae5a84c5c0e631083be9fadbf75f1d05b8aac94730cfed662e4c29335",
+      "destination": "src/Validation/StudentCountValidator.php",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "c6503ceae5a84c5c0e631083be9fadbf75f1d05b8aac94730cfed662e4c29335"
+    },
+    {
+      "source": "src/Validation/SupervisorCountValidator.php",
+      "sha256": "c8a338e316351b709a281102a3a68ced28d05ce92099878ededa5fa7303ea14e",
+      "destination": "src/Validation/SupervisorCountValidator.php",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "c8a338e316351b709a281102a3a68ced28d05ce92099878ededa5fa7303ea14e"
+    },
+    {
+      "source": "src/Validation/FoodAndDrinkSelectionValidator.php",
+      "sha256": "688b18c8927d8f697b3360050bb3cbddb66f151fb922caa2258928af3b21427f",
+      "destination": "src/Validation/FoodAndDrinkSelectionValidator.php",
+      "adaptations": [
+        "Neutrale cateringlabel."
+      ],
+      "demoSha256": "331be000aef2211cd78f65ecf8bc7b967bd6639ac1a49443c69c17d4e5920f74"
+    },
+    {
+      "source": "src/Services/Booking/Data/FoodAndDrinkSelectionData.php",
+      "sha256": "eb310c4d1c7fa7392a694778334813d0debaeddcaf2ab1a91a39b608385ab741",
+      "destination": "src/Services/Booking/Data/FoodAndDrinkSelectionData.php",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "eb310c4d1c7fa7392a694778334813d0debaeddcaf2ab1a91a39b608385ab741"
+    },
+    {
+      "source": "src/Validation/TermsAcceptanceValidator.php",
+      "sha256": "a56140cad07edf04ca0e7afebf95bf11f3d9277e9349ab2eee64c631b18a9d47",
+      "destination": "src/Validation/TermsAcceptanceValidator.php",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "a56140cad07edf04ca0e7afebf95bf11f3d9277e9349ab2eee64c631b18a9d47"
+    },
+    {
+      "source": "src/Services/Booking/Availability/BookingAvailabilityService.php",
+      "sha256": "119fc1b88b721bf955eff153ee5b2d4eb6fe628c0c18859bdb93bd09d3ec971a",
+      "destination": "src/Services/Booking/Availability/BookingAvailabilityService.php",
+      "adaptations": [
+        "SQL-type vervangen door alleen-lezen interface.",
+        "Blokkades en datumbron geïnjecteerd.",
+        "Fictieve kalenderrepository.",
+        "Fictieve blokkadesrepository.",
+        "Deterministische klok voor kalender en datumvalidatie."
+      ],
+      "demoSha256": "2aceb82171dc3cc65b0b83f8097ea7349b5cdc9af72ebb0b0deb25c9667850a0"
+    },
+    {
+      "source": "src/Services/Booking/Roster/BookingRosterResolver.php",
+      "sha256": "9545dab4f1b6a1e3d247967021f55b415d146e26d979fb8f2f17af305010b680",
+      "destination": "src/Services/Booking/Roster/BookingRosterResolver.php",
+      "adaptations": [
+        "Lege fictieve roosterrepository achter interface.",
+        "Geen SQL-afhankelijkheid.",
+        "Bestaande unavailable-toestand met demouitleg."
+      ],
+      "demoSha256": "f4ec536972b33be68194a56e9871e1690704eff1a32963f7c62d092c27e6d288"
+    },
+    {
+      "source": "src/Services/Booking/Roster/BookingRosterResult.php",
+      "sha256": "d495428c72e1814bbf79865f67a7169e6ba9dab1cd4a0e5d6579a6e942f4372b",
+      "destination": "src/Services/Booking/Roster/BookingRosterResult.php",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "d495428c72e1814bbf79865f67a7169e6ba9dab1cd4a0e5d6579a6e942f4372b"
+    },
+    {
+      "source": "src/Services/Booking/Roster/RosterGroupCountResolver.php",
+      "sha256": "150ee1f80ede81f42033eedaf562fdf79c329dfda70b6baa5d6db50481cfd274",
+      "destination": "src/Services/Booking/Roster/RosterGroupCountResolver.php",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "150ee1f80ede81f42033eedaf562fdf79c329dfda70b6baa5d6db50481cfd274"
+    },
+    {
+      "source": "src/Services/Booking/Pricing/BookingPriceCalculator.php",
+      "sha256": "0eb6cf3ea7db37702624be46f38a1cebe93899f762b02b909527dd96c0acf0c8",
+      "destination": "src/Services/Booking/Pricing/BookingPriceCalculator.php",
+      "adaptations": [
+        "Catalogusinjectie verplicht; rekenregels ongewijzigd."
+      ],
+      "demoSha256": "3332848b2feb03484a21079001bbedb617212dd9c23bd4bcf3aae53895fd5870"
+    },
+    {
+      "source": "src/Services/Booking/Pricing/BookingPricingInput.php",
+      "sha256": "3aa269bc16833d6da70d12636a93e3feeb192acf98e9cc90b9a0f2aa89097e59",
+      "destination": "src/Services/Booking/Pricing/BookingPricingInput.php",
+      "adaptations": [
+        "Alleen prijsinput-constructor behouden; adapters voor opgeslagen aanvragen weggelaten."
+      ],
+      "demoSha256": "2a5d6ace80564113143bf1a347e663080abe1c84dca89c1f8261b70b0cfc6088"
+    },
+    {
+      "source": "src/Services/Booking/Pricing/BookingPriceLine.php",
+      "sha256": "ef40db8b0d0313104462d631030b72c208a058c3e9ef7b410322c13497f2bed1",
+      "destination": "src/Services/Booking/Pricing/BookingPriceLine.php",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "ef40db8b0d0313104462d631030b72c208a058c3e9ef7b410322c13497f2bed1"
+    },
+    {
+      "source": "src/Services/Booking/Pricing/BookingPriceQuote.php",
+      "sha256": "d12f9bb6298579de4de37134dbcd3ad4dcd188e0d77c3d22d8599bdcaaf8cbd5",
+      "destination": "src/Services/Booking/Pricing/BookingPriceQuote.php",
+      "adaptations": [
+        "Ongewijzigde broncode, afgezien van regeleinden en eindspaties."
+      ],
+      "demoSha256": "d12f9bb6298579de4de37134dbcd3ad4dcd188e0d77c3d22d8599bdcaaf8cbd5"
+    },
+    {
+      "source": "AGENTS.md",
+      "sha256": "5f0bb8e617898774e59e70bb7891ac2c2db3c4fbe071c0ab3dd109363dc67cbb",
+      "destination": null,
+      "adaptations": [
+        "Alleen gelezen als contract/instructie; niet gekopieerd."
+      ]
+    },
+    {
+      "source": "resources/js/booking/App.vue",
+      "sha256": "501ea11926839712f37471fd1f61211e8ce9d3ac70d73bbc6bec5a7225a0dde8",
+      "destination": null,
+      "adaptations": [
+        "Alleen gelezen als contract/instructie; niet gekopieerd."
+      ]
+    },
+    {
+      "source": "resources/js/booking/main.ts",
+      "sha256": "0318797b50e155cadbc03c895f52f0004532b70e2c984e13196eb6c86864274a",
+      "destination": null,
+      "adaptations": [
+        "Alleen gelezen als contract/instructie; niet gekopieerd."
+      ]
+    },
+    {
+      "source": "package.json",
+      "sha256": "553dde66e831a466047c5672016aa508d4b98b9f38a2a125e8a9e3ffae9dfe44",
+      "destination": null,
+      "adaptations": [
+        "Alleen gelezen als contract/instructie; niet gekopieerd."
+      ]
+    },
+    {
+      "source": "src/Services/Http/Api/Booking/BookingFormHandler.php",
+      "sha256": "410e0f6a1cb92bd7ae9ccf3303c2b7093d180047b1ad778057844ef85d40e176",
+      "destination": "server/ValidateSubmission.php",
+      "adaptations": [
+        "Validatiesequentie tot en met capaciteit geëxtraheerd. Alleen die validators geïnjecteerd; geen IP, cooldownregistratie, BookingRequestData, opslag, submissionservice, logging of mail."
+      ],
+      "demoSha256": "40d7456c99a17ce5715b20364315448f50d097a2e7e95804cdff06c2201f0bef"
+    },
+    {
+      "source": "src/Services/Http/Api/Booking/DisabledDatesAction.php",
+      "sha256": "0ee238df4ec436098228245f1a0eaef27878806ac84c2e78a6e327ef60feca71",
+      "destination": null,
+      "adaptations": [
+        "Alleen gelezen als contract/instructie; niet gekopieerd."
+      ]
+    },
+    {
+      "source": "src/Services/Http/Api/Booking/BookingPriceQuoteAction.php",
+      "sha256": "4a6df6dd6f35f94035bdeae94df3eb59e72e487d2467f1cef1aa48894028f458",
+      "destination": null,
+      "adaptations": [
+        "Alleen gelezen als contract/instructie; niet gekopieerd."
+      ]
+    }
+  ],
+  "verifiedAt": "2026-10-10",
+  "sourceVerification": "Alle geregistreerde bronhashes en de revisie opnieuw gecontroleerd; bron ongewijzigd. De rekenmachine verschilt uitsluitend in verplichte catalogusinjectie.",
+  "addedDemoFiles": [
+    "server/Contracts/*",
+    "server/Application.php",
+    "server/DemoClock.php",
+    "server/FictionalCalendar.php",
+    "server/EmptyRoster.php",
+    "server/catalog.json",
+    "server/bootstrap.php",
+    "server/router.php",
+    "resources/js/App.vue",
+    "resources/js/main.ts",
+    "resources/js/demoClock.ts",
+    "resources/js/services/http/demoSession.ts",
+    "resources/css/demo.css",
+    "scripts/*",
+    "tests/*",
+    "index.html",
+    "package.json",
+    "package-lock.json",
+    "vite.config.ts",
+    "tsconfig.json",
+    "eslint.config.js",
+    ".gitignore",
+    "README.md"
+  ]
+}

@@ -74,6 +74,7 @@ export default defineConfigWithVueTs(
     },
     {
         ignores: [
+            'demos/**', // Standalone demo's hebben eigen lintconfiguratie en commando's.
             'vendor',
             'node_modules',
             'public',

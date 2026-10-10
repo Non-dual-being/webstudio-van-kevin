@@ -1,0 +1,18 @@
+{
+  "version": "demo-fictief-v1",
+  "currency": "EUR",
+  "vatBasisPoints": 900,
+  "visitPricesCents": {
+    "ochtend": { "basis": 725 },
+    "dag": { "basis": 1450, "voortgezet": 1825 }
+  },
+  "cateringPricesCents": {
+    "remise_break": 175,
+    "kazerne_break": 225,
+    "fortgracht_break": 195,
+    "glas_limonade": 85,
+    "waterijsje": 115,
+    "remise_lunch": 425,
+    "eigen_picknick": 0
+  }
+}

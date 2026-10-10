@@ -1,0 +1,330 @@
+[
+  {
+    "width": 390,
+    "checks": [
+      {
+        "label": "Fictieve startgegevens",
+        "passed": true
+      },
+      {
+        "label": "Geen horizontale overloop bij start",
+        "passed": true
+      },
+      {
+        "label": "Zichtbare toetsenbordfocus",
+        "passed": true
+      },
+      {
+        "label": "Beperkte en geblokkeerde dagen zichtbaar",
+        "passed": true
+      },
+      {
+        "label": "Kalenderdag met pijltjestoetsen bereikbaar",
+        "passed": true
+      },
+      {
+        "label": "Rooster unavailable zonder downloads",
+        "passed": true
+      },
+      {
+        "label": "Leerlinggrens met foutmarkering",
+        "passed": true
+      },
+      {
+        "label": "Begeleidergrens met foutmarkering",
+        "passed": true
+      },
+      {
+        "label": "Prijsfout laat invoer behouden",
+        "passed": true
+      },
+      {
+        "label": "Akkoord vereist",
+        "passed": true
+      },
+      {
+        "label": "600 tekens bewerkbaar en begrensd",
+        "passed": true
+      },
+      {
+        "label": "Geen overloop volledig formulier",
+        "passed": true
+      },
+      {
+        "label": "Eerlijk succes en focus",
+        "passed": true
+      },
+      {
+        "label": "Formulier en kalender gereset",
+        "passed": true
+      },
+      {
+        "label": "Begrijpelijke API-fout",
+        "passed": true
+      },
+      {
+        "label": "Late kalender genegeerd",
+        "passed": true
+      },
+      {
+        "label": "Kalenderdag met pijltjestoetsen bereikbaar",
+        "passed": true
+      },
+      {
+        "label": "Late prijs genegeerd",
+        "passed": true
+      },
+      {
+        "label": "Kalenderdag met pijltjestoetsen bereikbaar",
+        "passed": true
+      },
+      {
+        "label": "Late afronding genegeerd",
+        "passed": true
+      },
+      {
+        "label": "Kalenderdag met pijltjestoetsen bereikbaar",
+        "passed": true
+      },
+      {
+        "label": "Beperkte capaciteit begrenst invoer",
+        "passed": true
+      },
+      {
+        "label": "Sectorwissel wist vervolgkeuzes",
+        "passed": true
+      },
+      {
+        "label": "Ochtend verdwijnt bij voortgezet onderwijs",
+        "passed": true
+      },
+      {
+        "label": "Module geldig bij HAVO2",
+        "passed": true
+      },
+      {
+        "label": "Groepswissel verwijdert ongeldige module",
+        "passed": true
+      },
+      {
+        "label": "Niveauwissel wist oude groepen",
+        "passed": true
+      },
+      {
+        "label": "Niveaunamen en status passen op mobiel",
+        "passed": true
+      },
+      {
+        "label": "Kalenderdag met pijltjestoetsen bereikbaar",
+        "passed": true
+      },
+      {
+        "label": "Datumwissel behoudt alleen passend programma",
+        "passed": true
+      }
+    ],
+    "storage": {
+      "local": [],
+      "session": [],
+      "db": [],
+      "caches": [],
+      "workers": 0,
+      "history": null,
+      "cookies": ""
+    },
+    "cookies": 0,
+    "externalRequests": [],
+    "denied": [
+      {
+        "path": "/.env",
+        "status": 404
+      },
+      {
+        "path": "/server/catalog.json",
+        "status": 404
+      },
+      {
+        "path": "/src/Validation/FormRules.php",
+        "status": 404
+      },
+      {
+        "path": "/booking/validatie.php",
+        "status": 404
+      },
+      {
+        "path": "/api/getDisabledDates.php",
+        "status": 404
+      },
+      {
+        "path": "/assets/booking/roosters/example.pdf",
+        "status": 404
+      }
+    ],
+    "apiRequests": 49,
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "checks": [
+      {
+        "label": "Fictieve startgegevens",
+        "passed": true
+      },
+      {
+        "label": "Geen horizontale overloop bij start",
+        "passed": true
+      },
+      {
+        "label": "Zichtbare toetsenbordfocus",
+        "passed": true
+      },
+      {
+        "label": "Beperkte en geblokkeerde dagen zichtbaar",
+        "passed": true
+      },
+      {
+        "label": "Kalenderdag met pijltjestoetsen bereikbaar",
+        "passed": true
+      },
+      {
+        "label": "Rooster unavailable zonder downloads",
+        "passed": true
+      },
+      {
+        "label": "Leerlinggrens met foutmarkering",
+        "passed": true
+      },
+      {
+        "label": "Begeleidergrens met foutmarkering",
+        "passed": true
+      },
+      {
+        "label": "Prijsfout laat invoer behouden",
+        "passed": true
+      },
+      {
+        "label": "Akkoord vereist",
+        "passed": true
+      },
+      {
+        "label": "600 tekens bewerkbaar en begrensd",
+        "passed": true
+      },
+      {
+        "label": "Geen overloop volledig formulier",
+        "passed": true
+      },
+      {
+        "label": "Eerlijk succes en focus",
+        "passed": true
+      },
+      {
+        "label": "Formulier en kalender gereset",
+        "passed": true
+      },
+      {
+        "label": "Begrijpelijke API-fout",
+        "passed": true
+      },
+      {
+        "label": "Late kalender genegeerd",
+        "passed": true
+      },
+      {
+        "label": "Kalenderdag met pijltjestoetsen bereikbaar",
+        "passed": true
+      },
+      {
+        "label": "Late prijs genegeerd",
+        "passed": true
+      },
+      {
+        "label": "Kalenderdag met pijltjestoetsen bereikbaar",
+        "passed": true
+      },
+      {
+        "label": "Late afronding genegeerd",
+        "passed": true
+      },
+      {
+        "label": "Kalenderdag met pijltjestoetsen bereikbaar",
+        "passed": true
+      },
+      {
+        "label": "Beperkte capaciteit begrenst invoer",
+        "passed": true
+      },
+      {
+        "label": "Sectorwissel wist vervolgkeuzes",
+        "passed": true
+      },
+      {
+        "label": "Ochtend verdwijnt bij voortgezet onderwijs",
+        "passed": true
+      },
+      {
+        "label": "Module geldig bij HAVO2",
+        "passed": true
+      },
+      {
+        "label": "Groepswissel verwijdert ongeldige module",
+        "passed": true
+      },
+      {
+        "label": "Niveauwissel wist oude groepen",
+        "passed": true
+      },
+      {
+        "label": "Niveaunamen en status passen op mobiel",
+        "passed": true
+      },
+      {
+        "label": "Kalenderdag met pijltjestoetsen bereikbaar",
+        "passed": true
+      },
+      {
+        "label": "Datumwissel behoudt alleen passend programma",
+        "passed": true
+      }
+    ],
+    "storage": {
+      "local": [],
+      "session": [],
+      "db": [],
+      "caches": [],
+      "workers": 0,
+      "history": null,
+      "cookies": ""
+    },
+    "cookies": 0,
+    "externalRequests": [],
+    "denied": [
+      {
+        "path": "/.env",
+        "status": 404
+      },
+      {
+        "path": "/server/catalog.json",
+        "status": 404
+      },
+      {
+        "path": "/src/Validation/FormRules.php",
+        "status": 404
+      },
+      {
+        "path": "/booking/validatie.php",
+        "status": 404
+      },
+      {
+        "path": "/api/getDisabledDates.php",
+        "status": 404
+      },
+      {
+        "path": "/assets/booking/roosters/example.pdf",
+        "status": 404
+      }
+    ],
+    "apiRequests": 49,
+    "errors": []
+  }
+]

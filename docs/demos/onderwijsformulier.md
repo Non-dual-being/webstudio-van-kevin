@@ -1,6 +1,8 @@
 # Demo-voorstel: Onderwijsformulier
 
-Status: brononderzoek en portfolio-case afgerond in deze run; de interactieve demo is nog niet gebouwd.
+Status 10 oktober 2026: stap 11 gericht geactualiseerd; de eerste zelfstandige interactieve demo van stap 12 staat in [demos/onderwijsformulier](../../demos/onderwijsformulier/README.md). Zie het [actuele controlerapport](onderwijsformulier-demo-controle.md). De onderstaande bronkaart blijft de onderbouwing van de gekozen architectuur; er is nog geen publieke demo-URL of portfolioknop.
+
+De geselecteerde broncode is opnieuw vergeleken op revisie `1a43fc16bdaafb27920d8c6c819fa58c6e02dc35` (`feature/calendar-booking-clickability`). Binnen de geselecteerde bestanden waren geen lokale bronwijzigingen. Exacte bestanden, SHA-256-hashes en demo-aanpassingen staan in het [bronmanifest](../../demos/onderwijsformulier/source-manifest.json). Geen algemene heraudit uitgevoerd.
 
 ## Afbakening en bewijs
 
@@ -131,11 +133,11 @@ De browser mag alleen dezelfde demo-origin aanspreken. Een passende CSP met `con
 | Isolatie     | Vereist zorgvuldige scheiding van sessies, styling, routes en beveiligingsconfiguratie binnen de portfoliosite.                           | Eigen origin, assets en API; geen gedeelde sessie of toegang tot de portfolio- of productiebackend nodig.                        |
 | Onderhoud    | Eén website, maar twee applicatiepatronen in dezelfde codebase.                                                                           | Extra build/runtime te beheren; bronselectie en synchronisatie blijven overzichtelijk afgebakend.                                |
 
-**Advies: B**, een afzonderlijke Vue/Vite-demo met een kleine PHP-laag en geselecteerde bestaande domeinregels. De werkelijke architectuur maakt dit gerichter dan de volledige flow naar Inertia overzetten. Een volledig statische mock zou de serverregels en prijsberekening slechts nabootsen; dat is niet het advies. Voeg pas een link vanaf de portfolio-case toe als deze demo gebouwd, gecontroleerd en bereikbaar is. Deze run bevat geen demo-URL of demo-knop.
+**Uitgevoerd advies: B**, een afzonderlijke Vue/Vite-demo met een kleine PHP-laag en geselecteerde bestaande domeinregels. De werkelijke architectuur maakt dit gerichter dan de volledige flow naar Inertia overzetten. De PHP-prijsberekening en validators zijn hergebruikt; er is geen tweede rekenmodel gebouwd. De lokale preview is `http://127.0.0.1:8120`. Voeg pas een link vanaf de portfolio-case toe bij een gecontroleerde, publiek bereikbare demo-URL.
 
-## Concrete volgende implementatieopdracht
+## Uitgevoerde implementatieafbakening van stap 12
 
-Bouw in een nieuwe, geïsoleerde map binnen een expliciet toegestane workspace de eerste versie van de afzonderlijke **Onderwijsformulier-demo**, zonder GeoFortForm4 te wijzigen.
+De onderstaande afbakening is toegepast in `demos/onderwijsformulier/` binnen Kevin Webstudio. GeoFortForm4 is uitsluitend gelezen. Bewijs, startinstructies en resterende grenzen staan in het actuele controlerapport.
 
 - Selecteer en documenteer de hierboven genoemde publieke bronmodules met revisie en hashes; geen beheeromgeving, data, originele assets of originele bootstrap kopiëren.
 - Behoud de huidige conditionele flow tot en met opmerkingen/voorwaarden en gesimuleerde bevestiging. Geen nieuwe wizardindeling ontwerpen.
@@ -158,4 +160,4 @@ De volledige gebruikte teksten staan centraal in [config/projects.php](../../con
 - Contacttitel: “Ook een aanvraagproces met veel keuzes?”
 - Contactactie: **Neem contact op** → `/contact`, met de bestaande PublicButtonLink.
 
-De bestaande Contact-pagina heeft nog geen bevestigd zakelijk e-mailadres of verzendformulier, zoals vastgelegd in docs/brand/ontwerpkeuzes.md. De case verwijst naar die pagina; er is geen adres verzonnen. De case bevat geen persoonlijke taakverdeling, klantquote, klantlogo, meetbaar resultaat of claim over tijdsbesparing.
+De Contact-pagina en beide formuliermails zijn lokaal afgerond in `de0d44a`; privacy en publieke toegang zijn vastgelegd in `7bc95fb`. De case verwijst naar die bestaande `/contact`-pagina. Deze demo wijzigt geen contactverwerking, mailopmaak, SMTP of privacyvoorzieningen. Daadwerkelijke productiebezorging en overige releasevoorwaarden blijven zoals beschreven in de contact-, zakelijke-mail- en privacyrunbooks. De case bevat geen persoonlijke taakverdeling, klantquote, klantlogo, meetbaar resultaat of claim over tijdsbesparing.

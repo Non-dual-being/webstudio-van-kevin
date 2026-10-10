@@ -1,0 +1,6 @@
+@layer typography {
+    :root {
+        --font-primary: system-ui, -apple-system, sans-serif;
+        --font-headings: system-ui, -apple-system, sans-serif;
+    }
+}

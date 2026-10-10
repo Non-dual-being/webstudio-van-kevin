@@ -1,0 +1,40 @@
+@layer components {
+
+    .form-geoform {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 800px;
+        padding: var(--padding-xl);
+        background-size: contain;
+        background-position: center;
+        background-repeat: repeat;
+        border: 1px solid rgba(8, 21, 64, 0.08);
+        border-radius: 0.55rem;
+        background-color: rgba(255, 255, 255, 0.94);
+        background-blend-mode: normal;
+        box-shadow:
+        0 22px 55px rgba(8, 21, 64, 0.11),
+        0 1px 0 rgba(255, 255, 255, 0.9) inset;
+    }
+
+    .legend-geoform {
+        display: inline-block;
+        padding: 0.15rem 0.65rem;
+        border: 1px solid rgba(8, 21, 64, 0.75);
+        border-radius: var(--field-radius);
+        background: var(--color-bg-legend);
+        color: var(--color-main-blue-dark);
+        font: var(--fs-big-legend) var(--font-headings);
+        font-size: var(--fs-legend);
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: 0.02em;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+
+
+}

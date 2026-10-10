@@ -1,6 +1,6 @@
 # Controle: Onderwijsformulier
 
-De portfolio-case is lokaal afgerond op 11 september 2026. De interactieve demo is niet gebouwd.
+Historisch verslag: de portfolio-case is lokaal afgerond op 11 september 2026. De interactieve demo is daarna gebouwd in stap 12; zie het [controlerapport van 10 oktober 2026](onderwijsformulier-demo-controle.md). De onderstaande resultaten horen bij de oorspronkelijke case-oplevering.
 
 ## Resultaat
 

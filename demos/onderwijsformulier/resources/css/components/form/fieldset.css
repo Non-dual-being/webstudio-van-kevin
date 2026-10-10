@@ -1,0 +1,47 @@
+@layer components {
+  .fieldset-geoform {
+    display: flex;
+    flex-direction: column;
+    gap: 1.05rem;
+    margin: 0 0 1.4rem;
+    padding: var(--padding-xxxl);
+    border: var(--border-width-small) solid var(--border-color-fieldset);
+    border-radius: var(--border-radius-base);
+    background: var(--color-bg-fieldset);
+    box-shadow: var(--fieldset-shadow);
+  }
+
+  .fieldset-geoform--info {
+    position: relative;
+    gap: 0;
+    overflow: hidden;
+    border-color: var(--info-fieldset-border);
+    background: var(--info-fieldset-bg);
+    box-shadow:
+      0 20px 48px rgba(8, 21, 64, 0.11),
+      0 8px 24px rgba(169, 71, 74, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.95),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.42);
+  }
+
+  .fieldset-geoform--info::before {
+    content: none;
+  }
+
+
+  /*
+    De rode streep weghalen.
+    Niet meer gebruiken als visuele hoofddrager.
+  */
+  .fieldset-geoform--info::before {
+    content: none;
+  }
+
+
+
+  @media (max-width: 760px) {
+    .fieldset-geoform--info {
+      padding-inline: 1rem;
+    }
+  }
+}

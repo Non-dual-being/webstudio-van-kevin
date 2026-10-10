@@ -1,0 +1,32 @@
+{
+  "name": "kevin-onderwijsformulier-demo",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "start": "node scripts/start.mjs",
+    "types:check": "vue-tsc --noEmit",
+    "lint": "eslint resources/js scripts tests vite.config.ts",
+    "test": "node scripts/test.mjs && node tests/isolation.mjs",
+    "test:browser": "node tests/flow.mjs",
+    "check": "npm run types:check && npm run lint && npm test"
+  },
+  "dependencies": {
+    "flatpickr": "4.6.13",
+    "@lucide/vue": "1.17.0",
+    "vue": "3.5.43"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.1",
+    "@types/node": "24.10.1",
+    "@vitejs/plugin-vue": "6.0.1",
+    "eslint": "9.39.1",
+    "eslint-plugin-vue": "10.11.1",
+    "globals": "16.5.0",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.71.1",
+    "vite": "7.3.7",
+    "vue-tsc": "3.1.4"
+  }
+}
