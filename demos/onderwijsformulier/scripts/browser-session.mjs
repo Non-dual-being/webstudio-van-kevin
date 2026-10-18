@@ -10,28 +10,28 @@ export const root = fileURLToPath(new URL('../', import.meta.url));
 export const origin = 'http://127.0.0.1:8121';
 export const pause = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-export async function launch() {
+export async function launch({ startServer = true } = {}) {
   if (!fs.existsSync(root + '/dist/index.html')) throw Error('Eerst npm run build; tests gebruiken de voltooide build.');
-  await new Promise((resolve, reject) => {
+  if (startServer) await new Promise((resolve, reject) => {
     const server = net.createServer();
     server.on('error', reject);
     server.listen(8121, '127.0.0.1', () => server.close(resolve));
   });
   const profile = fs.mkdtempSync(path.join(os.tmpdir(), 'kevin-onderwijs-browser-'));
-  const server = startPhp(8121, '2031-10-06');
+  const server = startServer ? startPhp(8121, '2031-10-06') : null;
   const chrome = spawn(process.env.DEMO_CHROME || 'C:/Program Files/Google/Chrome/Application/chrome.exe', [
     '--headless=new', '--remote-debugging-address=127.0.0.1', '--remote-debugging-port=0', '--user-data-dir=' + profile,
     '--no-first-run', '--no-default-browser-check', '--disable-sync', '--disable-background-networking', 'about:blank',
   ], { windowsHide: true, stdio: 'ignore' });
   const stop = async () => {
     // Alleen de processen die door deze test zijn gestart; geen bestaande browser/server.
-    server.kill(); chrome.kill();
+    server?.kill(); chrome.kill();
   };
   let port;
   try {
     for (let attempt = 0; attempt < 100; attempt++) {
       if (fs.existsSync(profile + '/DevToolsActivePort')) port = fs.readFileSync(profile + '/DevToolsActivePort', 'utf8').split('\n')[0];
-      try { if (port && (await fetch(origin + '/demo-api/dates')).ok) break; } catch { /* Server start nog. */ }
+      try { if (port && (await fetch(origin + '/demo-api/policy')).ok) break; } catch { /* Server start nog. */ }
       await pause(100);
     }
     if (!port) throw Error('Test-Chrome kon niet starten.');

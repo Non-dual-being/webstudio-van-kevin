@@ -1,5 +1,7 @@
 # Onderwijsformulier-demo — stap 12
 
+**Historisch rapport van stap 12.** De actuele uitbreiding met aanvragenbeheer, tijdelijke opslag per tabblad en gekoppelde succesmelding staat in [het run-12B-rapport](onderwijsdashboard-demo-controle.md). Onderstaande uitspraken over geen aanvraagopslag en geen beheer beschrijven uitsluitend de oorspronkelijke versie.
+
 Lokaal opgeleverd op **10 oktober 2026**, vanaf `7bc95fb` op `feature/public-visual-refinement`. De goedgekeurde portfoliosite, contactverwerking, mails, SMTP en privacycode zijn behouden. Geen deployment, bronappstart of verwerking van de bestaande contactqueue.
 
 ## Bekijken en starten

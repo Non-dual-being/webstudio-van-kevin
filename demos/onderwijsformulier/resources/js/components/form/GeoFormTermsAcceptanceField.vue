@@ -94,7 +94,7 @@ function onChange(event: Event): void {
           <h3 class="terms-acceptance-card__title">Demo-afspraak</h3>
 
           <p class="terms-acceptance-card__description">
-            Er wordt niets geboekt, opgeslagen of gemaild. Gebruik uitsluitend fictieve gegevens.
+            Je aanvraag blijft tijdelijk in jouw demonstratieomgeving. Er wordt niets echt geboekt of gemaild. Gebruik uitsluitend fictieve gegevens.
           </p>
         </div>
 

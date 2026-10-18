@@ -1,0 +1,445 @@
+{
+  "sourceRepository": "GeoFortForm4",
+  "sourceRevision": "1a43fc16bdaafb27920d8c6c819fa58c6e02dc35",
+  "reviewedAt": "2026-10-16",
+  "hashAlgorithm": "SHA-256",
+  "existingSelectionDrift": [],
+  "license": "Geen repositorylicentie aangetroffen; aanwezige bronvermeldingen behouden. Publieke gebruiksrechten blijven te bevestigen.",
+  "files": [
+    {
+      "source": "src/Booking/Status/BookingStatusTransitionPolicy.php",
+      "sha256": "ee509805da115a5aa4dea8ebfcf72ae67c0cfaf9254655e07df379212375bc9c",
+      "destination": "src/Booking/Status/BookingStatusTransitionPolicy.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "ee509805da115a5aa4dea8ebfcf72ae67c0cfaf9254655e07df379212375bc9c"
+    },
+    {
+      "source": "src/Booking/Status/BookingTransitionCode.php",
+      "sha256": "2ac0e79c4db300f132265946cc48a5e656a72fe050490885b306871d50189871",
+      "destination": "src/Booking/Status/BookingTransitionCode.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "2ac0e79c4db300f132265946cc48a5e656a72fe050490885b306871d50189871"
+    },
+    {
+      "source": "src/Booking/Status/BookingTransitionDecision.php",
+      "sha256": "7adf3802116742f7bc6206153b8417aaf0e96f63265b1f2cd1757a440293570b",
+      "destination": "src/Booking/Status/BookingTransitionDecision.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "7adf3802116742f7bc6206153b8417aaf0e96f63265b1f2cd1757a440293570b"
+    },
+    {
+      "source": "src/Booking/Capacity/BookingCapacityValidator.php",
+      "sha256": "c50230846eb4e997f3314f97240323877fe1374f5d79ea6bd0c72a3235be5713",
+      "destination": "src/Booking/Capacity/BookingCapacityValidator.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "c50230846eb4e997f3314f97240323877fe1374f5d79ea6bd0c72a3235be5713"
+    },
+    {
+      "source": "src/Booking/Capacity/DayCapacityTotals.php",
+      "sha256": "46eed2a10b09de64811411042551aaedf1aef30657075193a81c1c22fc84c48a",
+      "destination": "src/Booking/Capacity/DayCapacityTotals.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "46eed2a10b09de64811411042551aaedf1aef30657075193a81c1c22fc84c48a"
+    },
+    {
+      "source": "src/Booking/Capacity/EffectiveDayCapacity.php",
+      "sha256": "7c63f3018134808867dd5da73efbf4cd8b3355224d719f81980506f5988f1a88",
+      "destination": "src/Booking/Capacity/EffectiveDayCapacity.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "7c63f3018134808867dd5da73efbf4cd8b3355224d719f81980506f5988f1a88"
+    },
+    {
+      "source": "src/Booking/Capacity/CapacityValidationCode.php",
+      "sha256": "7776d22dd6c23c330e949987fa68298888c3fdf3a4dbd604ebbf6b21042fabcd",
+      "destination": "src/Booking/Capacity/CapacityValidationCode.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "7776d22dd6c23c330e949987fa68298888c3fdf3a4dbd604ebbf6b21042fabcd"
+    },
+    {
+      "source": "src/Booking/Capacity/CapacityValidationResult.php",
+      "sha256": "a6d0e0ec61cc1ea0f109e94f5b2c61614860116e02316836872587b646f747ba",
+      "destination": "src/Booking/Capacity/CapacityValidationResult.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "a6d0e0ec61cc1ea0f109e94f5b2c61614860116e02316836872587b646f747ba"
+    },
+    {
+      "source": "src/Booking/Stored/StoredBooking.php",
+      "sha256": "1564d7570b902e0a5dadc77e138f904964f846c0bdb1554fd09baf935a829e1e",
+      "destination": "src/Booking/Stored/StoredBooking.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "1564d7570b902e0a5dadc77e138f904964f846c0bdb1554fd09baf935a829e1e"
+    },
+    {
+      "source": "src/Booking/Stored/BookingSourceMetadata.php",
+      "sha256": "bf0036e98f39221f8e4b5b79bd913227e8fcad5fa51933f74d90c9f4e4a13f42",
+      "destination": "src/Booking/Stored/BookingSourceMetadata.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "bf0036e98f39221f8e4b5b79bd913227e8fcad5fa51933f74d90c9f4e4a13f42"
+    },
+    {
+      "source": "src/Booking/Validation/BookingValidationCoordinator.php",
+      "sha256": "e9cf323f2819fc51e1dbf60f51fed4793016975717e3dd3a7e9aed74fb131233",
+      "destination": "src/Booking/Validation/BookingValidationCoordinator.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "e9cf323f2819fc51e1dbf60f51fed4793016975717e3dd3a7e9aed74fb131233"
+    },
+    {
+      "source": "src/Booking/Validation/BookingValidationProfile.php",
+      "sha256": "705d1c4a8fc3282b473cac2cc94429e4f9582ceb546607affaef8377710e6364",
+      "destination": "src/Booking/Validation/BookingValidationProfile.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "705d1c4a8fc3282b473cac2cc94429e4f9582ceb546607affaef8377710e6364"
+    },
+    {
+      "source": "src/Booking/Validation/BookingValidationContext.php",
+      "sha256": "4229d3790a309dc74c1de9c5d8925d5838577b7c9d6f3ffaf9f67e98c04eb5dd",
+      "destination": "src/Booking/Validation/BookingValidationContext.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "4229d3790a309dc74c1de9c5d8925d5838577b7c9d6f3ffaf9f67e98c04eb5dd"
+    },
+    {
+      "source": "src/Booking/Validation/ProgramStudentLimitValidator.php",
+      "sha256": "4869aa40c80a69bdb1a072f739ec17cf1be21cc5b3f072d3001ce0363f4421e8",
+      "destination": "src/Booking/Validation/ProgramStudentLimitValidator.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "4869aa40c80a69bdb1a072f739ec17cf1be21cc5b3f072d3001ce0363f4421e8"
+    },
+    {
+      "source": "src/Booking/Validation/MinimumSupervisorValidator.php",
+      "sha256": "c5efab825e224f457a543780993df017aed46b92c4b13601e8e971a49673ef66",
+      "destination": "src/Booking/Validation/MinimumSupervisorValidator.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "c5efab825e224f457a543780993df017aed46b92c4b13601e8e971a49673ef66"
+    },
+    {
+      "source": "src/Booking/Validation/StoredBookingCateringValidator.php",
+      "sha256": "5c7f25143bc203a68d2056622e1f320416274f1f9ab085139967c827a352502a",
+      "destination": "src/Booking/Validation/StoredBookingCateringValidator.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "5c7f25143bc203a68d2056622e1f320416274f1f9ab085139967c827a352502a"
+    },
+    {
+      "source": "src/Booking/Validation/StoredBookingIssue.php",
+      "sha256": "c5ebf72dedf0f2ecdef43d4c1eca349902c966e683fff178fdf33d8c17c1dd94",
+      "destination": "src/Booking/Validation/StoredBookingIssue.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "c5ebf72dedf0f2ecdef43d4c1eca349902c966e683fff178fdf33d8c17c1dd94"
+    },
+    {
+      "source": "src/Booking/Validation/StoredBookingIssueCategory.php",
+      "sha256": "e2e99b1962cff16220a6b06473c4f7b919bd993dd57792551fa4d3416c0de2fe",
+      "destination": "src/Booking/Validation/StoredBookingIssueCategory.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "e2e99b1962cff16220a6b06473c4f7b919bd993dd57792551fa4d3416c0de2fe"
+    },
+    {
+      "source": "src/Booking/Validation/StoredBookingValidationResult.php",
+      "sha256": "7eb23afa6a9fcd6aa90c60bcc25899f15dab9500ea25d666533320a9940f8404",
+      "destination": "src/Booking/Validation/StoredBookingValidationResult.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "7eb23afa6a9fcd6aa90c60bcc25899f15dab9500ea25d666533320a9940f8404"
+    },
+    {
+      "source": "src/Booking/Validation/StoredBookingValidator.php",
+      "sha256": "611c82e1b977cd6ac4990502c6f6ff764a4c51186a2b9e882b1ff3ae4254a6ab",
+      "destination": "src/Booking/Validation/StoredBookingValidator.php",
+      "adaptations": [
+        "Alleen-lezen demo-interface vervangt SQL; verbindingscontrole verwijderd. Validatieregels intact."
+      ],
+      "demoSha256": "29978fa340c8970a54356e5711ecb6865a219a18046cfc532db256004327d7ae"
+    },
+    {
+      "source": "src/Booking/Validation/StoredBookingVisitDateValidator.php",
+      "sha256": "e49095360cf3163099e26f1168c287f736c303f6a48a3187df74c45e1b1a6504",
+      "destination": "src/Booking/Validation/StoredBookingVisitDateValidator.php",
+      "adaptations": [
+        "Alleen-lezen demo-interface vervangt SQL; verbindingscontrole verwijderd. Validatieregels intact."
+      ],
+      "demoSha256": "65b05387698fd44e0a75deee13cdcf87a19c1b4ec83dd00cef4dea56e8338a88"
+    },
+    {
+      "source": "src/Booking/Validation/StoredBookingStudentCountValidator.php",
+      "sha256": "6565e66682491f814f79dad225609591a9d830f3639e9562d3f8f3a7c8136be3",
+      "destination": "src/Booking/Validation/StoredBookingStudentCountValidator.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "6565e66682491f814f79dad225609591a9d830f3639e9562d3f8f3a7c8136be3"
+    },
+    {
+      "source": "src/Booking/Rules/BookingRuleOverridePolicy.php",
+      "sha256": "81e0e15674ac36170c1ac83a9561028a47d1facb17749649d3ba6cd0ebc9559e",
+      "destination": "src/Booking/Rules/BookingRuleOverridePolicy.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "81e0e15674ac36170c1ac83a9561028a47d1facb17749649d3ba6cd0ebc9559e"
+    },
+    {
+      "source": "src/Booking/Rules/BookingRuleDefinition.php",
+      "sha256": "566ed5eae0a9ab3b5dbe8e7a5ca1d6ba378e0e7b82ef28add001e2708d52eb15",
+      "destination": "src/Booking/Rules/BookingRuleDefinition.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "566ed5eae0a9ab3b5dbe8e7a5ca1d6ba378e0e7b82ef28add001e2708d52eb15"
+    },
+    {
+      "source": "src/Booking/Rules/BookingRuleSeverity.php",
+      "sha256": "ebce47c4268f0a251e2da9c5b913fe624488edb6c5fe08c29cfdede860c9631b",
+      "destination": "src/Booking/Rules/BookingRuleSeverity.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "ebce47c4268f0a251e2da9c5b913fe624488edb6c5fe08c29cfdede860c9631b"
+    },
+    {
+      "source": "src/Booking/SchoolContact/BookingSchoolContactDetails.php",
+      "sha256": "85d4f1b87a8612fa63ab192d42d353dac0e8cc946386cccd5358ea7e39812363",
+      "destination": "src/Booking/SchoolContact/BookingSchoolContactDetails.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "85d4f1b87a8612fa63ab192d42d353dac0e8cc946386cccd5358ea7e39812363"
+    },
+    {
+      "source": "src/Booking/SchoolContact/BookingSchoolContactIssue.php",
+      "sha256": "8ec7ce4743656c79dffd7d594c6dbab5ded1b5cebe6e33ea1b5020ffeab49914",
+      "destination": "src/Booking/SchoolContact/BookingSchoolContactIssue.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "8ec7ce4743656c79dffd7d594c6dbab5ded1b5cebe6e33ea1b5020ffeab49914"
+    },
+    {
+      "source": "src/Services/Booking/SchoolContact/BookingSchoolContactValidator.php",
+      "sha256": "4915dd605a0b0dbbf1dc9d15a491e0bf36d7b6ba441be247ca92aa980df6e76d",
+      "destination": "src/Services/Booking/SchoolContact/BookingSchoolContactValidator.php",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "4915dd605a0b0dbbf1dc9d15a491e0bf36d7b6ba441be247ca92aa980df6e76d"
+    },
+    {
+      "source": "src/Services/Dashboard/Booking/DashboardBookingFilters.php",
+      "sha256": "aea9da54567ce0bed7a20538edc0961463dc463db03ad2388bd4c4fac829db4d",
+      "destination": null,
+      "adaptations": [
+        "Alleen gelezen: zoekvelden, status/datumfilters, sortering en paginagrootte 20 als contract voor de browserlijst; PHP-parser niet geladen."
+      ]
+    },
+    {
+      "source": "src/Services/Dashboard/Booking/DashboardBookingFilterParser.php",
+      "sha256": "846a21c2a3e4a87875569d759abd360aaf32ad3aa6edfe76028a49d5f2692465",
+      "destination": null,
+      "adaptations": [
+        "Alleen gelezen: zoekvelden, status/datumfilters, sortering en paginagrootte 20 als contract voor de browserlijst; PHP-parser niet geladen."
+      ]
+    },
+    {
+      "source": "resources/js/admin/types/bookings.ts",
+      "sha256": "06fa6c3c36e8f6933ed87319fc138e957bceceb761d1e28ebca9e0ae703dda85",
+      "destination": "resources/js/admin/types/bookings.ts",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "06fa6c3c36e8f6933ed87319fc138e957bceceb761d1e28ebca9e0ae703dda85"
+    },
+    {
+      "source": "resources/js/admin/types/bookingStatus.ts",
+      "sha256": "fe3f1d17d6e17b370e50635e7a68835eeac6ef95a95da1547d65e3339dc3d081",
+      "destination": "resources/js/admin/types/bookingStatus.ts",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "fe3f1d17d6e17b370e50635e7a68835eeac6ef95a95da1547d65e3339dc3d081"
+    },
+    {
+      "source": "resources/js/admin/components/form/AdminButton.vue",
+      "sha256": "7a2f0ee37f3a8139be29a02bfc1d5c5ce20252dd853efbd5f56a7da19ec742f1",
+      "destination": "resources/js/admin/components/form/AdminButton.vue",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "7a2f0ee37f3a8139be29a02bfc1d5c5ce20252dd853efbd5f56a7da19ec742f1"
+    },
+    {
+      "source": "resources/js/admin/components/form/AdminNumberField.vue",
+      "sha256": "daa82871bd1e5b662e3b6af044bb4673fa6333d59cd26eff04f86835d2a5ad57",
+      "destination": "resources/js/admin/components/form/AdminNumberField.vue",
+      "adaptations": [
+        "Ongewijzigd geselecteerd bronbestand."
+      ],
+      "demoSha256": "daa82871bd1e5b662e3b6af044bb4673fa6333d59cd26eff04f86835d2a5ad57"
+    },
+    {
+      "source": "resources/js/admin.ts",
+      "sha256": "f217cdbf4b4302ece3123ddf02e51d1b2ce342274a38af62465802ac6d6b34ec",
+      "destination": null,
+      "adaptations": [
+        "Alleen gelezen: structuur, contract of orchestratielogica; geen productie-infrastructuur overgenomen."
+      ]
+    },
+    {
+      "source": "resources/js/admin/router/index.ts",
+      "sha256": "a0b15232ef0bfbe52f3b65d6ba86600da35636c09354f7c402d1e86278594e11",
+      "destination": null,
+      "adaptations": [
+        "Alleen gelezen: structuur, contract of orchestratielogica; geen productie-infrastructuur overgenomen."
+      ]
+    },
+    {
+      "source": "resources/js/admin/views/DashboardBookingsView.vue",
+      "sha256": "0847bea0f5b68e72bbe53740e225265ff4c7df8cbc021a0096b3c5d3b8da1a08",
+      "destination": null,
+      "adaptations": [
+        "Alleen gelezen: structuur, contract of orchestratielogica; geen productie-infrastructuur overgenomen."
+      ]
+    },
+    {
+      "source": "resources/js/admin/views/DashboardBookingDetailView.vue",
+      "sha256": "d7133bf2b86ddb2e16b13ca90024e734297dba4c07c264756522b2458dc5ea60",
+      "destination": null,
+      "adaptations": [
+        "Alleen gelezen: structuur, contract of orchestratielogica; geen productie-infrastructuur overgenomen."
+      ]
+    },
+    {
+      "source": "resources/js/admin/components/bookings/BookingAttendancePanel.vue",
+      "sha256": "5c7ee4886c2a6e46267069bbc3df49c1c4c83e4640646b2aca41c6366e39fd5a",
+      "destination": null,
+      "adaptations": [
+        "Alleen gelezen: structuur, contract of orchestratielogica; geen productie-infrastructuur overgenomen."
+      ]
+    },
+    {
+      "source": "resources/js/admin/components/bookings/BookingStatusPanel.vue",
+      "sha256": "eef1a9e44d1de7d270d146ba7fc5be95aa531687bb2370cd108e4ff4f92a334a",
+      "destination": null,
+      "adaptations": [
+        "Alleen gelezen: structuur, contract of orchestratielogica; geen productie-infrastructuur overgenomen."
+      ]
+    },
+    {
+      "source": "src/Services/Booking/Attendance/BookingAttendanceChangeService.php",
+      "sha256": "5c0d8acd022e7cf59c34e9bce88d3b992b49d8ee2936781070bf09395aae49cb",
+      "destination": null,
+      "adaptations": [
+        "Alleen gelezen: structuur, contract of orchestratielogica; geen productie-infrastructuur overgenomen."
+      ]
+    },
+    {
+      "source": "src/Services/Booking/Status/BookingStatusChangeService.php",
+      "sha256": "2271973b60cc9017abd9966372f207f13b28dc4fce8e383d0beb09c8ada38adf",
+      "destination": null,
+      "adaptations": [
+        "Alleen gelezen: structuur, contract of orchestratielogica; geen productie-infrastructuur overgenomen."
+      ]
+    },
+    {
+      "source": "src/Services/Http/Api/Admin/DashboardBookingStatusUpdateAction.php",
+      "sha256": "0395cfdb03a9bcc3c6480f167f5fb82ee3550c355a6e43730fb844697e0b13bf",
+      "destination": null,
+      "adaptations": [
+        "Alleen gelezen: structuur, contract of orchestratielogica; geen productie-infrastructuur overgenomen."
+      ]
+    },
+    {
+      "source": "src/Services/Http/Api/Admin/BookingAttendanceUpdateRequest.php",
+      "sha256": "6f9149706d3dbd64b86c4863e36eb62033e3816ecefd3701ee2e307c62eb5ec5",
+      "destination": null,
+      "adaptations": [
+        "Alleen gelezen: structuur, contract of orchestratielogica; geen productie-infrastructuur overgenomen."
+      ]
+    }
+  ],
+  "verifiedAt": "2026-10-18",
+  "sourceChangesInSelection": "M resources/js/admin/router/index.ts",
+  "localSourceChanges": [
+    {
+      "source": "resources/js/admin/router/index.ts",
+      "copied": false,
+      "description": "Lokale imports en routes voor roosters, nieuw rooster, personeel en roosterdetail bovenop de bronrevisie. Alleen gelezen; planner-routes niet overgenomen. Vastgelegde SHA-256 betreft de gelezen werkboombytes.",
+      "diffSha256": "8824f647b1ecee6aafcf44ed72072beab433bb2587da453f41a92c4ed8e621da"
+    }
+  ],
+  "demoRole": {
+    "actions": [
+      "list",
+      "detail",
+      "edit-school-contact",
+      "edit-attendance",
+      "edit-catering",
+      "edit-comments",
+      "change-status"
+    ],
+    "overrides": false,
+    "mail": false,
+    "productionAuthentication": false
+  },
+  "integration": [
+    {
+      "destination": "server/Dashboard.php",
+      "adaptation": "Coördineert bronvalidators en prijsregels zonder SQL/mail/transacties. Statusacties gebruiken de echte overgangspolicy, bevestigingsvalidator en capaciteit. Beheeraantallen vanaf 1; draft-waarschuwingen toegestaan. Geen rule overrides. Prijs is actuele fictieve calculatie, geen financiële snapshotadministratie.",
+      "demoSha256": "43aa0661ea94ae26895932c169f2301f5382f35a29371f8815da06ea66b28090"
+    },
+    {
+      "destination": "resources/js/dashboard/DashboardView.vue",
+      "adaptation": "Aanvragenlijst en detailkaarten gebaseerd op bronstructuur, met hergebruikte AdminButton/AdminNumberField en filter/statustypes. Browserfilters, sortering en 20 per pagina; alleen toegestane demoacties. Geen Vue Router dependency nodig voor twee hash-ingangen.",
+      "demoSha256": "18598fbb93e8ba5dbece396719de3a10874779f6db2380ac350da671584f9737"
+    },
+    {
+      "destination": "resources/js/dashboard/state.ts",
+      "adaptation": "Eén veranderbare tabbladkopie. Generation/abortcontrole en vervallen kalendercaches; geen permanente opslag of serversessie.",
+      "demoSha256": "1f84d647cad945502f65288c099d49f7a0db538293f427ec3f9591f77e53ad2a"
+    },
+    {
+      "destination": "server/Seed.php",
+      "adaptation": "Nieuwe reproduceerbare fictieve generator; seed 120100. Bronconfiguratie bepaalt onderwijs, modules, aantallen en catering.",
+      "demoSha256": "2de6033abd90679a932b803b2fc2a7b3fe827ee352a9a4633ae2a9c8b8488e62"
+    },
+    {
+      "destination": "server/FictionalCalendar.php",
+      "adaptation": "Actuele definitieve records vervangen losse fictieve bezetting; bestaande fictieve blokkades behouden.",
+      "demoSha256": "2ad4f960d70ff736daec5ffec15b3cea5c04a2bf096c1fc817d27e5694c337b8"
+    }
+  ]
+}

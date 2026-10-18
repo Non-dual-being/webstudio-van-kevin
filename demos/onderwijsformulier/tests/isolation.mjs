@@ -18,7 +18,7 @@ for (const file of frontend) {
   assert(!/https?:\/\/|mailto:|geofort\.nl|GeoFort_Onderwijs\.pdf/.test(code), `Oorspronkelijke of externe koppeling: ${file}`);
   if (/\bfetch\(/.test(code)) assert(file.endsWith('/demoSession.ts'), `Fetch buiten demo-API: ${file}`);
 }
-assert(!files('src').some(f=>/Sql|SubmissionService|Mailer|StoredBooking/.test(f)), 'Onnodige infrastructuur overgenomen');
+assert(!files('src').some(f=>/Sql|SubmissionService|Mailer/.test(f)), 'Onnodige infrastructuur overgenomen');
 assert(fs.readFileSync(root+'server/router.php','utf8').includes("connect-src 'self'"), 'Same-origin CSP');
 assert(fs.readFileSync(root+'scripts/php-server.mjs','utf8').includes('disable_functions=mail'), 'Mail moet technisch uit staan');
 assert(!fs.existsSync(path.join(root,'vendor')), 'Demo vereist geen Laravel/vendor');

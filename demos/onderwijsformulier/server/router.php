@@ -21,7 +21,7 @@ $send = static function (array $body, int $status = 200): never {
 
 if (str_starts_with((string) $path, '/demo-api/')) {
     require __DIR__.'/bootstrap.php';
-    $routes = ['rules' => 'GET', 'policy' => 'GET', 'programs' => 'GET', 'dates' => 'GET', 'roster' => 'POST', 'quote' => 'POST', 'complete' => 'POST'];
+    $routes = ['rules' => 'GET', 'policy' => 'GET', 'programs' => 'GET', 'seed' => 'GET', 'dates' => 'POST', 'roster' => 'POST', 'quote' => 'POST', 'complete' => 'POST', 'change' => 'POST'];
     $route = substr($path, strlen('/demo-api/'));
     if (!isset($routes[$route])) {
         $send(['ok' => false, 'message' => 'Onbekende demo-API.'], 404);
@@ -34,19 +34,26 @@ if (str_starts_with((string) $path, '/demo-api/')) {
         $send(['ok' => false, 'message' => 'Ongeldig demoverzoek.'], 400);
     }
     try {
-        $app = new Demo\Application(new Demo\DemoClock(getenv('DEMO_TODAY') ?: null));
+        $clock = new Demo\DemoClock(getenv('DEMO_TODAY') ?: null);
+        $context = Demo\Dashboard::context($_POST['demoContext'] ?? null);
+        $app = new Demo\Application($clock, $context);
+        $dashboard = new Demo\Dashboard($app);
         $data = match ($route) {
             'rules' => GeoFort\Validation\FormRules::getRulesForFrontend(),
             'policy' => GeoFort\Booking\BookingPolicy::getBookingPolicyForFrontend(),
             'programs' => GeoFort\Booking\BookingProgramConfig::forFrontend(),
+            'seed' => $dashboard->seed(),
             'dates' => $app->dates(),
             'roster' => $app->roster($_POST),
             'quote' => $app->quote($_POST),
-            'complete' => $app->complete($_POST),
+            'complete' => $dashboard->complete($_POST, $context ?? Demo\Seed::records($clock)),
+            'change' => $dashboard->mutate($_POST, $context ?? Demo\Seed::records($clock)),
         };
         $send($route === 'complete' ? $data : ['ok' => true, 'data' => $data]);
     } catch (GeoFort\Validation\FieldValidationException $error) {
         $send(['ok' => false, 'type' => 'validation', 'fieldErrors' => [$error->getField() => $error->getMessage()]], 422);
+    } catch (JsonException|TypeError) {
+        $send(['ok' => false, 'type' => 'validation', 'fieldErrors' => ['demo' => 'Ongeldig demoverzoek.']], 400);
     } catch (Throwable) {
         // Geen exceptiontekst of formulierinhoud in response/logs.
         $send(['ok' => false, 'type' => 'server', 'code' => 500, 'message' => 'De demo kon dit niet controleren. Probeer opnieuw.'], 500);

@@ -12,7 +12,7 @@ try {
       checks.push({ label, passed });
       if (!passed) throw Error(`${width}: ${label}`);
     };
-    const shot = name => page.shot(`${root}/artifacts/${name}-${width}.png`);
+    const shot = async () => {}; // Beeldselectie van maximaal zes staat in dashboard-flow.mjs.
     const ready = () => page.until(`!!document.getElementById('bezoekdatum-visible')`);
     const press = async selector => { await page.tabTo(selector); await page.key('Enter'); };
     const choose = async (selector, index = 0) => {
@@ -88,7 +88,7 @@ try {
       await page.evaluate(`document.querySelector('textarea#opmerkingen').scrollIntoView({block:'center'})`); await shot('comments');
       await check('Geen overloop volledig formulier', 'document.documentElement.scrollWidth <= innerWidth');
       await page.tabTo('#voorwaardenAkkoord'); await page.key(' '); await press('button[type="submit"]'); await page.until(`!!document.querySelector('.demo-success')`);
-      await check('Eerlijk succes en focus', `document.querySelector('.demo-success').innerText.includes('Demo afgerond.') && document.querySelector('.demo-success').innerText.includes('Er is geen aanvraag opgeslagen of e-mail verstuurd.') && document.activeElement.matches('.demo-success')`); await shot('success');
+      await check('Eerlijk succes en focus', `document.querySelector('.demo-success').innerText.includes('Demo afgerond.') && document.querySelector('.demo-success').innerText.includes('Er is geen echte boeking gemaakt of e-mail verstuurd.') && document.activeElement.matches('.demo-success')`); await shot('success');
       await restart();
       await check('Formulier en kalender gereset', `document.getElementById('bezoekdatum').value === '' && !document.querySelector('textarea') && !document.querySelector('.demo-success') && document.querySelectorAll('.flatpickr-calendar').length === 1`);
       await page.evaluate(`(() => { const real = window.fetch; window.__originalFetch = real; let used = false; window.fetch = (url,init) => { if (!used && url === '/demo-api/rules') { used = true; return Promise.resolve(new Response(JSON.stringify({ok:false}),{status:503,headers:{'Content-Type':'application/json'}})); } return real(url,init); }; })()`);

@@ -87,6 +87,7 @@ export function useFormSubmit(): UseFormSubmitReturn {
             switch (data.type) {
                 case "validation":
                     state.value = "idle";
+                    formError.value = (data.fieldErrors as Record<string, string>).demo ?? null;
                     return data;
 
                 case "rate-limit":

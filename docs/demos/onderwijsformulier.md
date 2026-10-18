@@ -1,6 +1,6 @@
 # Demo-voorstel: Onderwijsformulier
 
-Status 10 oktober 2026: stap 11 gericht geactualiseerd; de eerste zelfstandige interactieve demo van stap 12 staat in [demos/onderwijsformulier](../../demos/onderwijsformulier/README.md). Zie het [actuele controlerapport](onderwijsformulier-demo-controle.md). De onderstaande bronkaart blijft de onderbouwing van de gekozen architectuur; er is nog geen publieke demo-URL of portfolioknop.
+Status 18 oktober 2026: run 12B breidt de [zelfstandige demo](../../demos/onderwijsformulier/README.md) uit met aanvragenbeheer en 100 fictieve scholen, gekoppeld aan het goedgekeurde formulier. Zie het [dashboardcontrolerapport](onderwijsdashboard-demo-controle.md) en het [aansluitende bronmanifest](../../demos/onderwijsformulier/dashboard-source-manifest.json). De onderstaande bronkaart beschrijft de oorspronkelijke formulierselectie van stap 11/12. Er is nog geen publieke demo-URL of portfolioknop.
 
 De geselecteerde broncode is opnieuw vergeleken op revisie `1a43fc16bdaafb27920d8c6c819fa58c6e02dc35` (`feature/calendar-booking-clickability`). Binnen de geselecteerde bestanden waren geen lokale bronwijzigingen. Exacte bestanden, SHA-256-hashes en demo-aanpassingen staan in het [bronmanifest](../../demos/onderwijsformulier/source-manifest.json). Geen algemene heraudit uitgevoerd.
 
@@ -8,7 +8,7 @@ De geselecteerde broncode is opnieuw vergeleken op revisie `1a43fc16bdaafb27920d
 
 Onderzocht: `C:/wamp64/www/GeoFortForm4`, uitsluitend door bronbestanden te lezen. Het toepasselijke `AGENTS.md` is gelezen. Geen productie-.env, databasebestanden, logs of echte aanvragen gelezen; geen applicatie, migraties of tests in dat project gestart. De genoemde functies zijn vastgesteld in code, niet door echte boekingen te versturen. Exacte persoonlijke bijdrage, klanttoestemming, gebruikscijfers en tijdsbesparing zijn niet vastgesteld en worden niet geclaimd.
 
-De eerste demo betreft alleen het **publieke aanvraagformulier**. De interne planner is een afzonderlijke toepassing, met eigen Vue-ingang, hashrouter, private sessie en beheer-API's. Planning, statuswijzigingen, rapportages, exports, login en beheer worden niet in de eerste demo opgenomen.
+Stap 12 betrof alleen het **publieke aanvraagformulier**. Run 12B voegt een tijdelijke eigen beheeromgeving toe: overzicht, zoeken/filteren, detail, bewerken van school/contactgegevens, aantallen, catering en opmerkingen, en bronconforme statuswijzigingen. De uitgebreide roosterplanner en personeelsplanning blijven een afzonderlijke vervolgopdracht; rapportages, exports, facturen, accounts en echte verzending vallen buiten deze versie. De interne bronapp blijft uitsluitend leesbron.
 
 Er zijn geen geschikte, aantoonbaar geschoonde screenshots vastgesteld. Daarom heeft de portfolio-case een tekstuele opzet met een procesoverzicht. Bestaande roosterafbeeldingen, PDF's, logo's en huisstijlbestanden van de bronapp worden niet gepubliceerd.
 

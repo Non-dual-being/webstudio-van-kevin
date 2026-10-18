@@ -9,7 +9,7 @@
     "types:check": "vue-tsc --noEmit",
     "lint": "eslint resources/js scripts tests vite.config.ts",
     "test": "node scripts/test.mjs && node tests/isolation.mjs",
-    "test:browser": "node tests/flow.mjs",
+    "test:browser": "node tests/flow.mjs && node tests/dashboard-flow.mjs",
     "check": "npm run types:check && npm run lint && npm test"
   },
   "dependencies": {

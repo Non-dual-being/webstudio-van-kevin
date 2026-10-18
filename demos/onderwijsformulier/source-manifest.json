@@ -92,9 +92,10 @@
       "sha256": "554c171ef2abaf370b43237c5da119e3e55491e4dc39c5009f37e9ac9f7dda79",
       "destination": "resources/js/types/http/ApiResponse.ts",
       "adaptations": [
-        "Eerlijke demo-successtatus."
+        "Eerlijke demo-successtatus.",
+        "Run 12B: succesvolle response bevat de gevalideerde demoaanvraag voor gedeelde tabbladstate."
       ],
-      "demoSha256": "66f68535f5355b217e5b4788f6780012d5c604b7369a44d5eaccaeba8551de9e"
+      "demoSha256": "6438b6b2f442afd572712256484ea7880e021f75da959eb4e3d87fcff769d69e"
     },
     {
       "source": "resources/js/types/booking/BookingFieldTypes.ts",
@@ -184,9 +185,10 @@
       "destination": "resources/js/composables/useFormSubmit.ts",
       "adaptations": [
         "Hergebruikte structuur; ongebruikte code/imports verwijderd en neutrale presentatieteksten.",
-        "Alleen demo-complete; timer opruimen bij unmount, abort-/generatiecontrole en begrijpelijke netwerkfout."
+        "Alleen demo-complete; timer opruimen bij unmount, abort-/generatiecontrole en begrijpelijke netwerkfout.",
+        "Run 12B: begrenzingsfout van de demonstratieomgeving als formulierfout tonen."
       ],
-      "demoSha256": "98025a4c4d92657638332e4eba1ec9ab54b36fafe6e15f9c0bd135646b522a35"
+      "demoSha256": "fcf71dcf46de8f046470c0610b2154aed40e8644788c4b21c95e171949e59769"
     },
     {
       "source": "resources/js/components/form/GeoFormDiscoveryField.vue",
@@ -423,9 +425,10 @@
       "destination": "resources/js/components/form/GeoFormTermsAcceptanceField.vue",
       "adaptations": [
         "Expliciete demo-afspraak, geen productievoorwaarden of download.",
-        "Lokale iconen via @lucide/vue; geen CDN of klantassets."
+        "Lokale iconen via @lucide/vue; geen CDN of klantassets.",
+        "Run 12B: uitleg tijdelijke opslag in eigen tabblad, geen echte boeking of mail."
       ],
-      "demoSha256": "928687d6c02b7db10cec5b5eb913bc21821afec37a5159ebbd1b170a12e913f9"
+      "demoSha256": "ff98777609bc286c29129508c77e60a373d4815f97a5bc61ed3fbead06f214f2"
     },
     {
       "source": "resources/js/composables/useEducationProgram.ts",
@@ -1157,8 +1160,8 @@
       ]
     }
   ],
-  "verifiedAt": "2026-10-10",
-  "sourceVerification": "Alle geregistreerde bronhashes en de revisie opnieuw gecontroleerd; bron ongewijzigd. De rekenmachine verschilt uitsluitend in verplichte catalogusinjectie.",
+  "verifiedAt": "2026-10-18",
+  "sourceVerification": "Alle geregistreerde bronhashes en revisie opnieuw gecontroleerd op 18 oktober: geen hashdrift. De alleen gelezen dashboardrouter heeft lokale planner-routes; zie dashboard-source-manifest.json. Gekopieerde regelbestanden behouden dezelfde bronrevisie.",
   "addedDemoFiles": [
     "server/Contracts/*",
     "server/Application.php",
@@ -1183,5 +1186,6 @@
     "eslint.config.js",
     ".gitignore",
     "README.md"
-  ]
+  ],
+  "dashboardExtension": "dashboard-source-manifest.json"
 }

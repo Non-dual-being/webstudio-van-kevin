@@ -10,4 +10,4 @@ function files(dir) {
 const phpFiles = ['src', 'server', 'tests'].flatMap(files).filter(file => file.endsWith('.php'));
 for (const file of phpFiles) execFileSync(php, ['-l', file], { cwd: root, stdio: 'pipe' });
 console.log(`PHP syntax: ${phpFiles.length} bestanden in orde.`);
-execFileSync(php, ['-d', 'display_errors=1', '-d', 'log_errors=0', '-d', 'disable_functions=mail', 'tests/domain.php'], { cwd: root, stdio: 'inherit' });
+execFileSync(php, ['-d', 'display_errors=1', '-d', 'xdebug.mode=off', '-d', 'log_errors=0', '-d', 'disable_functions=mail', 'tests/dashboard.php'], { cwd: root, stdio: 'inherit' });

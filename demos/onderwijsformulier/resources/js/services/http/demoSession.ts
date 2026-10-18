@@ -1,4 +1,6 @@
-const paths = new Set(['/demo-api/rules', '/demo-api/policy', '/demo-api/programs', '/demo-api/dates', '/demo-api/roster', '/demo-api/quote', '/demo-api/complete']);
+const paths = new Set(['/demo-api/rules', '/demo-api/policy', '/demo-api/programs', '/demo-api/dates', '/demo-api/roster', '/demo-api/quote', '/demo-api/complete', '/demo-api/seed', '/demo-api/change']);
+let context: (() => string) | null = null;
+export function setDemoContext(provider: () => string): void { context = provider; }
 let generation = 0;
 let controller = new AbortController();
 const cache = new Map<string, Promise<unknown>>();
@@ -14,6 +16,10 @@ export function resetDemoSession(): void {
 
 export async function requestDemo<T>(url: string, init: RequestInit = {}): Promise<{ body: T; status: number; ok: boolean }> {
   if (!paths.has(url)) throw new Error('Deze koppeling hoort niet bij de demo.');
+  if (url === '/demo-api/dates') init = { ...init, method: 'POST', body: new FormData() };
+  if (init.body instanceof FormData && context) {
+    init.body.set('demoContext', context());
+  }
   const requestGeneration = generation;
   const signal = AbortSignal.any([controller.signal, AbortSignal.timeout(15000), ...(init.signal ? [init.signal] : [])]);
   const headers = new Headers(init.headers);

@@ -29,9 +29,9 @@ final class Application
     public readonly BookingPriceCatalogRegistry $catalogs;
     public readonly BookingPriceCalculator $calculator;
 
-    public function __construct(public readonly Clock $clock)
+    public function __construct(public readonly Clock $clock, ?array $records = null)
     {
-        $this->calendar = new FictionalCalendar($clock);
+        $this->calendar = new FictionalCalendar($clock, $records);
         $this->availability = new BookingAvailabilityService($this->calendar, $this->calendar, $clock);
         $data = json_decode(file_get_contents(__DIR__.'/catalog.json'), true, 32, JSON_THROW_ON_ERROR);
         $priceTypes = array_map(static fn (array $sector): string => $sector['priceType'], BookingProgramConfig::SCHOOL_TYPES_BY_KEY);

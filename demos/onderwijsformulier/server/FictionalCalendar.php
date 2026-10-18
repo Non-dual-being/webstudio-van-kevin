@@ -9,13 +9,13 @@ use Demo\Contracts\Clock;
 use Demo\Contracts\DisabledDatesRepository;
 use GeoFort\Booking\BookingPolicy;
 
-/** Alleen verzonnen aantallen en redenen in geheugen; geen aanvragen. */
+/** Capaciteit uitsluitend uit de actuele tabbladrecords; blokkades zijn fictief. */
 final class FictionalCalendar implements CalendarRepository, DisabledDatesRepository
 {
     private array $stats = [];
     private array $disabled = [];
 
-    public function __construct(Clock $clock)
+    public function __construct(Clock $clock, ?array $records = null)
     {
         $day = $clock->today();
         $weekdays = [];
@@ -26,9 +26,13 @@ final class FictionalCalendar implements CalendarRepository, DisabledDatesReposi
             }
         }
 
-        $this->stats[$weekdays[1]] = ['bookedSchools' => 1, 'bookedStudents' => BookingPolicy::MAX_STUDENTS_TOTAL_PER_DAY - 40];
-        $this->stats[$weekdays[3]] = ['bookedSchools' => BookingPolicy::MAX_SCHOOLS_PER_DAY, 'bookedStudents' => 80];
-        $this->stats[$weekdays[5]] = ['bookedSchools' => 1, 'bookedStudents' => BookingPolicy::MAX_STUDENTS_TOTAL_PER_DAY];
+        foreach ($records ?? Seed::records($clock) as $record) {
+            if ($record['status'] !== BookingPolicy::STATUS_CONFIRMED) continue;
+            $date = $record['payload']['bezoekdatum'];
+            $this->stats[$date] ??= ['bookedSchools'=>0, 'bookedStudents'=>0];
+            $this->stats[$date]['bookedSchools']++;
+            $this->stats[$date]['bookedStudents'] += (int) $record['payload']['aantalLeerlingen'];
+        }
         $this->disabled[$weekdays[4]] = ['datum' => $weekdays[4], 'type' => 'manual', 'reden' => 'Voorbeelddag: gesloten voor onderwijsbezoeken.'];
         foreach (array_slice($weekdays, 10, 3) as $date) {
             $this->disabled[$date] = ['datum' => $date, 'type' => 'school_vacation', 'reden' => 'Fictieve vakantieperiode; geen echte schoolvakantiekalender.'];
