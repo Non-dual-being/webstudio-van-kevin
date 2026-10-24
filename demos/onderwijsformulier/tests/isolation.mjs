@@ -14,8 +14,15 @@ for (const file of php) {
 }
 for (const file of frontend) {
   const code = fs.readFileSync(root+file,'utf8');
+  // One explicitly gated navigation link; never an API/asset/mail destination.
+  const backLink = '<p v-if="showWebsiteLink"><a class="demo-nav-link" href="https://kevinwebstudio.nl/werk/onderwijsformulier">Terug naar Kevin Webstudio</a></p>';
+  const externalCode = file === 'resources/js/App.vue' ? code.replace(backLink, '') : code;
+  if (file === 'resources/js/App.vue') {
+    assert(code.includes(backLink), 'Teruglink heeft vaste URL, eigen tabblad en releaseflag');
+    assert(code.includes("const showWebsiteLink = import.meta.env.VITE_WEBSTUDIO_LINK_ENABLED === 'true';"), 'Teruglink standaard uit');
+  }
   assert(!/localStorage|sessionStorage|indexedDB|document\.cookie|history\.(pushState|replaceState)|serviceWorker/.test(code), `Browseropslag: ${file}`);
-  assert(!/https?:\/\/|mailto:|geofort\.nl|GeoFort_Onderwijs\.pdf/.test(code), `Oorspronkelijke of externe koppeling: ${file}`);
+  assert(!/https?:\/\/|mailto:|geofort\.nl|GeoFort_Onderwijs\.pdf/.test(externalCode), `Oorspronkelijke of externe koppeling: ${file}`);
   if (/\bfetch\(/.test(code)) assert(file.endsWith('/demoSession.ts'), `Fetch buiten demo-API: ${file}`);
 }
 assert(!files('src').some(f=>/Sql|SubmissionService|Mailer/.test(f)), 'Onnodige infrastructuur overgenomen');

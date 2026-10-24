@@ -44,6 +44,20 @@ class PublicPagesTest extends TestCase
                 ->where('projects.0', $project));
     }
 
+    public function test_demo_link_is_hidden_until_release_and_uses_the_central_url(): void
+    {
+        config(['demos.education_enabled' => false]);
+        $this->get('/werk/onderwijsformulier')
+            ->assertInertia(fn (Assert $page) => $page->where('demoUrl', null));
+
+        config(['demos.education_enabled' => true]);
+        $this->get('/werk/onderwijsformulier')
+            ->assertInertia(fn (Assert $page) => $page
+                ->where('demoUrl', 'https://onderwijsdemo.kevinwebstudio.nl/#/formulier'));
+        $this->get('/werk')->assertInertia(fn (Assert $page) => $page->missing('demoUrl'));
+        $this->get('/werk/onbekend-project')->assertNotFound();
+    }
+
     public function test_unknown_project_slugs_return_not_found(): void
     {
         $this->get('/werk/onbekend-project')->assertNotFound();

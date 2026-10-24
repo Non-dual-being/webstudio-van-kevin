@@ -27,6 +27,10 @@ class PortfolioController extends Controller
 
         abort_unless(is_array($project), 404);
 
-        return Inertia::render('Work/Show', ['project' => $project]);
+        return Inertia::render('Work/Show', [
+            'project' => $project,
+            'demoUrl' => $slug === 'onderwijsformulier' && config('demos.education_enabled')
+                ? config('demos.education_url') : null,
+        ]);
     }
 }

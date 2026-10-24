@@ -1,0 +1,8 @@
+{
+  "reviewed": false,
+  "phpSeries": "8.5",
+  "siteRoot": "/var/www/kevin-webstudio",
+  "demoRoot": "/var/www/onderwijsdemo",
+  "siteCertificate": "REVIEW_kevinwebstudio.nl",
+  "demoCertificate": "REVIEW_onderwijsdemo.kevinwebstudio.nl"
+}

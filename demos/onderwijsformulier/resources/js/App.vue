@@ -14,6 +14,7 @@ import type { ApiOk } from './types/http/ApiResponse';
 import '../css/dashboard.css';
 
 const run = ref(0), ready = ref(false), completed = ref(false), error = ref('');
+const showWebsiteLink = import.meta.env.VITE_WEBSTUDIO_LINK_ENABLED === 'true';
 const heading = ref<HTMLElement | null>(null), success = ref<HTMLElement | null>(null);
 const route = ref(location.hash || '#/formulier');
 const dashboard = computed(() => route.value.startsWith('#/aanvragen'));
@@ -61,5 +62,5 @@ onBeforeUnmount(() => window.removeEventListener('hashchange', navigate));
   <section v-else-if="!validRoute" class="demo-message"><h2>Deze demopagina bestaat niet.</h2><a href="#/aanvragen">Naar het overzicht</a></section>
   <section v-else-if="completed" ref="success" class="demo-message demo-success" role="status" tabindex="-1"><Check :size="28" aria-hidden="true" /><h2>Demo afgerond.</h2><p>Je demoaanvraag staat in jouw demonstratieomgeving. Er is geen echte boeking gemaakt of e-mail verstuurd.</p><p class="demo-muted">Je wijzigingen blijven beschikbaar zolang dit tabblad openstaat. Vernieuwen of opnieuw starten herstelt de voorbeelden.</p><a class="demo-reset" :href="'#/aanvragen/' + lastCreated">Bekijk in het demodashboard</a><button class="demo-reset" @click="newForm">Nog een demoaanvraag</button></section>
   <BookingGeoFormView v-else :key="run" @success="complete" @server-error="error = $event.message" />
-  <footer class="demo-footer">Fictieve prijzen en aantallen. Je wijzigingen blijven in dit tabblad tot vernieuwen of opnieuw starten. Geen echte boeking of e-mail.</footer>
+  <footer class="demo-footer">Fictieve prijzen en aantallen. Je wijzigingen blijven in dit tabblad tot vernieuwen of opnieuw starten. Geen echte boeking of e-mail.<p v-if="showWebsiteLink"><a class="demo-nav-link" href="https://kevinwebstudio.nl/werk/onderwijsformulier">Terug naar Kevin Webstudio</a></p></footer>
 </template>

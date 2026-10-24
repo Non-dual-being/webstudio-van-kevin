@@ -5,7 +5,7 @@ import PublicCardAction from '@/components/public/PublicCardAction.vue';
 import PublicLayout from '@/layouts/PublicLayout.vue';
 import type { PortfolioProject } from '@/types/portfolio';
 
-defineProps<{ project: PortfolioProject }>();
+defineProps<{ project: PortfolioProject; demoUrl: string | null }>();
 </script>
 
 <template>
@@ -30,6 +30,13 @@ defineProps<{ project: PortfolioProject }>();
             <p class="mt-6 text-lg leading-8 text-slate-700">
                 {{ project.intro }}
             </p>
+            <a
+                v-if="demoUrl"
+                :href="demoUrl"
+                class="mt-6 inline-flex min-h-11 items-center rounded-md border border-slate-900 bg-slate-900 px-5 py-2.5 font-semibold text-white hover:bg-slate-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-600"
+            >
+                Probeer de onderwijsdemo
+            </a>
         </header>
 
         <div

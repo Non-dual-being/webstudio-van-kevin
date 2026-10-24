@@ -1,5 +1,7 @@
 # Onderwijsdemo: formulier en aanvragenbeheer
 
+Publicatievoorbereiding: zie [eerste publicatie](../../docs/runbooks/eerste-publicatie.md). Nog niet live. De hoofdsiteknop blijft uit via `EDUCATION_DEMO_ENABLED=false`; de demo-teruglink verschijnt alleen in een build met `VITE_WEBSTUDIO_LINK_ENABLED=true`. Deze twee gewone links openen in hetzelfde tabblad. De lokale PHP 8.4.15-versiecontrole blijft behouden; op deze machine is die versie voor run 13A afzonderlijk in de tijdelijke testmap beschikbaar gemaakt.
+
 Zelfstandige Vue/Vite-demo met een kleine PHP-laag. Laravel en GeoFortForm4 hoeven niet te draaien of aanwezig te zijn. Alleen fictieve gegevens; aanvragen en wijzigingen staan tijdelijk in het geheugen van het open tabblad. Geen database, serversessies, mailtransport of queue.
 
 ## Starten op Windows
