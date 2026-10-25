@@ -14,34 +14,34 @@ const specialties = [
     },
     {
         title: 'Webapplicaties op maat',
-        text: 'Komen aanvragen onvolledig binnen of mis je overzicht? Ik kan formulieren met vervolgvragen en invoercontroles bouwen, of een dashboard voor aanvragen en taken.',
+        text: 'Veel keuzes, regels of gegevens? Ik breng ze samen in een formulier, dashboard of beheeromgeving met een logische navigatie en duidelijke vervolgstappen.',
     },
     {
         title: 'Webshops en productcatalogi',
         text: 'Wil je producten online tonen of verkopen? Ik kan een catalogus voor productinformatie en aanvragen bouwen, of een webshop waarin klanten daadwerkelijk bestellen.',
     },
     {
-        title: 'Onderhoud en doorontwikkeling',
-        text: 'Wil je je website laten bijhouden of uitbreiden? Denk aan technische updates, hulp bij problemen of nieuwe functies. We spreken vooraf af welke werkzaamheden passen.',
+        title: 'Hosting, onderhoud en doorontwikkeling',
+        text: 'Naast het bouwen kan ik de technische omgeving en het online zetten verzorgen. Hosting, updates, back-ups en ondersteuning spreken we vooraf af. Nieuwe functies zijn apart af te spreken werk.',
     },
 ];
 
 const processSteps = [
     {
         title: 'Kennismaken',
-        text: 'Je vertelt wat je wilt bereiken, voor wie en wat er nu lastig gaat.',
+        text: 'Je vertelt wat je wilt bereiken. Ik vraag door naar wat je bezoekers en jijzelf moeten kunnen doen.',
     },
     {
         title: 'Afspreken wat we bouwen',
-        text: 'We spreken de onderdelen af en welke inhoud en gegevens ik van je nodig heb.',
+        text: 'We bespreken de omvang, planning en prijs, en welke inhoud en gegevens ik van je nodig heb.',
     },
     {
         title: 'Een eerste versie bekijken',
-        text: 'Ik laat zien hoe het werkt. Met jouw feedback stel ik de afgesproken onderdelen bij.',
+        text: 'Je bekijkt een werkende versie. Ik verwerk gerichte feedback en controleer de keuzes, vervolgstappen en afwerking binnen de afgesproken oplossing.',
     },
     {
         title: 'Opleveren met duidelijke afspraken',
-        text: 'We lopen de belangrijkste handelingen na en spreken af hoe beheer, overdracht en eventuele nazorg zijn geregeld.',
+        text: 'We lopen de belangrijkste handelingen na en leggen vast hoe oplevering, eventuele hosting en verder beheer worden geregeld.',
     },
 ];
 </script>
@@ -64,11 +64,10 @@ const processSteps = [
                 class="mt-7 max-w-3xl space-y-4 text-lg leading-8 text-slate-700"
             >
                 <p>
-                    Ik ben Kevin. Ik bouw websites, formulieren en
-                    webapplicaties die aansluiten op de mensen die ze gebruiken.
-                    Samen kijken we wat jouw bezoekers nodig hebben en waar je
-                    werk eenvoudiger kan. Dat vertaal ik naar een heldere
-                    website of een praktisch systeem.
+                    Ik ben Kevin. Ik bouw websites en webapplicaties en maak
+                    complexe functies eenvoudig in gebruik. Een aanvraagproces
+                    met veel keuzes breng ik terug tot begrijpelijke stappen,
+                    met een duidelijke navigatie en aandacht voor de afwerking.
                 </p>
             </div>
             <div class="mt-8 flex flex-wrap gap-3">

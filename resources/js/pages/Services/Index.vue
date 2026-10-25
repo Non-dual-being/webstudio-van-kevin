@@ -29,12 +29,12 @@ const services = [
         linkLabel: 'Bekijk webshops en catalogi',
     },
     {
-        title: 'Onderhoud en doorontwikkeling',
-        text: 'Wil je je website of applicatie laten bijhouden of uitbreiden? Denk aan technische updates, hulp bij problemen of het bouwen van nieuwe pagina’s en functies.',
+        title: 'Hosting, onderhoud en doorontwikkeling',
+        text: 'Wil je ook de techniek achter je website laten verzorgen? Naast het bouwen kan ik hosting en het online zetten regelen, inclusief het inrichten van een VPS of dedicated server als dat bij je project past.',
         agreement:
-            'Tijdens de kennismaking bekijken we de bestaande techniek en spreken we werkzaamheden, ondersteuning en eventuele back-ups en herstel af. Nieuwe functies begroten we apart.',
+            'We spreken vooraf af wat hosting, updates, back-ups, herstel en ondersteuning omvatten. Er is geen automatisch inbegrepen abonnement. Nieuwe functies en doorontwikkeling begroten we apart.',
         href: '/contact',
-        linkLabel: 'Bespreek onderhoud',
+        linkLabel: 'Bespreek hosting en beheer',
     },
 ];
 </script>
@@ -85,7 +85,7 @@ const services = [
                     </p>
                     <footer class="mt-auto border-t border-stone-200 pt-5">
                         <p class="mb-3 text-sm font-semibold text-slate-700">
-                            Prijs na kennismaking
+                            Prijs na projectbespreking
                         </p>
                         <PublicCardAction :href="service.href">
                             {{ service.linkLabel }}
@@ -93,6 +93,21 @@ const services = [
                     </footer>
                 </article>
             </div>
+        </section>
+        <section
+            aria-labelledby="project-bespreken"
+            class="mt-14 max-w-3xl border-t border-stone-200 pt-8"
+        >
+            <h2 id="project-bespreken" class="text-2xl font-semibold">
+                Van eerste bericht naar duidelijke afspraken
+            </h2>
+            <p class="mt-4 leading-7 text-slate-600">
+                Bekijk mijn werk en vertel via het contactformulier of
+                info@kevinwebstudio.nl wat je wilt maken. De verdere afstemming
+                verloopt per e-mail. Tijdens de projectbespreking bepalen we de
+                omvang, planning en geldafspraken. Daarop baseer ik een
+                persoonlijk voorstel en de prijs.
+            </p>
         </section>
     </PublicLayout>
 </template>

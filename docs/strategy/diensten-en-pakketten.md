@@ -1,5 +1,7 @@
 # Diensten en pakketten: publieke toepassing en intern voorstel
 
+**Actualisering 25 oktober 2026:** de [persoonlijke presentatie en hostingkeuzes](persoonlijke-presentatie-en-hosting.md) gaan voor op de hieronder beschreven publieke tekst van september. De vierde aanbodgroep heet nu “Hosting, onderhoud en doorontwikkeling”; de publieke prijsvermelding is “Prijs na projectbespreking”. Omvang, planning, geldafspraken en eventuele hosting/beheertaken worden per project besproken, met verdere afstemming per e-mail. De historische pakketlimieten hieronder zijn daarmee niet vastgesteld of publiek aangeboden.
+
 **Status: het dienstenaanbod is toegepast in de websitecode. De commerciële uitwerking hieronder blijft een INTERN VOORSTEL, niet vastgesteld als verkoopvoorwaarden.**
 
 Bijgewerkt: 18 september 2026. Oorspronkelijk voorstel: 15–16 september 2026. Vertrekpunt voor de publieke toepassing: `9fb4e85` op `feature/public-visual-refinement`. Dit beschrijft de lokale wijzigingen; er is geen merge of deployment uitgevoerd.

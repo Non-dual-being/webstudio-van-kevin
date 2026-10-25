@@ -44,7 +44,7 @@ import PublicLayout from '@/layouts/PublicLayout.vue';
                 </p>
             </section>
             <p class="mt-8 font-semibold text-slate-950">
-                Prijs na kennismaking
+                Prijs na projectbespreking
             </p>
             <PublicButtonLink href="/contact" class="mt-4">
                 Bespreek je website
