@@ -13,6 +13,16 @@ export type PortfolioProject = {
     solution: string;
     features: ProjectText[];
     steps: ProjectText[];
+    images: {
+        src: string;
+        mobileSrc: string;
+        width: number;
+        height: number;
+        alt: string;
+        caption: string;
+    }[];
+    trySteps: string[];
+    demoNote: string;
     scope: string;
     stack: string[];
     contactTitle: string;

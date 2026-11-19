@@ -4,6 +4,8 @@ Publicatievoorbereiding: zie [eerste publicatie](../../docs/runbooks/eerste-publ
 
 Zelfstandige Vue/Vite-demo met een kleine PHP-laag. Laravel en GeoFortForm4 hoeven niet te draaien of aanwezig te zijn. Alleen fictieve gegevens; aanvragen en wijzigingen staan tijdelijk in het geheugen van het open tabblad. Geen database, serversessies, mailtransport of queue.
 
+De [lokale case- en routepreview](../../docs/demos/onderwijscase-en-demoroute-controle.md) verbindt de hoofdsite op **8136** met een afzonderlijke demobuild op **8137**. Alleen buildmodus `local-preview` gebruikt de vaste teruglink naar `http://127.0.0.1:8136/werk/onderwijsformulier`; de teruglink blijft ook daar afhankelijk van `VITE_WEBSTUDIO_LINK_ENABLED=true`. Gewone en releasebuilds houden de publieke bestemming. Bouw deze kijkversie naar een aparte map: overschrijf daarvoor niet de gewone `dist`. De API en CSP blijven same-origin.
+
 ## Starten op Windows
 
 ```powershell

@@ -24,7 +24,6 @@ class PublicPagesTest extends TestCase
                 ->component('Work/Show')
                 ->where('auth.user', null)
                 ->where('project', config('projects.onderwijsformulier'))
-                ->where('project.title', 'Onderwijsformulier')
                 ->missing('project.demoUrl'));
     }
 

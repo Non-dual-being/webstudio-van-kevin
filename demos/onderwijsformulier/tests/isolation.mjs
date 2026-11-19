@@ -13,10 +13,12 @@ for (const file of php) {
   assert(!/vendor\/autoload|bootstrap\/app|Dotenv|\.env/.test(code.replace(/^\s*\/\/.*$/gm,'')), `Oorspronkelijke bootstrap: ${file}`);
 }
 for (const file of frontend) {
-  const code = fs.readFileSync(root+file,'utf8');
+  const code = fs.readFileSync(root+file,'utf8').replace(/\r\n/g, '\n');
   // One explicitly gated navigation link; never an API/asset/mail destination.
-  const backLink = '<p v-if="showWebsiteLink"><a class="demo-nav-link" href="https://kevinwebstudio.nl/werk/onderwijsformulier">Terug naar Kevin Webstudio</a></p>';
-  const externalCode = file === 'resources/js/App.vue' ? code.replace(backLink, '') : code;
+  const backLink = '<p v-if="showWebsiteLink"><a class="demo-nav-link" :href="websiteCaseUrl">Terug naar Kevin Webstudio</a></p>';
+  const destinations = "export const websiteCaseUrl = import.meta.env.MODE === 'local-preview'\n  ? 'http://127.0.0.1:8136/werk/onderwijsformulier'\n  : 'https://kevinwebstudio.nl/werk/onderwijsformulier';";
+  const externalCode = file === 'resources/js/websiteLink.ts' ? code.replace(destinations, '') : code;
+  if (file === 'resources/js/websiteLink.ts') assert(code.includes(destinations), 'Alleen vaste casebestemmingen; loopback uitsluitend in local-preview build');
   if (file === 'resources/js/App.vue') {
     assert(code.includes(backLink), 'Teruglink heeft vaste URL, eigen tabblad en releaseflag');
     assert(code.includes("const showWebsiteLink = import.meta.env.VITE_WEBSTUDIO_LINK_ENABLED === 'true';"), 'Teruglink standaard uit');
