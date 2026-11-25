@@ -39,8 +39,24 @@ class PublicPagesTest extends TestCase
         $this->get('/werk')
             ->assertInertia(fn (Assert $page) => $page
                 ->component('Work/Index')
-                ->has('projects', 1)
-                ->where('projects.0', $project));
+                ->has('projects', 2)
+                ->where('projects.0', $project)
+                ->where('projects.1', config('projects.future-films')));
+    }
+
+    public function test_future_films_has_its_own_data_and_no_education_demo(): void
+    {
+        config(['demos.education_enabled' => true]);
+
+        $this->get('/werk/future-films')
+            ->assertOk()
+            ->assertInertia(fn (Assert $page) => $page
+                ->component('Work/Show')
+                ->where('project', config('projects.future-films'))
+                ->where('project.projectUrl', 'https://futurefilms.planetaryhealth.xyz/')
+                ->where('demoUrl', null)
+                ->missing('project.demoUnavailableNote')
+                ->missing('project.trySteps'));
     }
 
     public function test_demo_link_is_hidden_until_release_and_uses_the_central_url(): void
@@ -72,6 +88,7 @@ class PublicPagesTest extends TestCase
             'home' => ['/', 'Home'],
             'work' => ['/werk', 'Work/Index'],
             'education form' => ['/werk/onderwijsformulier', 'Work/Show'],
+            'future films' => ['/werk/future-films', 'Work/Show'],
             'services' => ['/diensten', 'Services/Index'],
             'websites' => ['/diensten/websites', 'Services/Websites'],
             'dashboards' => ['/diensten/dashboards', 'Services/Dashboards'],

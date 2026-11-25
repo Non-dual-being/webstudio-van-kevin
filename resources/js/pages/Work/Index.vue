@@ -41,9 +41,9 @@ const categories = [
                 Werk
             </h1>
             <p class="mt-6 text-lg leading-8 text-slate-700">
-                Een blik op digitale oplossingen en de keuzes erachter. Ontdek
-                hoe een aanvraagproces vorm krijgt en welke functies daarbij
-                samenkomen.
+                Een blik op digitale oplossingen en de keuzes erachter. Van een
+                aanvraagproces tot een interactieve videoquiz: bekijk hoe de
+                functies aansluiten op wat gebruikers willen doen.
             </p>
         </header>
 

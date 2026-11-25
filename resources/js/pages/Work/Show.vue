@@ -35,7 +35,14 @@ defineProps<{ project: PortfolioProject; demoUrl: string | null }>();
                 :href="demoUrl"
                 class="mt-6 inline-flex min-h-11 items-center rounded-md border border-slate-900 bg-slate-900 px-5 py-2.5 font-semibold text-white hover:bg-slate-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-600"
             >
-                Probeer de onderwijsdemo
+                {{ project.demoLinkLabel }}
+            </a>
+            <a
+                v-if="project.projectUrl"
+                :href="project.projectUrl"
+                class="mt-6 inline-flex min-h-11 items-center rounded-md border border-slate-900 bg-slate-900 px-5 py-2.5 font-semibold text-white hover:bg-slate-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-600"
+            >
+                {{ project.projectLinkLabel }}
             </a>
         </header>
 
@@ -67,14 +74,14 @@ defineProps<{ project: PortfolioProject; demoUrl: string | null }>();
         </div>
 
         <section
-            aria-labelledby="aanvraagproces"
+            aria-labelledby="projectstappen"
             class="mt-14 rounded-xl bg-stone-100 p-6 sm:p-8"
         >
             <h2
-                id="aanvraagproces"
+                id="projectstappen"
                 class="text-2xl font-semibold tracking-tight"
             >
-                Van bezoekidee naar bevestiging
+                {{ project.stepsTitle }}
             </h2>
             <ol class="mt-7 grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
                 <li v-for="(step, index) in project.steps" :key="step.title">
@@ -93,7 +100,7 @@ defineProps<{ project: PortfolioProject; demoUrl: string | null }>();
 
         <section aria-labelledby="functies" class="mt-14">
             <h2 id="functies" class="text-2xl font-semibold tracking-tight">
-                Het formulier en het dashboard
+                {{ project.featuresTitle }}
             </h2>
             <div class="mt-6 grid gap-8">
                 <article
@@ -116,8 +123,8 @@ defineProps<{ project: PortfolioProject; demoUrl: string | null }>();
                             <source
                                 media="(max-width: 639px)"
                                 :srcset="project.images[index].mobileSrc"
-                                width="390"
-                                height="800"
+                                :width="project.images[index].mobileWidth"
+                                :height="project.images[index].mobileHeight"
                             />
                             <img
                                 :src="project.images[index].src"
@@ -158,21 +165,23 @@ defineProps<{ project: PortfolioProject; demoUrl: string | null }>();
             <a
                 :href="demoUrl"
                 class="mt-6 inline-flex min-h-11 items-center rounded-md border border-slate-900 bg-slate-900 px-5 py-2.5 font-semibold text-white hover:bg-slate-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-600"
-                >Start de formulierdemo</a
+                >{{ project.demoStartLabel }}</a
             >
         </section>
 
-        <section aria-labelledby="achter-het-formulier" class="mt-14 max-w-3xl">
+        <section aria-labelledby="projectbereik" class="mt-14 max-w-3xl">
             <h2
-                id="achter-het-formulier"
+                id="projectbereik"
                 class="text-2xl font-semibold tracking-tight"
             >
-                Wat deze demo laat zien
+                {{ project.scopeTitle }}
             </h2>
             <p class="mt-4 leading-7 text-slate-600">{{ project.scope }}</p>
-            <p v-if="!demoUrl" class="mt-4 leading-7 text-slate-600">
-                De beelden tonen de werkende demonstratie met fictieve gegevens.
-                De interactieve demo is nog niet publiek beschikbaar.
+            <p
+                v-if="!demoUrl && project.demoUnavailableNote"
+                class="mt-4 leading-7 text-slate-600"
+            >
+                {{ project.demoUnavailableNote }}
             </p>
             <ul
                 aria-label="Gebruikte technieken"
